@@ -6,6 +6,7 @@ import CitiesSection from "@/features/cities/CitiesSection";
 import AboutSection from "@/features/about/AboutSection";
 import EarnSection from "@/features/earn/EarnSection";
 import LatestFeaturesSection from "@/features/latestFeatures/LatestFeaturesSection";
+import DownloadSection from "@/features/download/DownloadSection";
 
 /**
  * Main landing page of the application
@@ -20,6 +21,7 @@ const Index = () => {
       <AboutSection />
       <EarnSection />
       <LatestFeaturesSection />
+      <DownloadSection />
     </div>
   );
 };
