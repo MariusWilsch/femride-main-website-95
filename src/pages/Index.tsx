@@ -1,5 +1,5 @@
 
-import Navbar from "@/shared/navigation/Navbar";
+import Navbar from "@/shared/Navbar";
 import HeroSection from "@/features/hero/HeroSection";
 
 /**
