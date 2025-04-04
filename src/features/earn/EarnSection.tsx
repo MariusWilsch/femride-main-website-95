@@ -22,9 +22,9 @@ const EarnSection = () => {
         <div className="flex flex-col md:flex-row gap-8 mb-20">
           <div className="w-full md:w-1/2">
             <img 
-              src="/lovable-uploads/70e119a8-9b4c-4ccc-aefd-b67b2e7972de.png" 
+              src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
               alt="Driver behind the wheel of a car" 
-              className="rounded-xl w-full h-auto"
+              className="rounded-xl w-full h-auto object-cover aspect-video"
             />
           </div>
           <div className="w-full md:w-1/2 flex flex-col justify-center">
@@ -46,9 +46,9 @@ const EarnSection = () => {
         <div className="flex flex-col md:flex-row-reverse gap-8 mb-20">
           <div className="w-full md:w-1/2">
             <img 
-              src="/lovable-uploads/8e5d08d8-b576-4634-8488-9612bbf71c3a.png" 
+              src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
               alt="Courier with Bolt Food delivery bag" 
-              className="rounded-xl w-full h-auto"
+              className="rounded-xl w-full h-auto object-cover aspect-video"
             />
           </div>
           <div className="w-full md:w-1/2 flex flex-col justify-center">
@@ -71,9 +71,9 @@ const EarnSection = () => {
         <div className="flex flex-col md:flex-row gap-8 mb-20">
           <div className="w-full md:w-1/2">
             <img 
-              src="/lovable-uploads/bacae506-bc7c-4d1a-b902-ca7cbbab49fa.png" 
+              src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
               alt="Merchant holding a phone with Bolt Food app" 
-              className="rounded-xl w-full h-auto"
+              className="rounded-xl w-full h-auto object-cover aspect-video"
             />
           </div>
           <div className="w-full md:w-1/2 flex flex-col justify-center">
@@ -95,9 +95,9 @@ const EarnSection = () => {
         <div className="flex flex-col md:flex-row-reverse gap-8">
           <div className="w-full md:w-1/2">
             <img 
-              src="/lovable-uploads/3c627c80-9dc0-48f6-8f95-e730dcba1952.png" 
+              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
               alt="Woman driver in a Bolt vehicle" 
-              className="rounded-xl w-full h-auto"
+              className="rounded-xl w-full h-auto object-cover aspect-video"
             />
           </div>
           <div className="w-full md:w-1/2 flex flex-col justify-center">
