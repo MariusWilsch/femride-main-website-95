@@ -40,7 +40,7 @@ const ServicesSection = () => {
       description:
         "Exklusiv für Frauen, mit verifizierten Fahrerinnen, für maximale Sicherheit und Vertrauen.",
       buttonText: "Jetzt buchen",
-      color: "#0E241B",
+      color: "#33C3F0", // Updated to primary blue
       imageSrc: "/lovable-uploads/577109eb-1080-4502-98b2-23f2f98dc25f.png",
       imageAlt: "Woman checking her phone to book a ride",
     },
@@ -51,7 +51,7 @@ const ServicesSection = () => {
       description:
         "Fahre ausschließlich Frauen, verdiene fair und sei Teil von FemRide und unserer Community.",
       buttonText: "Jetzt Fahrerin werden",
-      color: "#2C5779",
+      color: "#33C3F0", // Updated to primary blue
       imageSrc: "/lovable-uploads/1115ff08-742b-47e1-a06b-be2290d5abb9.png",
       imageAlt: "Woman driving a car",
     },
@@ -62,7 +62,7 @@ const ServicesSection = () => {
       description:
         "Maximieren Sie Ihre Flotten Auslastung und profitieren Sie von FemRide's Wachstum und attraktiven Konditionen.",
       buttonText: "Jetzt Flottenpartner werden",
-      color: "#0E241B",
+      color: "#33C3F0", // Updated to primary blue
       imageSrc: "/lovable-uploads/522eabb7-70e9-4879-a6c3-9d8dcbfb2471.png",
       imageAlt: "Fleet of cars in parking lot",
     },
@@ -71,11 +71,12 @@ const ServicesSection = () => {
   return (
     <section 
       ref={sectionRef} 
-      className="py-24 bg-gray-50 overflow-hidden relative"
+      className="pt-24 pb-32 bg-gradient-to-b from-white via-gray-50 to-gray-100 overflow-hidden relative -mt-20"
       id="services"
     >
-      {/* Background decorative elements */}
-      <div className="absolute top-20 left-10 w-64 h-64 bg-[#fa9de3]/10 rounded-full filter blur-3xl"></div>
+      {/* Background decorative elements that match hero section */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent"></div>
+      <div className="absolute top-20 left-10 w-64 h-64 bg-[#a3adf4]/10 rounded-full filter blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#a3adf4]/10 rounded-full filter blur-3xl"></div>
       
       <div className="container mx-auto px-4">
@@ -126,11 +127,13 @@ const ServicesSection = () => {
                   {card.description}
                 </p>
                 <Button 
-                  className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-medium px-6 w-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group mt-auto" 
+                  className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-semibold text-base px-6 py-6 h-auto w-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group mt-auto" 
                   onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
                 >
-                  {card.buttonText}
-                  <ChevronRight className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                  <span className="flex items-center justify-center w-full">
+                    <span className="tracking-wide">{card.buttonText}</span>
+                    <ChevronRight className="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                  </span>
                 </Button>
               </div>
 
