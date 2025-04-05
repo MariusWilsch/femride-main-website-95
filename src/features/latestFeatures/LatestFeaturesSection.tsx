@@ -28,8 +28,8 @@ const LatestFeaturesSection = () => {
               enter your details and secure your ride up to 90 days ahead.
             </p>
             <img 
-              src="/lovable-uploads/eef63163-3e4d-4654-b851-413d3b3afaff.png"
-              alt="People booking a ride in advance on laptop"
+              src="/lovable-uploads/a7d735bf-4c68-4fc9-8947-390ccc1051ee.png"
+              alt="Woman booking a ride in advance on laptop"
               className="w-full max-h-[500px] object-cover"
             />
           </div>
