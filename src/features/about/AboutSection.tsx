@@ -7,7 +7,7 @@ import { User, Shield, Sparkles } from "lucide-react";
 /**
  * Enhanced About section highlighting FemRide as a European mobility platform for women
  * With improved aesthetics, animations, and design elements
- * Updated to use pink as primary color with only "ABOUT US" in blue
+ * Updated to use blue as primary color with "ABOUT US" in blue
  */
 const AboutSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,21 +37,21 @@ const AboutSection = () => {
   const testimonialCards = [
     {
       id: 1,
-      icon: <User size={28} color="#fa9de3" />,
+      icon: <User size={28} color="#a3adf4" />,
       title: '„Endlich eine sichere Alternative!"',
       stats: "80%",
       description: "der Frauen fühlen sich mit einer Ride-Hailing-Plattform, exklusiv für Frauen sicherer. FemRide schafft Vertrauen durch geprüfte Fahrerinnen und Schutzmaßnahmen für Frauen und Fahrerinnen."
     },
     {
       id: 2,
-      icon: <Shield size={28} color="#fa9de3" />,
+      icon: <Shield size={28} color="#a3adf4" />,
       title: '„Keine Angst mehr vor Übergriffen."',
       stats: "75%",
       description: "der befragten Frauen wollen FemRide nutzen, um sich vor Belästigung und Diskriminierung zu schützen. Unsere Fahrten sind exklusiv von Frauen für Frauen."
     },
     {
       id: 3,
-      icon: <Sparkles size={28} color="#fa9de3" />,
+      icon: <Sparkles size={28} color="#a3adf4" />,
       title: '„Genau das hat gefehlt!"',
       stats: "83%",
       description: "der Frauen sind überzeugt, dass FemRide eine nachhaltige Lösung für mehr Sicherheit im Ride-Hailing bietet. Eine Plattform, die Frauen mehr Freiheit und Unabhängigkeit denn je ermöglicht."
@@ -64,8 +64,8 @@ const AboutSection = () => {
       className="py-20 relative overflow-hidden"
       id="about"
     >
-      {/* Background changed to pink */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#fa9de3]/80 via-[#fa9de3] to-[#fa9de3]/90 -z-10"></div>
+      {/* Background changed to blue */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#a3adf4]/80 via-[#a3adf4] to-[#a3adf4]/90 -z-10"></div>
       
       {/* Decorative blobs with updated colors */}
       <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-white/10 filter blur-[50px] animate-blob"></div>
