@@ -7,76 +7,97 @@ import { useLanguage } from '@/lib/LanguageContext';
 
 export const Footer = () => {
   const { t } = useLanguage();
+  const currentYear = new Date().getFullYear();
   
   return (
     <footer className="bg-[#1A1F2C] text-white">
-      <div className="container mx-auto px-4 py-12">
-        {/* Top section with logo and links */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 gap-6">
-          <div className="mb-6 lg:mb-0">
+      {/* Main footer content */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
+          {/* Logo section */}
+          <div className="mb-8 lg:mb-0">
             <img 
               src="/lovable-uploads/1c4c3713-8362-4f14-b80e-d0163d28bb8f.png" 
               alt="FemRide Logo" 
-              className="h-12 md:h-16"
+              className="h-14 md:h-16"
             />
           </div>
           
-          <div className="flex flex-wrap items-center gap-6 lg:gap-10">
-            <Link to="/terms" className="text-gray-300 hover:text-white transition-colors">
-              Terms & Conditions
-            </Link>
-            <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
+          {/* Links and social icons */}
+          <div className="flex flex-col md:flex-row md:items-center gap-8">
+            {/* Legal links */}
+            <div className="flex flex-col md:flex-row gap-6 md:gap-10">
+              <Link to="/terms" className="text-gray-300 hover:text-[#fa9de3] transition-colors text-sm md:text-base">
+                {t('footerTerms')}
+              </Link>
+              <Link to="/privacy" className="text-gray-300 hover:text-[#fa9de3] transition-colors text-sm md:text-base">
+                {t('footerPrivacy')}
+              </Link>
+            </div>
             
             {/* Social media icons */}
-            <div className="flex items-center gap-4 ml-0 lg:ml-8">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#fa9de3] transition-colors">
+            <div className="flex items-center gap-6 mt-6 md:mt-0 md:ml-8">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-[#fa9de3] transition-colors transform hover:scale-110">
                 <Facebook size={20} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#fa9de3] transition-colors">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-[#fa9de3] transition-colors transform hover:scale-110">
                 <Instagram size={20} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#fa9de3] transition-colors">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-[#fa9de3] transition-colors transform hover:scale-110">
                 <Twitter size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#fa9de3] transition-colors">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-[#fa9de3] transition-colors transform hover:scale-110">
                 <Linkedin size={20} />
               </a>
             </div>
           </div>
         </div>
         
-        <Separator className="bg-gray-800 my-8" />
+        {/* Subtle divider */}
+        <Separator className="bg-gray-800 my-10" />
         
-        {/* Impressum section */}
-        <div className="pt-4">
-          <h2 className="text-xl font-bold mb-8 text-center">Impressum</h2>
+        {/* Impressum section with cleaner layout */}
+        <div className="pb-6">
+          <h2 className="text-xl font-bold mb-10 text-center">{t('footerImpressum')}</h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-left">
-            <div className="space-y-3">
-              <p className="font-semibold text-lg">FemRide UG</p>
-              <p><span className="inline-block w-6">📍</span> Adresse: Waldstraße 222A, 12527 Berlin</p>
-              <p><span className="inline-block w-6">📧</span> E-Mail: <a href="mailto:info@femride.de" className="text-[#fa9de3] hover:underline">info@femride.de</a></p>
-              <p><span className="inline-block w-6">📞</span> Telefon: <a href="tel:+4915758195608" className="hover:underline">+49 157 58195608</a></p>
-              <p><span className="inline-block w-6">🌐</span> Webseite: <a href="https://www.femride.de" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">www.femride.de</a></p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-left max-w-4xl mx-auto">
+            {/* Company info */}
+            <div className="space-y-4">
+              <p className="font-semibold text-lg mb-4">FemRide UG</p>
+              <div className="flex items-start space-x-3 text-gray-300">
+                <span className="text-[#fa9de3]">📍</span>
+                <p>Adresse: Waldstraße 222A, 12527 Berlin</p>
+              </div>
+              <div className="flex items-start space-x-3 text-gray-300">
+                <span className="text-[#fa9de3]">📧</span>
+                <p>E-Mail: <a href="mailto:info@femride.de" className="text-[#fa9de3] hover:underline">info@femride.de</a></p>
+              </div>
+              <div className="flex items-start space-x-3 text-gray-300">
+                <span className="text-[#fa9de3]">🌐</span>
+                <p>Webseite: <a href="https://www.femride.de" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">www.femride.de</a></p>
+              </div>
             </div>
             
+            {/* Legal info */}
             <div className="space-y-6">
-              <div>
-                <p className="font-semibold">Vertreten durch:</p>
-                <p>Aykut Atli (Geschäftsführer)</p>
+              <div className="space-y-2">
+                <p className="font-semibold text-white">Vertreten durch:</p>
+                <p className="text-gray-300">Aykut Atli (Geschäftsführer)</p>
               </div>
               
-              <div>
-                <p className="font-semibold">Handelsregister:</p>
-                <p>Amtsgericht Berlin (Charlottenburg)</p>
-                <p>HRB 272631</p>
+              <div className="space-y-2">
+                <p className="font-semibold text-white">Handelsregister:</p>
+                <p className="text-gray-300">Amtsgericht Berlin (Charlottenburg)</p>
+                <p className="text-gray-300">HRB 272631</p>
               </div>
               
-              <div>
-                <p className="font-semibold">Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV:</p>
-                <p>Aykut Atli, Waldstraße 222A, 12527 Berlin</p>
+              <div className="space-y-2">
+                <p className="font-semibold text-white">Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV:</p>
+                <p className="text-gray-300">Aykut Atli, Waldstraße 222A, 12527 Berlin</p>
               </div>
             </div>
           </div>
@@ -85,8 +106,8 @@ export const Footer = () => {
         <Separator className="bg-gray-800 my-8" />
         
         {/* Copyright section */}
-        <div className="text-center">
-          <p className="text-gray-400">© {new Date().getFullYear()} FemRide. All rights reserved.</p>
+        <div className="text-center pt-4">
+          <p className="text-gray-400">© {currentYear} FemRide. {t('footerRights')}</p>
         </div>
       </div>
     </footer>
