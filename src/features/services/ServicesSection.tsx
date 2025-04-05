@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState, useRef } from "react";
 import { ChevronRight } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 /**
  * Services section component showcasing FemRide's main service offerings
@@ -11,6 +12,7 @@ const ServicesSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,33 +37,30 @@ const ServicesSection = () => {
   const serviceCards = [
     {
       id: 1,
-      header: "FÜR FAHRGÄSTE",
-      title: "Buche deine erste Fahrt",
-      description:
-        "Exklusiv für Frauen, mit verifizierten Fahrerinnen, für maximale Sicherheit und Vertrauen.",
-      buttonText: "Jetzt buchen",
+      header: t('servicesHeader1'),
+      title: t('servicesTitle1'),
+      description: t('servicesDesc1'),
+      buttonText: t('servicesButton1'),
       color: "#a3adf4", // Using the correct blue color
       imageSrc: "/lovable-uploads/577109eb-1080-4502-98b2-23f2f98dc25f.png",
       imageAlt: "Woman checking her phone to book a ride",
     },
     {
       id: 2,
-      header: "FÜR FAHRERINNEN",
-      title: "Fahrerin werden",
-      description:
-        "Fahre ausschließlich Frauen, verdiene fair und sei Teil von FemRide und unserer Community.",
-      buttonText: "Jetzt Fahrerin werden",
+      header: t('servicesHeader2'),
+      title: t('servicesTitle2'),
+      description: t('servicesDesc2'),
+      buttonText: t('servicesButton2'),
       color: "#a3adf4", // Using the correct blue color
       imageSrc: "/lovable-uploads/1115ff08-742b-47e1-a06b-be2290d5abb9.png",
       imageAlt: "Woman driving a car",
     },
     {
       id: 3,
-      header: "FÜR UNTERNEHMEN",
-      title: "Flottenpartner werden",
-      description:
-        "Maximieren Sie Ihre Flotten Auslastung und profitieren Sie von FemRide's Wachstum und attraktiven Konditionen.",
-      buttonText: "Jetzt Flottenpartner werden",
+      header: t('servicesHeader3'),
+      title: t('servicesTitle3'),
+      description: t('servicesDesc3'),
+      buttonText: t('servicesButton3'),
       color: "#a3adf4", // Using the correct blue color
       imageSrc: "/lovable-uploads/522eabb7-70e9-4879-a6c3-9d8dcbfb2471.png",
       imageAlt: "Fleet of cars in parking lot",
@@ -89,11 +88,11 @@ const ServicesSection = () => {
             <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#fa9de3]"></span>
           </p>
           <h2 className="text-4xl md:text-6xl font-bold text-[#222] mb-8">
-            Was wir anbieten
+            {t('servicesTitle')}
           </h2>
           <div className="w-24 h-1 bg-[#fa9de3] mx-auto mb-8"></div>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Entdecken Sie unsere maßgeschneiderten Dienste für Fahrgäste, Fahrerinnen und Flottenpartner
+            {t('servicesSubtitle')}
           </p>
         </div>
         

@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 /**
  * Enhanced Hero section component for the landing page
@@ -8,6 +9,7 @@ import { useEffect, useState } from "react";
  */
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useLanguage();
   
   useEffect(() => {
     setIsVisible(true);
@@ -22,7 +24,7 @@ const HeroSection = () => {
       <div 
         className={`bg-white/70 backdrop-blur-sm border border-pink-200 rounded-full px-6 py-2 shadow-md transform transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}
       >
-        <p className="text-[#fa9de3] font-bold text-lg">FemRide</p>
+        <p className="text-[#fa9de3] font-bold text-lg">{t('heroTagline')}</p>
       </div>
       
       {/* Headline with staggered animation */}
@@ -33,14 +35,14 @@ const HeroSection = () => {
           <span className="block transform transition-transform duration-1000 delay-100 ease-out" style={{
             transform: isVisible ? 'translateY(0)' : 'translateY(100%)'
           }}>
-            Driven for Women
+            {t('heroTitle1')}
           </span>
         </span>
         <span className="block relative overflow-hidden mt-2">
           <span className="block transform transition-transform duration-1000 delay-300 ease-out" style={{
             transform: isVisible ? 'translateY(0)' : 'translateY(100%)'
           }}>
-            by Women
+            {t('heroTitle2')}
           </span>
         </span>
       </h1>
@@ -49,7 +51,7 @@ const HeroSection = () => {
       <p 
         className={`text-xl md:text-2xl text-gray-600 mt-12 text-center max-w-2xl transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
       >
-        FemRide - Europas erste Ride-Hailing-Plattform, exklusiv für Frauen
+        {t('heroSubtitle')}
       </p>
       
       {/* Call to action */}
@@ -60,10 +62,10 @@ const HeroSection = () => {
           className="px-8 py-6 text-lg bg-[#fa9de3] hover:bg-[#e989cc] text-black rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden group"
         >
           <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20"></span>
-          <span className="relative">Get the FemRide app</span>
+          <span className="relative">{t('heroButton')}</span>
         </Button>
         <p className="text-lg text-[#fa9de3] font-medium mt-3 animate-pulse">
-          Coming soon to Google Play & App Store
+          {t('heroComingSoon')}
         </p>
       </div>
       
