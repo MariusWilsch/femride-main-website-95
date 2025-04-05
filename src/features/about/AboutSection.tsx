@@ -63,8 +63,8 @@ const AboutSection = () => {
       className="py-20 relative overflow-hidden"
       id="about"
     >
-      {/* Gradient background with decorative elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#fa9de3]/80 via-[#fa9de3] to-[#fa9de3]/90 -z-10"></div>
+      {/* Background changed to blue */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#a3adf4]/80 via-[#a3adf4] to-[#a3adf4]/90 -z-10"></div>
       
       {/* Decorative blobs */}
       <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-white/10 filter blur-[50px] animate-blob"></div>
@@ -73,15 +73,15 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 relative">
         {/* Section header with animations - Updated to match services section */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-[#fa9de3] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
+          <p className="text-white font-medium tracking-wide uppercase text-base relative inline-block mb-3">
             ABOUT US
-            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#fa9de3]"></span>
+            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-white"></span>
           </p>
-          <h2 className="text-4xl md:text-6xl font-bold text-[#222] mb-8">
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">
             Was sagen die Frauen zu FemRide?
           </h2>
-          <div className="w-24 h-1 bg-[#fa9de3] mx-auto mb-8"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
+          <p className="text-white/90 max-w-2xl mx-auto text-lg">
             FemRide macht den Unterschied! – Eine Umfrage mit über 100 Teilnehmer:innen, davon 90 % Frauen, zeigt: 
             Sichere Mobilität ist ein dringendes Bedürfnis.
           </p>
@@ -100,30 +100,30 @@ const AboutSection = () => {
               style={{ transitionDelay: `${200 * (index + 1)}ms` }}
             >
               <div className="p-6 flex flex-col h-full">
-                {/* Card icon in circle - Updated to blue background color */}
-                <div className="w-12 h-12 rounded-full bg-[#a3adf4] flex items-center justify-center mb-4">
+                {/* Icon background changed to a deeper pink color */}
+                <div className="w-12 h-12 rounded-full bg-[#e989cc] flex items-center justify-center mb-4">
                   {card.icon}
                 </div>
                 
                 {/* Card title */}
-                <h3 className="text-2xl font-bold mb-4 text-black text-center">{card.title}</h3>
+                <h3 className="text-2xl font-bold mb-4 text-white text-center">{card.title}</h3>
                 
-                {/* Statistics highlight - No underline, equal height */}
+                {/* Statistics highlight */}
                 <div className="mb-6 text-center">
-                  <div className="text-5xl font-bold text-black">{card.stats}</div>
+                  <div className="text-5xl font-bold text-white">{card.stats}</div>
                 </div>
                 
                 {/* Card description */}
-                <p className="text-black/90 text-center">{card.description}</p>
+                <p className="text-white/90 text-center">{card.description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* CTA button with animation - Updated to match hero and services buttons */}
+        {/* CTA button with animation - Updated to match hero and services buttons with deeper pink */}
         <div className={`flex justify-center transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <Button 
-            className="px-8 py-6 text-lg bg-[#a3adf4] hover:bg-[#8a93d6] text-black rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden group"
+            className="px-8 py-6 text-lg bg-[#e989cc] hover:bg-[#d678bb] text-black rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden group"
             onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
           >
             <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20"></span>
