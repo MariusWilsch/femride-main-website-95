@@ -19,9 +19,12 @@ const HeroSection = () => {
         FemRide is the all-in-one mobility app.
       </p>
       
-      <Button className="mt-10 px-8 py-6 text-lg bg-[#e908b0] hover:bg-[#d007a0] text-white rounded-lg">
-        Get the FemRide app
-      </Button>
+      <div className="flex flex-col items-center mt-10">
+        <Button className="px-8 py-6 text-lg bg-[#e908b0] hover:bg-[#d007a0] text-white rounded-lg">
+          Get the FemRide app
+        </Button>
+        <p className="text-lg text-[#e908b0] font-medium mt-3">Coming soon - Not yet available</p>
+      </div>
     </main>
   );
 };
