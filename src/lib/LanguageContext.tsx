@@ -13,6 +13,22 @@ export const translations: Translations = {
   navRegister: {
     de: 'Registrieren',
     en: 'Register'
+  },
+  footerTerms: {
+    de: 'AGB',
+    en: 'Terms & Conditions'
+  },
+  footerPrivacy: {
+    de: 'Datenschutz',
+    en: 'Privacy Policy'
+  },
+  footerImpressum: {
+    de: 'Impressum',
+    en: 'Imprint'
+  },
+  footerRights: {
+    de: 'Alle Rechte vorbehalten.',
+    en: 'All rights reserved.'
   }
 };
 
