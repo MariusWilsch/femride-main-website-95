@@ -6,7 +6,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ChevronDown } from 'lucide-react';
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Separator } from "@/components/ui/separator";
 
@@ -284,12 +283,7 @@ const FAQSection = () => {
         </div>
       </div>
       
-      {/* Scroll to top button indicator */}
-      <div className="absolute bottom-8 right-8 animate-bounce hidden md:block">
-        <div className="h-12 w-12 rounded-full bg-[#fa9de3] flex items-center justify-center text-black">
-          <ChevronDown className="rotate-180" size={24} />
-        </div>
-      </div>
+      {/* Removed the scroll to top button indicator */}
     </section>
   );
 };
