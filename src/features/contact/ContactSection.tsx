@@ -5,9 +5,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Send, UserCircle, Mail, Phone, MessageSquare } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
 
 /**
- * Enhanced contact section with improved design principles
+ * Enhanced contact section with improved design principles and email functionality
  */
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -49,21 +50,53 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    console.log('Form submitted:', formData);
-    
-    // In a real application, you would send the data to a server here
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Reset form after submission
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
-    
-    setIsSubmitting(false);
+    try {
+      // Prepare email data
+      const emailData = {
+        to: "info@femride.de",
+        subject: `FemRide Kontaktanfrage von ${formData.name}`,
+        message: `
+Name: ${formData.name}
+Email: ${formData.email}
+Telefon: ${formData.phone || 'Nicht angegeben'}
+
+Nachricht:
+${formData.message}
+        `,
+      };
+      
+      console.log('Sending email with data:', emailData);
+      
+      // This is a client-side only app, so we'll use mailto protocol to open the user's email client
+      // In a real application with a backend, you would send this data to a server
+      const mailtoLink = `mailto:${emailData.to}?subject=${encodeURIComponent(emailData.subject)}&body=${encodeURIComponent(emailData.message)}`;
+      
+      // Open the mailto link in a new window
+      window.open(mailtoLink);
+      
+      // Show success message
+      toast({
+        title: "Nachricht gesendet",
+        description: "Vielen Dank für Ihre Nachricht. Wir werden uns umgehend bei Ihnen melden.",
+      });
+      
+      // Reset form after submission
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Fehler beim Senden",
+        description: "Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
