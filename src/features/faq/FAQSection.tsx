@@ -48,9 +48,7 @@ const FAQSection = () => {
   // Custom accordion styles that match the image
   const accordionItemClass = "border-0 border-b border-gray-200";
   const accordionTriggerClass = "py-6 text-lg font-medium flex items-center justify-between hover:no-underline";
-  const accordionContentClass = "pb-6 prose max-w-none text-gray-600";
-  const listItemClass = "flex items-start mb-2";
-  const listBulletClass = "min-w-5 text-[#fa9de3] mr-2";
+  const accordionContentClass = "pb-6 text-gray-600";
 
   return (
     <section 
@@ -123,7 +121,9 @@ const FAQSection = () => {
                   Was ist FemRide?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <p className="mt-0 mb-0">FemRide ist Europas erste Ride-Hailing-Plattform, die ausschließlich für Frauen – für mehr Sicherheit und Vertrauen unterwegs.</p>
+                  <div className="pl-0 pr-0">
+                    FemRide ist Europas erste Ride-Hailing-Plattform, die ausschließlich für Frauen – für mehr Sicherheit und Vertrauen unterwegs.
+                  </div>
                 </AccordionContent>
               </AccordionItem>
               
@@ -132,7 +132,9 @@ const FAQSection = () => {
                   In welchen Städten ist FemRide verfügbar?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <p className="mt-0 mb-0">FemRide startet in Berlin und wird bald auch in weiteren deutschen Städten verfügbar sein. Schrittweise erfolgt der Ausbau in weitere Regionen und Länder. 🚀</p>
+                  <div className="pl-0 pr-0">
+                    FemRide startet in Berlin und wird bald auch in weiteren deutschen Städten verfügbar sein. Schrittweise erfolgt der Ausbau in weitere Regionen und Länder. 🚀
+                  </div>
                 </AccordionContent>
               </AccordionItem>
               
@@ -141,7 +143,9 @@ const FAQSection = () => {
                   Wie kann ich eine Fahrt buchen?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <p className="mt-0 mb-0">Lade die FemRide-App herunter, registriere dich und buche deine Fahrt in wenigen Klicks – sicher und einfach.</p>
+                  <div className="pl-0 pr-0">
+                    Lade die FemRide-App herunter, registriere dich und buche deine Fahrt in wenigen Klicks – sicher und einfach.
+                  </div>
                 </AccordionContent>
               </AccordionItem>
               
@@ -150,7 +154,9 @@ const FAQSection = () => {
                   Welche Sicherheitsmaßnahmen gibt es?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <p className="mt-0 mb-0">Unsere App bietet Live-Tracking, Notfall-Button und eine sichere Kommunikation zwischen Fahrerinnen und Passagierinnen. Zusätzlich identifizieren wir mit einem modernen System ob es sich bei dem Fahrgast und Fahrerin wirklich um Frauen handelt und garantieren damit die Sicherheit für die Benutzerin von FemRide.</p>
+                  <div className="pl-0 pr-0">
+                    Unsere App bietet Live-Tracking, Notfall-Button und eine sichere Kommunikation zwischen Fahrerinnen und Passagierinnen. Zusätzlich identifizieren wir mit einem modernen System ob es sich bei dem Fahrgast und Fahrerin wirklich um Frauen handelt und garantieren damit die Sicherheit für die Benutzerin von FemRide.
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -168,7 +174,9 @@ const FAQSection = () => {
                   Wie kann ich Fahrerin bei FemRide werden?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <p className="mt-0 mb-0">Registriere dich in der FemRide-App oder auf unserer Webseite und wähle ein Flottenunternehmen, mit dem du zusammenarbeiten möchtest.</p>
+                  <div className="pl-0 pr-0">
+                    Registriere dich in der FemRide-App oder auf unserer Webseite und wähle ein Flottenunternehmen, mit dem du zusammenarbeiten möchtest.
+                  </div>
                 </AccordionContent>
               </AccordionItem>
               
@@ -177,21 +185,23 @@ const FAQSection = () => {
                   Welche Voraussetzungen muss ich erfüllen?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <p className="mt-0 mb-0">Die Anforderungen hängen von deinem Flottenpartner ab. In der Regel benötigst du:</p>
-                  <ul className="list-none pl-0 mt-3 mb-0 space-y-2">
-                    <li className={listItemClass}>
-                      <span className={listBulletClass}>•</span>
-                      <span>Einen gültigen Führerschein & Personenbeförderungsschein (P-Schein)</span>
-                    </li>
-                    <li className={listItemClass}>
-                      <span className={listBulletClass}>•</span>
-                      <span>Ein polizeiliches Führungszeugnis</span>
-                    </li>
-                    <li className={listItemClass}>
-                      <span className={listBulletClass}>•</span>
-                      <span>Ein Mindestalter von 21 Jahren</span>
-                    </li>
-                  </ul>
+                  <div className="pl-0 pr-0">
+                    <p className="mb-2">Die Anforderungen hängen von deinem Flottenpartner ab. In der Regel benötigst du:</p>
+                    <ul className="list-none pl-0 space-y-2">
+                      <li className="flex items-start">
+                        <span className="text-[#fa9de3] mr-2">•</span>
+                        <span>Einen gültigen Führerschein & Personenbeförderungsschein (P-Schein)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#fa9de3] mr-2">•</span>
+                        <span>Ein polizeiliches Führungszeugnis</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[#fa9de3] mr-2">•</span>
+                        <span>Ein Mindestalter von 21 Jahren</span>
+                      </li>
+                    </ul>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
               
@@ -200,7 +210,9 @@ const FAQSection = () => {
                   Wie sehen die Verdienstmöglichkeiten aus?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <p className="mt-0 mb-0">Dein Verdienst hängt vom Flottenpartner und deinem Arbeitsmodell ab. In der Regel gibt es transparente Vergütungsmodelle mit fairen Einnahmen pro Fahrt. Zusätzlich gibt es einen Bonus für eine Anzahl von Fahrten, die dir FemRide zusätzlich zu deinem Gehalt auszahlt.</p>
+                  <div className="pl-0 pr-0">
+                    Dein Verdienst hängt vom Flottenpartner und deinem Arbeitsmodell ab. In der Regel gibt es transparente Vergütungsmodelle mit fairen Einnahmen pro Fahrt. Zusätzlich gibt es einen Bonus für eine Anzahl von Fahrten, die dir FemRide zusätzlich zu deinem Gehalt auszahlt.
+                  </div>
                 </AccordionContent>
               </AccordionItem>
               
@@ -209,7 +221,9 @@ const FAQSection = () => {
                   Brauche ich ein eigenes Auto?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <p className="mt-0 mb-0">Nein, du fährst mit den Fahrzeugen deines Flottenpartners. Die Bedingungen variieren je nach Partnerunternehmen.</p>
+                  <div className="pl-0 pr-0">
+                    Nein, du fährst mit den Fahrzeugen deines Flottenpartners. Die Bedingungen variieren je nach Partnerunternehmen.
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -227,7 +241,9 @@ const FAQSection = () => {
                   Wie kann mein Unternehmen mit FemRide kooperieren?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <p className="mt-0 mb-0">Registriere dich als Flottenpartner und bringe deine Fahrzeuge auf die Straße – wir bieten attraktive Einsatzmöglichkeiten!</p>
+                  <div className="pl-0 pr-0">
+                    Registriere dich als Flottenpartner und bringe deine Fahrzeuge auf die Straße – wir bieten attraktive Einsatzmöglichkeiten!
+                  </div>
                 </AccordionContent>
               </AccordionItem>
               
@@ -236,7 +252,9 @@ const FAQSection = () => {
                   Welche Vorteile hat eine Partnerschaft mit FemRide?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <p className="mt-0 mb-0">Mehr Fahrten & höhere Auslastung, gesellschaftliche Anerkennung und die Vermittlung neuer Fahrerinnen.</p>
+                  <div className="pl-0 pr-0">
+                    Mehr Fahrten & höhere Auslastung, gesellschaftliche Anerkennung und die Vermittlung neuer Fahrerinnen.
+                  </div>
                 </AccordionContent>
               </AccordionItem>
               
@@ -245,7 +263,9 @@ const FAQSection = () => {
                   Wie erfolgt die Abrechnung?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <p className="mt-0 mb-0">Wir bieten transparente Abrechnungsmodelle mit regelmäßigen Auszahlungen für eine nachhaltige Zusammenarbeit.</p>
+                  <div className="pl-0 pr-0">
+                    Wir bieten transparente Abrechnungsmodelle mit regelmäßigen Auszahlungen für eine nachhaltige Zusammenarbeit.
+                  </div>
                 </AccordionContent>
               </AccordionItem>
               
@@ -254,7 +274,9 @@ const FAQSection = () => {
                   Welche finanziellen Vorteile bietet eine Zusammenarbeit mit FemRide?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <p className="mt-0 mb-0">Dank eines fairen Preismodells zahlen Flottenpartner weniger als üblich, um eine langfristige Partnerschaft zu fördern.</p>
+                  <div className="pl-0 pr-0">
+                    Dank eines fairen Preismodells zahlen Flottenpartner weniger als üblich, um eine langfristige Partnerschaft zu fördern.
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
