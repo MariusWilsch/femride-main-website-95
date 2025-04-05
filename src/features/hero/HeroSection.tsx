@@ -19,14 +19,18 @@ const HeroSection = () => {
     <main className="relative min-h-[90vh] flex items-center">
       {/* Full-width background image with better visibility */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full -z-10"
+        className="absolute inset-0 -z-10"
         style={{ 
           backgroundImage: "url('/lovable-uploads/36886a85-3305-42f6-b237-b56840c8722b.png')",
-          backgroundSize: "cover"
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          width: "100%",
+          height: "100%"
         }}
       >
         {/* Darker overlay to improve text readability */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
