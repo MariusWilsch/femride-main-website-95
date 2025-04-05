@@ -36,21 +36,21 @@ const AboutSection = () => {
   const testimonialCards = [
     {
       id: 1,
-      icon: <User size={28} />,
+      icon: <User size={28} color="white" />,
       title: '„Endlich eine sichere Alternative!"',
       stats: "80%",
       description: "der Frauen fühlen sich mit einer Ride-Hailing-Plattform, exklusiv für Frauen sicherer. FemRide schafft Vertrauen durch geprüfte Fahrerinnen und Schutzmaßnahmen für Frauen und Fahrerinnen."
     },
     {
       id: 2,
-      icon: <Shield size={28} />,
+      icon: <Shield size={28} color="white" />,
       title: '„Keine Angst mehr vor Übergriffen."',
       stats: "75%",
       description: "der befragten Frauen wollen FemRide nutzen, um sich vor Belästigung und Diskriminierung zu schützen. Unsere Fahrten sind exklusiv von Frauen für Frauen."
     },
     {
       id: 3,
-      icon: <Sparkles size={28} />,
+      icon: <Sparkles size={28} color="white" />,
       title: '„Genau das hat gefehlt!"',
       stats: "83%",
       description: "der Frauen sind überzeugt, dass FemRide eine nachhaltige Lösung für mehr Sicherheit im Ride-Hailing bietet. Eine Plattform, die Frauen mehr Freiheit und Unabhängigkeit denn je ermöglicht."
@@ -73,9 +73,9 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 relative">
         {/* Section header with animations - Updated to match services section */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-white font-medium tracking-wide uppercase text-base relative inline-block mb-3">
+          <p className="text-[#a3adf4] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
             ABOUT US
-            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-white"></span>
+            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#a3adf4]"></span>
           </p>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">
             Was sagen die Frauen zu FemRide?
