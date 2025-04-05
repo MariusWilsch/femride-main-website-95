@@ -40,7 +40,7 @@ const ServicesSection = () => {
       description:
         "Exklusiv für Frauen, mit verifizierten Fahrerinnen, für maximale Sicherheit und Vertrauen.",
       buttonText: "Jetzt buchen",
-      color: "#33C3F0", // Updated to primary blue
+      color: "#a3adf4", // Updated to correct blue color
       imageSrc: "/lovable-uploads/577109eb-1080-4502-98b2-23f2f98dc25f.png",
       imageAlt: "Woman checking her phone to book a ride",
     },
@@ -51,7 +51,7 @@ const ServicesSection = () => {
       description:
         "Fahre ausschließlich Frauen, verdiene fair und sei Teil von FemRide und unserer Community.",
       buttonText: "Jetzt Fahrerin werden",
-      color: "#33C3F0", // Updated to primary blue
+      color: "#a3adf4", // Updated to correct blue color
       imageSrc: "/lovable-uploads/1115ff08-742b-47e1-a06b-be2290d5abb9.png",
       imageAlt: "Woman driving a car",
     },
@@ -62,7 +62,7 @@ const ServicesSection = () => {
       description:
         "Maximieren Sie Ihre Flotten Auslastung und profitieren Sie von FemRide's Wachstum und attraktiven Konditionen.",
       buttonText: "Jetzt Flottenpartner werden",
-      color: "#33C3F0", // Updated to primary blue
+      color: "#a3adf4", // Updated to correct blue color
       imageSrc: "/lovable-uploads/522eabb7-70e9-4879-a6c3-9d8dcbfb2471.png",
       imageAlt: "Fleet of cars in parking lot",
     },
@@ -71,11 +71,12 @@ const ServicesSection = () => {
   return (
     <section 
       ref={sectionRef} 
-      className="pt-24 pb-32 bg-gradient-to-b from-white via-gray-50 to-gray-100 overflow-hidden relative -mt-20"
+      className="pt-20 pb-32 bg-white overflow-hidden relative -mt-20 z-10"
       id="services"
     >
-      {/* Background decorative elements that match hero section */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent"></div>
+      {/* Background gradient that matches hero section */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-gray-50 z-[-1]"></div>
+      <div className="absolute -top-40 left-0 right-0 w-full h-96 bg-gradient-to-b from-white via-white to-transparent z-[-1]"></div>
       <div className="absolute top-20 left-10 w-64 h-64 bg-[#a3adf4]/10 rounded-full filter blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#a3adf4]/10 rounded-full filter blur-3xl"></div>
       
