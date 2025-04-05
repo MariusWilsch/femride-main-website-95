@@ -74,8 +74,8 @@ const ServicesSection = () => {
       className="pt-20 pb-32 overflow-hidden relative"
       id="services"
     >
-      {/* Background gradient flowing from whitish to bluish (top to bottom) */}
-      <div className="absolute -z-10 inset-0 bg-gradient-to-b from-[#fa9de3]/10 to-[#a3adf4]/20 filter blur-[80px]"></div>
+      {/* Background gradient that starts with the hero section's ending shade */}
+      <div className="absolute -z-10 inset-0 bg-gradient-to-b from-white via-[#fa9de3]/10 to-[#a3adf4]/20 filter blur-[80px]"></div>
       
       {/* Repositioned blob animations to match the vertical gradient flow */}
       <div className="absolute top-10 left-5 md:left-20 w-20 h-20 rounded-full bg-[#fa9de3]/20 filter blur-lg animate-blob"></div>
