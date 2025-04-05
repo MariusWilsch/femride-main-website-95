@@ -42,8 +42,8 @@ const ServicesSection = () => {
       description: t('servicesDesc1'),
       buttonText: t('servicesButton1'),
       color: "#a3adf4", // Using the correct blue color
-      imageSrc: "/lovable-uploads/577109eb-1080-4502-98b2-23f2f98dc25f.png",
-      imageAlt: "Woman checking her phone to book a ride",
+      imageSrc: "/lovable-uploads/97a44fdb-e7a6-4917-9b66-1a40f373e0a7.png",
+      imageAlt: "Women in car with pink hair",
     },
     {
       id: 2,
@@ -52,8 +52,8 @@ const ServicesSection = () => {
       description: t('servicesDesc2'),
       buttonText: t('servicesButton2'),
       color: "#a3adf4", // Using the correct blue color
-      imageSrc: "/lovable-uploads/1115ff08-742b-47e1-a06b-be2290d5abb9.png",
-      imageAlt: "Woman driving a car",
+      imageSrc: "/lovable-uploads/6cb77555-69e9-4c53-8c49-17d4a2798133.png",
+      imageAlt: "Women in car enjoying a ride",
     },
     {
       id: 3,
@@ -62,8 +62,8 @@ const ServicesSection = () => {
       description: t('servicesDesc3'),
       buttonText: t('servicesButton3'),
       color: "#a3adf4", // Using the correct blue color
-      imageSrc: "/lovable-uploads/522eabb7-70e9-4879-a6c3-9d8dcbfb2471.png",
-      imageAlt: "Fleet of cars in parking lot",
+      imageSrc: "/lovable-uploads/f56c6c65-2478-46a3-8ee7-3d8fcbea2312.png",
+      imageAlt: "Women smiling in car with passengers",
     },
   ];
 
@@ -96,12 +96,12 @@ const ServicesSection = () => {
           </p>
         </div>
         
-        {/* Service cards with enhanced animations and equal height */}
+        {/* Service cards with enhanced animations - completely covered by images with text overlay */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {serviceCards.map((card, index) => (
             <div 
               key={card.id}
-              className={`rounded-xl overflow-hidden bg-white shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 flex flex-col h-full transform ${
+              className={`rounded-xl overflow-hidden bg-white shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 h-full transform ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-20'
@@ -113,41 +113,46 @@ const ServicesSection = () => {
               onMouseEnter={() => setHoveredCard(card.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              {/* Card header */}
-              <div 
-                className="p-3 text-center text-sm font-bold uppercase tracking-wider text-white"
-                style={{ backgroundColor: card.color }}
-              >
-                {card.header}
-              </div>
-
-              {/* Card content with flex-grow to push button to bottom */}
-              <div className="p-8 flex-grow flex flex-col">
-                <h3 className="text-2xl font-bold mb-4" style={{ color: card.color }}>{card.title}</h3>
-                <p className="text-gray-600 mb-6 flex-grow">
-                  {card.description}
-                </p>
-                <Button 
-                  className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-semibold text-base px-6 py-6 h-auto w-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group mt-auto" 
-                  onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
-                >
-                  <span className="flex items-center justify-center w-full">
-                    <span className="tracking-wide font-bold">{card.buttonText}</span>
-                    <ChevronRight className="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                  </span>
-                </Button>
-              </div>
-
-              {/* Card image */}
-              <div className="h-60 overflow-hidden">
-                <div className="relative w-full h-full overflow-hidden group">
+              {/* Card content as a relative container with image covering everything */}
+              <div className="relative h-full w-full">
+                {/* Background image covering the entire card */}
+                <div className="absolute inset-0 w-full h-full">
                   <img 
                     src={card.imageSrc} 
                     alt={card.imageAlt} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover"
                   />
-                  {/* Image overlay that appears on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {/* Dark overlay for text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
+                </div>
+
+                {/* Header banner at top */}
+                <div 
+                  className="p-3 text-center text-sm font-bold uppercase tracking-wider text-white relative"
+                  style={{ backgroundColor: card.color }}
+                >
+                  {card.header}
+                </div>
+
+                {/* Text content overlay */}
+                <div className="relative z-10 p-8 flex flex-col h-[400px]">
+                  <h3 className="text-2xl font-bold mb-4 text-white">{card.title}</h3>
+                  <p className="text-white/90 mb-6 flex-grow">
+                    {card.description}
+                  </p>
+                  
+                  {/* Button pushed to the bottom */}
+                  <div className="mt-auto">
+                    <Button 
+                      className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-semibold text-base px-6 py-6 h-auto w-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group" 
+                      onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+                    >
+                      <span className="flex items-center justify-center w-full">
+                        <span className="tracking-wide font-bold">{card.buttonText}</span>
+                        <ChevronRight className="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                      </span>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
