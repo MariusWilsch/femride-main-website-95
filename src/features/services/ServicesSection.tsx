@@ -71,24 +71,24 @@ const ServicesSection = () => {
   return (
     <section 
       ref={sectionRef} 
-      className="py-24 bg-gray-50 overflow-hidden relative"
+      className="py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden relative mt-[-100px] pt-[150px]"
       id="services"
     >
       {/* Background decorative elements */}
-      <div className="absolute top-20 left-10 w-64 h-64 bg-[#fa9de3]/10 rounded-full filter blur-3xl"></div>
+      <div className="absolute top-40 left-10 w-64 h-64 bg-[#a3adf4]/10 rounded-full filter blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#a3adf4]/10 rounded-full filter blur-3xl"></div>
       
       <div className="container mx-auto px-4">
         {/* Section header with animations */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-[#fa9de3] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
+          <p className="text-[#a3adf4] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
             OUR SERVICES
-            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#fa9de3]"></span>
+            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#a3adf4]"></span>
           </p>
           <h2 className="text-4xl md:text-6xl font-bold text-[#222] mb-8">
             Was wir anbieten
           </h2>
-          <div className="w-24 h-1 bg-[#fa9de3] mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-[#a3adf4] mx-auto mb-8"></div>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             Entdecken Sie unsere maßgeschneiderten Dienste für Fahrgäste, Fahrerinnen und Flottenpartner
           </p>
@@ -114,19 +114,19 @@ const ServicesSection = () => {
               {/* Card header */}
               <div 
                 className="p-3 text-center text-sm font-bold uppercase tracking-wider text-white"
-                style={{ backgroundColor: card.color }}
+                style={{ backgroundColor: index === 1 ? '#2C5779' : '#0E241B' }}
               >
                 {card.header}
               </div>
 
               {/* Card content with flex-grow to push button to bottom */}
               <div className="p-8 flex-grow flex flex-col">
-                <h3 className="text-2xl font-bold mb-4" style={{ color: card.color }}>{card.title}</h3>
+                <h3 className="text-2xl font-bold mb-4" style={{ color: index === 1 ? '#2C5779' : '#0E241B' }}>{card.title}</h3>
                 <p className="text-gray-600 mb-6 flex-grow">
                   {card.description}
                 </p>
                 <Button 
-                  className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-medium px-6 w-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group mt-auto" 
+                  className="bg-[#a3adf4] hover:bg-[#8a94e0] text-black font-medium px-6 w-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group mt-auto" 
                   onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
                 >
                   {card.buttonText}
