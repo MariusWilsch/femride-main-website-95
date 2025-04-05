@@ -71,30 +71,20 @@ const AboutSection = () => {
       <div className="absolute bottom-20 left-20 w-80 h-80 rounded-full bg-white/5 filter blur-[70px] animate-blob animation-delay-2000"></div>
       
       <div className="container mx-auto px-4 relative">
-        {/* Section header with animations */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-block bg-white/20 backdrop-blur-sm py-2 px-6 rounded-full mb-4 transform transition-all duration-500 hover:bg-white/30">
-            <p className="text-black font-medium">About us</p>
-          </div>
-          
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold max-w-5xl mx-auto mb-8 text-black relative">
-            <span className="relative inline-block overflow-hidden">
-              <span className="block transform transition-transform duration-1000 delay-100" 
-                style={{
-                  transform: isVisible ? 'translateY(0)' : 'translateY(100%)'
-                }}>
-                Was sagen die Frauen zu FemRide?
-              </span>
-            </span>
+        {/* Section header with animations - Updated to match services section */}
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <p className="text-[#fa9de3] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
+            ABOUT US
+            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#fa9de3]"></span>
+          </p>
+          <h2 className="text-4xl md:text-6xl font-bold text-[#222] mb-8">
+            Was sagen die Frauen zu FemRide?
           </h2>
-          
-          <div className={`max-w-4xl mx-auto bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 shadow-xl transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-            <p className="text-lg text-black">
-              FemRide macht den Unterschied! – Eine Umfrage mit über 100 Teilnehmer:innen, davon 90 % Frauen, zeigt: 
-              Sichere Mobilität ist ein dringendes Bedürfnis. Ihre Antworten geben wertvolle Einblicke in die aktuellen 
-              Herausforderungen und bestätigen die Notwendigkeit einer Ride-Hailing-Plattform, exklusiv für Frauen.
-            </p>
-          </div>
+          <div className="w-24 h-1 bg-[#fa9de3] mx-auto mb-8"></div>
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            FemRide macht den Unterschied! – Eine Umfrage mit über 100 Teilnehmer:innen, davon 90 % Frauen, zeigt: 
+            Sichere Mobilität ist ein dringendes Bedürfnis.
+          </p>
         </div>
 
         {/* Testimonial cards with staggered animations */}
@@ -110,8 +100,8 @@ const AboutSection = () => {
               style={{ transitionDelay: `${200 * (index + 1)}ms` }}
             >
               <div className="p-6 flex flex-col h-full">
-                {/* Card icon in circle */}
-                <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-4">
+                {/* Card icon in circle - Updated to blue background color */}
+                <div className="w-12 h-12 rounded-full bg-[#a3adf4] flex items-center justify-center mb-4">
                   {card.icon}
                 </div>
                 
