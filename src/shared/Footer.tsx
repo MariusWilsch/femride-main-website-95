@@ -10,6 +10,9 @@ export const Footer = () => {
           <div className="mb-4 md:mb-0">
             <h3 className="text-lg font-bold">FemRide</h3>
             <p className="text-gray-400">Go wherever. Whenever.</p>
+            <address className="text-gray-400 mt-2 not-italic">
+              Waldstraße 222A, 12527 Berlin
+            </address>
           </div>
           
           <div className="flex space-x-6">
