@@ -6,15 +6,15 @@ import { Button } from "@/components/ui/button";
  */
 const LatestFeaturesSection = () => {
   return (
-    <section className="py-20 bg-[#a3adf4] text-white">
+    <section className="py-20 bg-[#a3adf4] text-black">
       <div className="container mx-auto px-4">
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-7xl font-bold mb-8">Join FemRide</h2>
-          <p className="text-lg text-gray-100 max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-black/90 max-w-3xl mx-auto mb-8">
             Werde ein Teil der FemRide Bewegung
           </p>
-          <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+          <p className="text-xl text-black/90 max-w-3xl mx-auto">
             Für Sichere Mobilität, mehr Chancen, eine gerechtere Zukunft!
           </p>
         </div>
@@ -32,7 +32,7 @@ const LatestFeaturesSection = () => {
               sicheren Job mit attraktiven Einkommensperspektiven!
             </p>
             <Button 
-              className="bg-[#fa9de3] hover:bg-[#e989cc] text-white font-medium px-6 py-4"
+              className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-medium px-6 py-4"
               onClick={() => {
                 const contactSection = document.getElementById('contact-section');
                 if (contactSection) contactSection.scrollIntoView({behavior: 'smooth'});
@@ -53,7 +53,7 @@ const LatestFeaturesSection = () => {
               Flottenauslastung mit FemRide!
             </p>
             <Button 
-              className="bg-[#fa9de3] hover:bg-[#e989cc] text-white font-medium px-6 py-4"
+              className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-medium px-6 py-4"
               onClick={() => {
                 const contactSection = document.getElementById('contact-section');
                 if (contactSection) contactSection.scrollIntoView({behavior: 'smooth'});

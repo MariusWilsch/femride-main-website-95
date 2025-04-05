@@ -18,7 +18,7 @@ const HeroSection = () => {
       </p>
       
       <div className="flex flex-col items-center mt-10">
-        <Button className="px-8 py-6 text-lg bg-[#fa9de3] hover:bg-[#e989cc] text-white rounded-lg">
+        <Button className="px-8 py-6 text-lg bg-[#fa9de3] hover:bg-[#e989cc] text-black rounded-lg">
           Get the FemRide app
         </Button>
         <p className="text-lg text-[#fa9de3] font-medium mt-3">Coming soon - Not yet available</p>

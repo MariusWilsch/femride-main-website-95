@@ -28,7 +28,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-20 bg-[#a3adf4] text-white" id="contact-section">
+    <section className="py-20 bg-[#a3adf4] text-black" id="contact-section">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Interessiert an einer Zusammenarbeit mit FemRide?</h2>
@@ -45,19 +45,19 @@ const ContactSection = () => {
           <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 gap-6">
               <div>
-                <Label htmlFor="name" className="text-white mb-2 block">Name</Label>
+                <Label htmlFor="name" className="text-black mb-2 block">Name</Label>
                 <Input 
                   id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="bg-white/5 border-white/20 text-white placeholder:text-white/50"
+                  className="bg-white/5 border-black/20 text-black placeholder:text-black/50"
                 />
               </div>
 
               <div>
-                <Label htmlFor="email" className="text-white mb-2 block">Email</Label>
+                <Label htmlFor="email" className="text-black mb-2 block">Email</Label>
                 <Input 
                   id="email"
                   name="email"
@@ -65,24 +65,24 @@ const ContactSection = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="bg-white/5 border-white/20 text-white placeholder:text-white/50"
+                  className="bg-white/5 border-black/20 text-black placeholder:text-black/50"
                 />
               </div>
 
               <div>
-                <Label htmlFor="phone" className="text-white mb-2 block">Phone</Label>
+                <Label htmlFor="phone" className="text-black mb-2 block">Phone</Label>
                 <Input 
                   id="phone"
                   name="phone"
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="bg-white/5 border-white/20 text-white placeholder:text-white/50"
+                  className="bg-white/5 border-black/20 text-black placeholder:text-black/50"
                 />
               </div>
 
               <div>
-                <Label htmlFor="message" className="text-white mb-2 block">Message</Label>
+                <Label htmlFor="message" className="text-black mb-2 block">Message</Label>
                 <Textarea 
                   id="message"
                   name="message"
@@ -90,11 +90,11 @@ const ContactSection = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="bg-white/5 border-white/20 text-white placeholder:text-white/50"
+                  className="bg-white/5 border-black/20 text-black placeholder:text-black/50"
                 />
               </div>
 
-              <Button className="w-full bg-[#fa9de3] hover:bg-[#e989cc] text-white">
+              <Button className="w-full bg-[#fa9de3] hover:bg-[#e989cc] text-black">
                 Absenden
               </Button>
             </div>

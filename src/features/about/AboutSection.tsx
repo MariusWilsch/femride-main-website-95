@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
  */
 const AboutSection = () => {
   return (
-    <section className="py-20 bg-[#fa9de3] text-white">
+    <section className="py-20 bg-[#fa9de3] text-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="text-white/90 mb-4 font-medium">About us</p>
+          <p className="text-black/90 mb-4 font-medium">About us</p>
           
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold max-w-5xl mx-auto mb-8">
             Was sagen die Frauen zu FemRide?
