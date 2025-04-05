@@ -41,7 +41,7 @@ export const Footer = () => {
                 className="text-gray-400 hover:text-[#fa9de3] transition-colors transform hover:scale-110">
                 <Facebook size={20} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" 
+              <a href="https://www.instagram.com/femride_de" target="_blank" rel="noopener noreferrer" 
                 className="text-gray-400 hover:text-[#fa9de3] transition-colors transform hover:scale-110">
                 <Instagram size={20} />
               </a>
@@ -49,7 +49,7 @@ export const Footer = () => {
                 className="text-gray-400 hover:text-[#fa9de3] transition-colors transform hover:scale-110">
                 <Twitter size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" 
+              <a href="https://www.linkedin.com/company/femridedeutschland/" target="_blank" rel="noopener noreferrer" 
                 className="text-gray-400 hover:text-[#fa9de3] transition-colors transform hover:scale-110">
                 <Linkedin size={20} />
               </a>
