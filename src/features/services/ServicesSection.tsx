@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { useEffect, useState, useRef } from "react";
 import { ChevronRight } from "lucide-react";
@@ -75,10 +74,12 @@ const ServicesSection = () => {
       id="services"
     >
       {/* Background gradient that matches hero section */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-gray-50 z-[-1]"></div>
-      <div className="absolute -top-40 left-0 right-0 w-full h-96 bg-gradient-to-b from-white via-white to-transparent z-[-1]"></div>
+      <div className="absolute -z-10 inset-0 w-full h-full">
+        <div className="absolute w-[80%] h-[70%] left-1/2 top-1/4 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#fa9de3]/20 to-[#a3adf4]/20 filter blur-[80px]"></div>
+      </div>
+      {/* Keep some of the previous background elements for depth */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-[#a3adf4]/10 rounded-full filter blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#a3adf4]/10 rounded-full filter blur-3xl"></div>
+      <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#fa9de3]/10 rounded-full filter blur-3xl"></div>
       
       <div className="container mx-auto px-4">
         {/* Section header with animations */}
@@ -132,7 +133,7 @@ const ServicesSection = () => {
                   onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
                 >
                   <span className="flex items-center justify-center w-full">
-                    <span className="tracking-wide">{card.buttonText}</span>
+                    <span className="tracking-wide font-bold">{card.buttonText}</span>
                     <ChevronRight className="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                   </span>
                 </Button>
