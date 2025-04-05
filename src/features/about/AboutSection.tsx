@@ -37,21 +37,21 @@ const AboutSection = () => {
   const testimonialCards = [
     {
       id: 1,
-      icon: <User size={28} color="white" />,
+      icon: <User size={28} color="#fa9de3" />,
       title: '„Endlich eine sichere Alternative!"',
       stats: "80%",
       description: "der Frauen fühlen sich mit einer Ride-Hailing-Plattform, exklusiv für Frauen sicherer. FemRide schafft Vertrauen durch geprüfte Fahrerinnen und Schutzmaßnahmen für Frauen und Fahrerinnen."
     },
     {
       id: 2,
-      icon: <Shield size={28} color="white" />,
+      icon: <Shield size={28} color="#fa9de3" />,
       title: '„Keine Angst mehr vor Übergriffen."',
       stats: "75%",
       description: "der befragten Frauen wollen FemRide nutzen, um sich vor Belästigung und Diskriminierung zu schützen. Unsere Fahrten sind exklusiv von Frauen für Frauen."
     },
     {
       id: 3,
-      icon: <Sparkles size={28} color="white" />,
+      icon: <Sparkles size={28} color="#fa9de3" />,
       title: '„Genau das hat gefehlt!"',
       stats: "83%",
       description: "der Frauen sind überzeugt, dass FemRide eine nachhaltige Lösung für mehr Sicherheit im Ride-Hailing bietet. Eine Plattform, die Frauen mehr Freiheit und Unabhängigkeit denn je ermöglicht."
@@ -78,11 +78,11 @@ const AboutSection = () => {
             ABOUT US
             <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#a3adf4]"></span>
           </p>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">
+          <h2 className="text-4xl md:text-6xl font-bold text-black mb-8">
             Was sagen die Frauen zu FemRide?
           </h2>
-          <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
-          <p className="text-white/90 max-w-2xl mx-auto text-lg">
+          <div className="w-24 h-1 bg-black mx-auto mb-8"></div>
+          <p className="text-black/80 max-w-2xl mx-auto text-lg">
             FemRide macht den Unterschied! – Eine Umfrage mit über 100 Teilnehmer:innen, davon 90 % Frauen, zeigt: 
             Sichere Mobilität ist ein dringendes Bedürfnis.
           </p>
@@ -101,21 +101,21 @@ const AboutSection = () => {
               style={{ transitionDelay: `${200 * (index + 1)}ms` }}
             >
               <div className="p-6 flex flex-col h-full">
-                {/* Icon background changed to a deeper blue color */}
-                <div className="w-12 h-12 rounded-full bg-[#a3adf4] flex items-center justify-center mb-4">
+                {/* Icon background changed to white */}
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-4">
                   {card.icon}
                 </div>
                 
-                {/* Card title */}
-                <h3 className="text-2xl font-bold mb-4 text-white text-center">{card.title}</h3>
+                {/* Card title - changed to black */}
+                <h3 className="text-2xl font-bold mb-4 text-black text-center">{card.title}</h3>
                 
-                {/* Statistics highlight */}
+                {/* Statistics highlight - changed to black */}
                 <div className="mb-6 text-center">
-                  <div className="text-5xl font-bold text-white">{card.stats}</div>
+                  <div className="text-5xl font-bold text-black">{card.stats}</div>
                 </div>
                 
-                {/* Card description */}
-                <p className="text-white/90 text-center">{card.description}</p>
+                {/* Card description - changed to darker color */}
+                <p className="text-black/80 text-center">{card.description}</p>
               </div>
             </div>
           ))}
