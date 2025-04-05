@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '../shared/Navbar';
 import { Footer } from '../shared/Footer';
@@ -210,109 +211,13 @@ const PrivacyPolicy = () => {
               <p className="mb-4">Your data may also be processed by staff who work for us or for one of our suppliers. Such staff may be engaged in, among other things, the fulfilment of your order and the provision of support services. By submitting your personal data, you agree to this transfer, storing or processing. We will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this privacy policy and relevant regulations. Once we have received your information, we will use strict procedures and security features to prevent unauthorised access.</p>
               
               <p className="mb-4">The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.</p>
-              
-              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">Disclosure of Your Personal Data</h3>
-              
-              <h4 className="text-lg font-semibold mt-4 mb-2 text-gray-800">Business Transactions</h4>
-              <p className="mb-4">If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
-              
-              <h4 className="text-lg font-semibold mt-4 mb-2 text-gray-800">Law enforcement</h4>
-              <p className="mb-4">Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
-              
-              <h4 className="text-lg font-semibold mt-4 mb-2 text-gray-800">Other legal requirements</h4>
-              <p className="mb-4">The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
-              
-              <ul className="list-disc pl-6 mt-2 mb-4">
-                <li className="mb-1">Comply with a legal obligation</li>
-                <li className="mb-1">Protect and defend the rights or property of the Company</li>
-                <li className="mb-1">Prevent or investigate possible wrongdoing in connection with the Service</li>
-                <li className="mb-1">Protect the personal safety of Users of the Service or the public</li>
-                <li className="mb-1">Protect against legal liability</li>
-              </ul>
-              
-              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">Security of Your Personal Data</h3>
-              <p className="mb-4">The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
-              
-              <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800">Detailed Information on the Processing of Your Personal Data</h2>
-              
-              <p className="mb-4">The Service Providers We use may have access to Your Personal Data. These third-party vendors collect, store, use, process and transfer information about Your activity on Our Service in accordance with their Privacy Policies.</p>
-              
-              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">Analytics</h3>
-              <p className="mb-4">We may use third-party Service providers to monitor and analyze the use of our Service.</p>
-              
-              <p className="mb-2"><strong>Google Analytics</strong></p>
-              
-              <p className="mb-4">Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network.</p>
-              
-              <p className="mb-4">You can opt-out of having made your activity on the Service available to Google Analytics by installing the Google Analytics opt-out browser add-on. The add-on prevents the Google Analytics JavaScript (ga.js, analytics.js and dc.js) from sharing information with Google Analytics about visits activity.</p>
-              
-              <p className="mb-4">You may opt-out of certain Google Analytics features through your mobile device settings, such as your device advertising settings or by following the instructions provided by Google in their Privacy Policy: https://policies.google.com/privacy</p>
-              
-              <p className="mb-4">For more information on the privacy practices of Google, please visit the Google Privacy & Terms web page: https://policies.google.com/privacy</p>
-              
-              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">Email Marketing</h3>
-              <p className="mb-4">We may use Your Personal Data to contact You with newsletters, marketing or promotional materials and other information that may be of interest to You. You may opt-out of receiving any, or all, of these communications from Us by following the unsubscribe link or instructions provided in any email We send or by contacting Us.</p>
-              
-              <p className="mb-4">We may use Email Marketing Service Providers to manage and send emails to You.</p>
-              
-              <p className="mb-2"><strong>MailerSend</strong></p>
-              
-              <p className="mb-4">MailerSend is an email marketing sending service.</p>
-              
-              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">Payments</h3>
-              <p className="mb-4">We may provide paid products and/or services within the Service. In that case, we may use third-party services for payment processing (e.g. payment processors).</p>
-              
-              <p className="mb-4">We will not store or collect Your payment card details. That information is provided directly to Our third-party payment processors whose use of Your personal information is governed by their Privacy Policy. These payment processors adhere to the standards set by PCI-DSS as managed by the PCI Security Standards Council, which is a joint effort of brands like Visa, Mastercard, American Express and Discover. PCI-DSS requirements help ensure the secure handling of payment information.</p>
-              
-              <p className="mb-2"><strong>Apple Store In-App Payments</strong></p>
-              
-              <p className="mb-4">Their Privacy Policy can be viewed at https://www.apple.com/legal/privacy/en-ww/</p>
-              
-              <p className="mb-2"><strong>Google Play In-App Payments</strong></p>
-              
-              <p className="mb-4">Their Privacy Policy can be viewed at https://www.google.com/policies/privacy/</p>
-              
-              <p className="mb-4">When You use Our Service to pay a product and/or service via bank transfer, We may ask You to provide information to facilitate this transaction and to verify Your identity.</p>
-              
-              <h3 className="text-xl font-semibold mt-6 mb-3 text-gray-800">Behavioral Remarketing</h3>
-              <p className="mb-4">The Company uses remarketing services to advertise to You after You accessed or visited our Service. We and Our third-party vendors use cookies and non-cookie technologies to help Us recognize Your Device and understand how You use our Service so that We can improve our Service to reflect Your interests and serve You advertisements that are likely to be of more interest to You.</p>
-              
-              <p className="mb-4">These third-party vendors collect, store, use, process and transfer information about Your activity on Our Service in accordance with their Privacy Policies and to enable Us to:</p>
-              
-              <ul className="list-disc pl-6 mt-2 mb-4">
-                <li className="mb-1">Measure and analyze traffic and browsing activity on Our Service</li>
-                <li className="mb-1">Show advertisements for our products and/or services to You on third-party websites or apps</li>
-                <li className="mb-1">Measure and analyze the performance of Our advertising campaigns</li>
-              </ul>
-              
-              <p className="mb-4">Some of these third-party vendors may use non-cookie technologies that may not be impacted by browser settings that block cookies. Your browser may not permit You to block such technologies. You can use the following third-party tools to decline the collection and use of information for the purpose of serving You interest-based advertising:</p>
-              
-              <ul className="list-disc pl-6 mt-2 mb-4">
-                <li className="mb-1">The NAI's opt-out platform: http://www.networkadvertising.org/choices/</li>
-                <li className="mb-1">The EDAA's opt-out platform http://www.youronlinechoices.com/</li>
-                <li className="mb-1">The DAA's opt-out platform: http://optout.aboutads.info/?c=2&lang=EN</li>
-              </ul>
-              
-              <p className="mb-4">You may opt-out of all personalized advertising by enabling privacy features on Your mobile device such as Limit Ad Tracking (iOS) and Opt Out of Ads Personalization (Android). See Your mobile device Help system for more information.</p>
-              
-              <p className="mb-4">We may share information, such as hashed email addresses (if available) or other online identifiers collected on Our Service with these third-party vendors. This allows Our third-party vendors to recognize and deliver You ads across devices and browsers. To read more about the technologies used by these third-party vendors and their cross-device capabilities please refer to the Privacy Policy of each vendor listed below.</p>
-              
-              <p className="mb-4">The third-party vendors We use are:</p>
-              
-              <p className="mb-2"><strong>Google Ads (AdWords)</strong></p>
-              
-              <p className="mb-4">Google Ads (AdWords) remarketing service is provided by Google Inc.</p>
-              
-              <p className="mb-4">You can opt-out of Google Analytics for Display Advertising and customise the Google Display Network ads by visiting the Google Ads Settings page: http://www.google.com/settings/ads</p>
-              
-              <p className="mb-4">Google also recommends installing the Google Analytics Opt-out Browser Add-on – https://tools.google.com/dlpage/gaoptout – for your web browser. Google Analytics Opt-out Browser Add-on provides visitors with the ability to prevent their data from being collected and used by Google Analytics.</p>
-              
-              <p className="mb-4">For more information on the privacy practices of Google, please visit the Google Privacy & Terms web page: https://policies.google.com/privacy</p>
-              
-              <p className="mb-2"><strong>Facebook</strong></p>
-              
-              <p className="mb-4">Facebook remarketing service is provided by Facebook Inc.</p>
-              
-              <p className="mb-4">You can learn more about interest-based advertising from Facebook by visiting this page: https://www.facebook.com/help/516147308587266</p>
-              
-              <p className="mb-4">To opt-out from Facebook's interest-based ads, follow these instructions from Facebook: https://www.facebook.com/help/568137493
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default PrivacyPolicy;
