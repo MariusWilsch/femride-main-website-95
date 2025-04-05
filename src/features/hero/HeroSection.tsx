@@ -7,7 +7,7 @@ const HeroSection = () => {
   const { t } = useLanguage();
   
   return (
-    <div className="relative min-h-[90vh] flex items-center">
+    <div className="relative min-h-[90vh] flex items-center justify-center">
       {/* Hero background with the woman in car image */}
       <div className="absolute inset-0 w-full h-full">
         <img 
@@ -18,11 +18,11 @@ const HeroSection = () => {
       </div>
       
       {/* Content overlay with gradient for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
       
       {/* Hero content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-lg text-left">
+      <div className="container mx-auto px-4 relative z-10 text-center">
+        <div className="max-w-lg mx-auto">
           <div className="inline-block bg-white/90 backdrop-blur-sm border border-pink-200 rounded-full px-6 py-2 shadow-md mb-6">
             <p className="text-[#fa9de3] font-bold text-lg">{t('heroTagline')}</p>
           </div>
@@ -36,7 +36,7 @@ const HeroSection = () => {
             {t('heroSubtitle')}
           </p>
           
-          <div className="flex flex-col items-start space-y-4">
+          <div className="flex flex-col items-center space-y-4">
             <Button 
               className="px-8 py-6 text-lg bg-[#fa9de3] hover:bg-[#e989cc] text-black rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
