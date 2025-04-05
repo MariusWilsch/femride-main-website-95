@@ -1,3 +1,6 @@
+
+@import url('https://cdn.jsdelivr.net/npm/gilroy-font@1.0.0/stylesheet.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +99,6 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-gilroy;
   }
 }
