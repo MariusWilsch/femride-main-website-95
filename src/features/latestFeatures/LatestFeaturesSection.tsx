@@ -1,6 +1,6 @@
 
-import { Button } from "@/components/ui/button";
 import { useEffect, useState, useRef } from "react";
+import { Button } from "@/components/ui/button";
 
 /**
  * LatestFeaturesSection component highlighting driver and fleet partner opportunities
@@ -31,19 +31,27 @@ const LatestFeaturesSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-[#a3adf4] text-black relative overflow-hidden">
+    <section ref={sectionRef} className="py-20 relative overflow-hidden bg-[#a3adf4]/20">
       {/* Background decorative elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full filter blur-3xl transform -translate-y-1/2 translate-x-1/3" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#fa9de3]/10 rounded-full filter blur-3xl transform translate-y-1/2 -translate-x-1/3" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white to-[#a3adf4]/20 -z-10"></div>
+      <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-[#a3adf4]/10 filter blur-[60px] animate-blob"></div>
+      <div className="absolute bottom-20 left-20 w-80 h-80 rounded-full bg-[#fa9de3]/10 filter blur-[70px] animate-blob animation-delay-2000"></div>
       
       <div className="container mx-auto px-4 relative">
-        {/* Section header */}
-        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          <h2 className="text-5xl md:text-7xl font-bold mb-8">Join FemRide</h2>
-          <p className="text-lg text-black/90 max-w-3xl mx-auto mb-8">
+        {/* Section header with consistent styling */}
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <p className="text-[#a3adf4] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
+            JOIN US
+            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#a3adf4]"></span>
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#222] mb-8">
+            Join FemRide
+          </h2>
+          <div className="w-24 h-1 bg-[#a3adf4] mx-auto mb-8"></div>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
             Werde ein Teil der FemRide Bewegung
           </p>
-          <p className="text-xl text-black/90 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Für Sichere Mobilität, mehr Chancen, eine gerechtere Zukunft!
           </p>
         </div>
@@ -54,12 +62,14 @@ const LatestFeaturesSection = () => {
           }`}
         >
           <div className="bg-black rounded-xl overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-[1.01] hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-            <h3 className="text-white text-2xl font-bold pt-8 px-6">Book a ride in advance</h3>
-            <p className="text-white/80 px-6 py-4 max-w-3xl mx-auto">
-              Planning a trip? Schedule a ride in advance for even more convenient airport 
-              transfers, important meetings, or any occasion that requires punctuality. Simply 
-              enter your details and secure your ride up to 90 days ahead.
-            </p>
+            <div className="p-8">
+              <h3 className="text-white text-2xl font-bold mb-4">Book a ride in advance</h3>
+              <p className="text-white/80 max-w-3xl mx-auto mb-6">
+                Planning a trip? Schedule a ride in advance for even more convenient airport 
+                transfers, important meetings, or any occasion that requires punctuality. Simply 
+                enter your details and secure your ride up to 90 days ahead.
+              </p>
+            </div>
             <div className="relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
               <img 
@@ -71,16 +81,16 @@ const LatestFeaturesSection = () => {
           </div>
         </div>
         
-        {/* Two columns section */}
+        {/* Two columns section with consistent card styling */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
           {/* For Drivers */}
           <div 
-            className={`bg-white/10 backdrop-blur-sm p-8 rounded-xl text-left shadow-lg border border-white/20 transition-all duration-700 delay-400 transform ${
+            className={`bg-white/50 backdrop-blur-sm p-8 rounded-2xl text-left shadow-lg border border-[#a3adf4]/20 transition-all duration-700 delay-400 transform ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
-            } hover:shadow-xl hover:bg-white/20`}
+            } hover:shadow-xl hover:bg-white/60`}
           >
-            <h3 className="text-2xl font-bold mb-4">For female drivers</h3>
-            <p className="text-lg mb-6">
+            <h3 className="text-2xl font-bold mb-4 text-[#222]">For female drivers</h3>
+            <p className="text-lg mb-6 text-gray-700">
               Werde Fahrerin und schließe dich einer FemRide-Flotte in Deutschland an!
               Auf der Suche nach einer Fahrerin-Position in Deutschland? Werde Teil eines Flottenunternehmens, 
               das mit FemRide kooperiert, und fahre für eine Plattform, die Sicherheit, Chancengleichheit und 
@@ -88,7 +98,7 @@ const LatestFeaturesSection = () => {
               sicheren Job mit attraktiven Einkommensperspektiven!
             </p>
             <Button 
-              className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-medium px-6 py-4 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] group"
+              className="bg-[#a3adf4] hover:bg-[#8a93d6] text-black font-medium px-6 py-4 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] group rounded-xl"
               onClick={() => {
                 const contactSection = document.getElementById('contact-section');
                 if (contactSection) contactSection.scrollIntoView({behavior: 'smooth'});
@@ -101,12 +111,12 @@ const LatestFeaturesSection = () => {
           
           {/* For Fleet Partners */}
           <div 
-            className={`bg-white/10 backdrop-blur-sm p-8 rounded-xl text-left shadow-lg border border-white/20 transition-all duration-700 delay-600 transform ${
+            className={`bg-white/50 backdrop-blur-sm p-8 rounded-2xl text-left shadow-lg border border-[#a3adf4]/20 transition-all duration-700 delay-600 transform ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
-            } hover:shadow-xl hover:bg-white/20`}
+            } hover:shadow-xl hover:bg-white/60`}
           >
-            <h3 className="text-2xl font-bold mb-4">For fleet operators</h3>
-            <p className="text-lg mb-6">
+            <h3 className="text-2xl font-bold mb-4 text-[#222]">For fleet operators</h3>
+            <p className="text-lg mb-6 text-gray-700">
               Werde Flottenpartner von FemRide in Deutschland!
               Besitzt du ein Flottenunternehmen und suchst nach neuen, lukrativen Einsatzmöglichkeiten? 
               Kooperiere mit FemRide und werde Teil einer Plattform, die gesellschaftlichen Impact und 
@@ -114,7 +124,7 @@ const LatestFeaturesSection = () => {
               Flottenauslastung mit FemRide!
             </p>
             <Button 
-              className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-medium px-6 py-4 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] group"
+              className="bg-[#a3adf4] hover:bg-[#8a93d6] text-black font-medium px-6 py-4 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] group rounded-xl"
               onClick={() => {
                 const contactSection = document.getElementById('contact-section');
                 if (contactSection) contactSection.scrollIntoView({behavior: 'smooth'});
