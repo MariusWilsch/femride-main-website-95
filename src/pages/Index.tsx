@@ -4,7 +4,7 @@ import Navbar from '../shared/Navbar';
 import HeroSection from '../features/hero/HeroSection';
 import ServicesSection from '../features/services/ServicesSection';
 import AboutSection from '../features/about/AboutSection';
-import TestimonialSection from '../features/testimonial/TestimonialSection';
+import FounderSection from '../features/founder/FounderSection';
 import LatestFeaturesSection from '../features/latestFeatures/LatestFeaturesSection';
 import FAQSection from '../features/faq/FAQSection';
 import ContactSection from '../features/contact/ContactSection';
@@ -19,7 +19,7 @@ const Index = () => {
         <HeroSection />
         <ServicesSection />
         <AboutSection />
-        <TestimonialSection />
+        <FounderSection />
         <LatestFeaturesSection />
         <FAQSection />
         <ContactSection />
