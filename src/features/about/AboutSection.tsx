@@ -37,21 +37,21 @@ const AboutSection = () => {
     {
       id: 1,
       icon: <User size={28} />,
-      title: "„Endlich eine sichere Alternative!"",
+      title: '„Endlich eine sichere Alternative!"',
       stats: "80%",
       description: "der Frauen fühlen sich mit einer Ride-Hailing-Plattform, exklusiv für Frauen sicherer. FemRide schafft Vertrauen durch geprüfte Fahrerinnen und Schutzmaßnahmen für Frauen und Fahrerinnen."
     },
     {
       id: 2,
       icon: <Shield size={28} />,
-      title: "„Keine Angst mehr vor Übergriffen."",
+      title: '„Keine Angst mehr vor Übergriffen."',
       stats: "75%",
       description: "der befragten Frauen wollen FemRide nutzen, um sich vor Belästigung und Diskriminierung zu schützen. Unsere Fahrten sind exklusiv von Frauen für Frauen."
     },
     {
       id: 3,
       icon: <Sparkles size={28} />,
-      title: "„Genau das hat gefehlt!"",
+      title: '„Genau das hat gefehlt!"',
       stats: "83%",
       description: "der Frauen sind überzeugt, dass FemRide eine nachhaltige Lösung für mehr Sicherheit im Ride-Hailing bietet. Eine Plattform, die Frauen mehr Freiheit und Unabhängigkeit denn je ermöglicht."
     }
