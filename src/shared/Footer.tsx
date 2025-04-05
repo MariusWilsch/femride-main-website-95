@@ -60,43 +60,43 @@ export const Footer = () => {
         {/* Subtle divider */}
         <Separator className="bg-gray-800 my-10" />
         
-        {/* Impressum section with cleaner layout */}
+        {/* Impressum section with consistent layout */}
         <div className="pb-6">
           <h2 className="text-xl font-bold mb-10 text-center">{t('footerImpressum')}</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-left max-w-4xl mx-auto">
-            {/* Company info */}
-            <div className="space-y-4">
-              <p className="font-semibold text-lg mb-4">FemRide UG</p>
-              <div className="flex items-start space-x-3 text-gray-300">
-                <span className="text-[#fa9de3]">📍</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 max-w-4xl mx-auto">
+            {/* Left column - Company info */}
+            <div>
+              <h3 className="font-semibold text-lg mb-4">FemRide UG</h3>
+              <div className="flex items-start space-x-3 text-gray-300 mb-3">
+                <span className="text-[#fa9de3] mt-0.5">📍</span>
                 <p>Adresse: Waldstraße 222A, 12527 Berlin</p>
               </div>
-              <div className="flex items-start space-x-3 text-gray-300">
-                <span className="text-[#fa9de3]">📧</span>
+              <div className="flex items-start space-x-3 text-gray-300 mb-3">
+                <span className="text-[#fa9de3] mt-0.5">📧</span>
                 <p>E-Mail: <a href="mailto:info@femride.de" className="text-[#fa9de3] hover:underline">info@femride.de</a></p>
               </div>
               <div className="flex items-start space-x-3 text-gray-300">
-                <span className="text-[#fa9de3]">🌐</span>
+                <span className="text-[#fa9de3] mt-0.5">🌐</span>
                 <p>Webseite: <a href="https://www.femride.de" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">www.femride.de</a></p>
               </div>
             </div>
             
-            {/* Legal info */}
-            <div className="space-y-6">
-              <div className="space-y-2">
-                <p className="font-semibold text-white">Vertreten durch:</p>
+            {/* Right column - Legal info */}
+            <div>
+              <div className="mb-4">
+                <h3 className="font-semibold text-white mb-2">Vertreten durch:</h3>
                 <p className="text-gray-300">Aykut Atli (Geschäftsführer)</p>
               </div>
               
-              <div className="space-y-2">
-                <p className="font-semibold text-white">Handelsregister:</p>
+              <div className="mb-4">
+                <h3 className="font-semibold text-white mb-2">Handelsregister:</h3>
                 <p className="text-gray-300">Amtsgericht Berlin (Charlottenburg)</p>
                 <p className="text-gray-300">HRB 272631</p>
               </div>
               
-              <div className="space-y-2">
-                <p className="font-semibold text-white">Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV:</p>
+              <div>
+                <h3 className="font-semibold text-white mb-2">Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV:</h3>
                 <p className="text-gray-300">Aykut Atli, Waldstraße 222A, 12527 Berlin</p>
               </div>
             </div>
