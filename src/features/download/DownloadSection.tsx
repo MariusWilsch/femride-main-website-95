@@ -15,7 +15,7 @@ const DownloadSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-5xl md:text-7xl font-bold mb-4">Download our apps</h2>
           <p className="text-lg text-gray-300">
-            Scan the QR code with your phone camera to download the FemRide app.
+            Coming soon to Google Play & App Store
           </p>
         </div>
 
@@ -58,12 +58,18 @@ const DownloadSection = () => {
 
             {/* App Store buttons */}
             <div className="flex flex-wrap gap-4">
-              <Button className="bg-white hover:bg-gray-100 text-black rounded-md font-medium px-6 py-5 text-base">
-                App Store
-              </Button>
-              <Button className="bg-white hover:bg-gray-100 text-black rounded-md font-medium px-6 py-5 text-base">
-                Google Play
-              </Button>
+              <div className="relative">
+                <Button className="bg-white hover:bg-gray-100 text-black rounded-md font-medium px-6 py-5 text-base opacity-60 pointer-events-none">
+                  App Store
+                </Button>
+                <div className="absolute -top-1.5 -right-1.5 bg-[#fa9de3] text-xs font-bold px-2 py-1 rounded-full">Soon</div>
+              </div>
+              <div className="relative">
+                <Button className="bg-white hover:bg-gray-100 text-black rounded-md font-medium px-6 py-5 text-base opacity-60 pointer-events-none">
+                  Google Play
+                </Button>
+                <div className="absolute -top-1.5 -right-1.5 bg-[#fa9de3] text-xs font-bold px-2 py-1 rounded-full">Soon</div>
+              </div>
             </div>
           </div>
         </div>

@@ -4,9 +4,10 @@ import Navbar from '../shared/Navbar';
 import HeroSection from '../features/hero/HeroSection';
 import ServicesSection from '../features/services/ServicesSection';
 import AboutSection from '../features/about/AboutSection';
-import CitiesSection from '../features/cities/CitiesSection';
+import TestimonialSection from '../features/testimonial/TestimonialSection';
 import LatestFeaturesSection from '../features/latestFeatures/LatestFeaturesSection';
-import EarnSection from '../features/earn/EarnSection';
+import FAQSection from '../features/faq/FAQSection';
+import ContactSection from '../features/contact/ContactSection';
 import DownloadSection from '../features/download/DownloadSection';
 import { Footer } from '../shared/Footer';
 
@@ -18,9 +19,10 @@ const Index = () => {
         <HeroSection />
         <ServicesSection />
         <AboutSection />
-        <CitiesSection />
+        <TestimonialSection />
         <LatestFeaturesSection />
-        <EarnSection />
+        <FAQSection />
+        <ContactSection />
         <DownloadSection />
       </main>
       <Footer />
