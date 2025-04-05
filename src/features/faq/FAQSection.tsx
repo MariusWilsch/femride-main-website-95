@@ -48,7 +48,9 @@ const FAQSection = () => {
   // Custom accordion styles that match the image
   const accordionItemClass = "border-0 border-b border-gray-200";
   const accordionTriggerClass = "py-6 text-lg font-medium flex items-center justify-between hover:no-underline";
-  const accordionContentClass = "pb-6 text-gray-600";
+  const accordionContentClass = "pb-6 prose max-w-none text-gray-600";
+  const listItemClass = "flex items-start mb-2";
+  const listBulletClass = "min-w-5 text-[#fa9de3] mr-2";
 
   return (
     <section 
@@ -121,7 +123,7 @@ const FAQSection = () => {
                   Was ist FemRide?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  FemRide ist Europas erste Ride-Hailing-Plattform, die ausschließlich für Frauen – für mehr Sicherheit und Vertrauen unterwegs.
+                  <p>FemRide ist Europas erste Ride-Hailing-Plattform, die ausschließlich für Frauen – für mehr Sicherheit und Vertrauen unterwegs.</p>
                 </AccordionContent>
               </AccordionItem>
               
@@ -130,7 +132,7 @@ const FAQSection = () => {
                   In welchen Städten ist FemRide verfügbar?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  FemRide startet in Berlin und wird bald auch in weiteren deutschen Städten verfügbar sein. Schrittweise erfolgt der Ausbau in weitere Regionen und Länder. 🚀
+                  <p>FemRide startet in Berlin und wird bald auch in weiteren deutschen Städten verfügbar sein. Schrittweise erfolgt der Ausbau in weitere Regionen und Länder. 🚀</p>
                 </AccordionContent>
               </AccordionItem>
               
@@ -139,7 +141,7 @@ const FAQSection = () => {
                   Wie kann ich eine Fahrt buchen?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  Lade die FemRide-App herunter, registriere dich und buche deine Fahrt in wenigen Klicks – sicher und einfach.
+                  <p>Lade die FemRide-App herunter, registriere dich und buche deine Fahrt in wenigen Klicks – sicher und einfach.</p>
                 </AccordionContent>
               </AccordionItem>
               
@@ -148,7 +150,7 @@ const FAQSection = () => {
                   Welche Sicherheitsmaßnahmen gibt es?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  Unsere App bietet Live-Tracking, Notfall-Button und eine sichere Kommunikation zwischen Fahrerinnen und Passagierinnen. Zusätzlich identifizieren wir mit einem modernen System ob es sich bei dem Fahrgast und Fahrerin wirklich um Frauen handelt und garantieren damit die Sicherheit für die Benutzerin von FemRide.
+                  <p>Unsere App bietet Live-Tracking, Notfall-Button und eine sichere Kommunikation zwischen Fahrerinnen und Passagierinnen. Zusätzlich identifizieren wir mit einem modernen System ob es sich bei dem Fahrgast und Fahrerin wirklich um Frauen handelt und garantieren damit die Sicherheit für die Benutzerin von FemRide.</p>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -166,7 +168,7 @@ const FAQSection = () => {
                   Wie kann ich Fahrerin bei FemRide werden?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  Registriere dich in der FemRide-App oder auf unserer Webseite und wähle ein Flottenunternehmen, mit dem du zusammenarbeiten möchtest.
+                  <p>Registriere dich in der FemRide-App oder auf unserer Webseite und wähle ein Flottenunternehmen, mit dem du zusammenarbeiten möchtest.</p>
                 </AccordionContent>
               </AccordionItem>
               
@@ -175,11 +177,20 @@ const FAQSection = () => {
                   Welche Voraussetzungen muss ich erfüllen?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  Die Anforderungen hängen von deinem Flottenpartner ab. In der Regel benötigst du:
-                  <ul className="list-disc pl-6 mt-2">
-                    <li>Einen gültigen Führerschein & Personenbeförderungsschein (P-Schein)</li>
-                    <li>Ein polizeiliches Führungszeugnis</li>
-                    <li>Ein Mindestalter von 21 Jahren</li>
+                  <p>Die Anforderungen hängen von deinem Flottenpartner ab. In der Regel benötigst du:</p>
+                  <ul className="list-none pl-0 mt-3 space-y-2">
+                    <li className={listItemClass}>
+                      <span className={listBulletClass}>•</span>
+                      <span>Einen gültigen Führerschein & Personenbeförderungsschein (P-Schein)</span>
+                    </li>
+                    <li className={listItemClass}>
+                      <span className={listBulletClass}>•</span>
+                      <span>Ein polizeiliches Führungszeugnis</span>
+                    </li>
+                    <li className={listItemClass}>
+                      <span className={listBulletClass}>•</span>
+                      <span>Ein Mindestalter von 21 Jahren</span>
+                    </li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
@@ -189,7 +200,7 @@ const FAQSection = () => {
                   Wie sehen die Verdienstmöglichkeiten aus?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  Dein Verdienst hängt vom Flottenpartner und deinem Arbeitsmodell ab. In der Regel gibt es transparente Vergütungsmodelle mit fairen Einnahmen pro Fahrt. Zusätzlich gibt es einen Bonus für eine Anzahl von Fahrten, die dir FemRide zusätzlich zu deinem Gehalt auszahlt.
+                  <p>Dein Verdienst hängt vom Flottenpartner und deinem Arbeitsmodell ab. In der Regel gibt es transparente Vergütungsmodelle mit fairen Einnahmen pro Fahrt. Zusätzlich gibt es einen Bonus für eine Anzahl von Fahrten, die dir FemRide zusätzlich zu deinem Gehalt auszahlt.</p>
                 </AccordionContent>
               </AccordionItem>
               
@@ -198,7 +209,7 @@ const FAQSection = () => {
                   Brauche ich ein eigenes Auto?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  Nein, du fährst mit den Fahrzeugen deines Flottenpartners. Die Bedingungen variieren je nach Partnerunternehmen.
+                  <p>Nein, du fährst mit den Fahrzeugen deines Flottenpartners. Die Bedingungen variieren je nach Partnerunternehmen.</p>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -216,7 +227,7 @@ const FAQSection = () => {
                   Wie kann mein Unternehmen mit FemRide kooperieren?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  Registriere dich als Flottenpartner und bringe deine Fahrzeuge auf die Straße – wir bieten attraktive Einsatzmöglichkeiten!
+                  <p>Registriere dich als Flottenpartner und bringe deine Fahrzeuge auf die Straße – wir bieten attraktive Einsatzmöglichkeiten!</p>
                 </AccordionContent>
               </AccordionItem>
               
@@ -225,7 +236,7 @@ const FAQSection = () => {
                   Welche Vorteile hat eine Partnerschaft mit FemRide?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  Mehr Fahrten & höhere Auslastung, gesellschaftliche Anerkennung und die Vermittlung neuer Fahrerinnen.
+                  <p>Mehr Fahrten & höhere Auslastung, gesellschaftliche Anerkennung und die Vermittlung neuer Fahrerinnen.</p>
                 </AccordionContent>
               </AccordionItem>
               
@@ -234,7 +245,7 @@ const FAQSection = () => {
                   Wie erfolgt die Abrechnung?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  Wir bieten transparente Abrechnungsmodelle mit regelmäßigen Auszahlungen für eine nachhaltige Zusammenarbeit.
+                  <p>Wir bieten transparente Abrechnungsmodelle mit regelmäßigen Auszahlungen für eine nachhaltige Zusammenarbeit.</p>
                 </AccordionContent>
               </AccordionItem>
               
@@ -243,7 +254,7 @@ const FAQSection = () => {
                   Welche finanziellen Vorteile bietet eine Zusammenarbeit mit FemRide?
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  Dank eines fairen Preismodells zahlen Flottenpartner weniger als üblich, um eine langfristige Partnerschaft zu fördern.
+                  <p>Dank eines fairen Preismodells zahlen Flottenpartner weniger als üblich, um eine langfristige Partnerschaft zu fördern.</p>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
