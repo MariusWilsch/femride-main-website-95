@@ -74,12 +74,12 @@ const ServicesSection = () => {
       className="pt-20 pb-32 overflow-hidden relative"
       id="services"
     >
-      {/* Using the exact same background styling as the hero section */}
-      <div className="absolute -z-10 top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80%] h-[70%] rounded-full bg-gradient-to-r from-[#fa9de3]/20 to-[#a3adf4]/20 filter blur-[80px]"></div>
+      {/* Background gradient reversed compared to hero section */}
+      <div className="absolute -z-10 top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80%] h-[70%] rounded-full bg-gradient-to-l from-[#fa9de3]/20 to-[#a3adf4]/20 filter blur-[80px]"></div>
       
-      {/* Adding the blob animations to match hero section */}
-      <div className="absolute bottom-10 left-5 md:left-20 w-20 h-20 rounded-full bg-[#a3adf4]/20 filter blur-lg animate-blob"></div>
-      <div className="absolute top-20 right-5 md:right-20 w-32 h-32 rounded-full bg-[#fa9de3]/20 filter blur-lg animate-blob animation-delay-2000"></div>
+      {/* Repositioned blob animations to match reversed gradient */}
+      <div className="absolute bottom-10 right-5 md:right-20 w-20 h-20 rounded-full bg-[#fa9de3]/20 filter blur-lg animate-blob"></div>
+      <div className="absolute top-20 left-5 md:left-20 w-32 h-32 rounded-full bg-[#a3adf4]/20 filter blur-lg animate-blob animation-delay-2000"></div>
       
       <div className="container mx-auto px-4">
         {/* Section header with animations */}
