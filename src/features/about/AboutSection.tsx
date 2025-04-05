@@ -118,10 +118,9 @@ const AboutSection = () => {
                 {/* Card title */}
                 <h3 className="text-2xl font-bold mb-4 text-black text-center">{card.title}</h3>
                 
-                {/* Statistics highlight - Improved formatting */}
+                {/* Statistics highlight - No underline, equal height */}
                 <div className="mb-6 text-center">
-                  <div className="text-5xl font-bold text-black mb-1">{card.stats}</div>
-                  <div className="w-24 h-0.5 bg-black/40 mx-auto rounded-full"></div>
+                  <div className="text-5xl font-bold text-black">{card.stats}</div>
                 </div>
                 
                 {/* Card description */}
@@ -131,14 +130,14 @@ const AboutSection = () => {
           ))}
         </div>
 
-        {/* CTA button with animation */}
+        {/* CTA button with animation - Updated to match hero and services buttons */}
         <div className={`flex justify-center transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <Button 
-            className="bg-[#85E6E7] hover:bg-[#71d2d3] text-black font-medium rounded-xl px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
+            className="px-8 py-6 text-lg bg-[#a3adf4] hover:bg-[#8a93d6] text-black rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden group"
             onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
           >
-            <span className="relative z-10">Jetzt registrieren und Teil der Bewegung werden</span>
-            <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20 rounded-xl"></span>
+            <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20"></span>
+            <span className="relative">Jetzt registrieren und Teil der Bewegung werden</span>
           </Button>
         </div>
       </div>
