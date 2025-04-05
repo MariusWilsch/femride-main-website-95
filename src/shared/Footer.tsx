@@ -60,30 +60,33 @@ export const Footer = () => {
         {/* Subtle divider */}
         <Separator className="bg-gray-800 my-10" />
         
-        {/* Impressum section with consistent layout */}
+        {/* Impressum section with proper alignment */}
         <div className="pb-6">
           <h2 className="text-xl font-bold mb-10 text-center">{t('footerImpressum')}</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6 max-w-4xl mx-auto">
             {/* Left column - Company info */}
-            <div>
+            <div className="text-left">
               <h3 className="font-semibold text-lg mb-4">FemRide UG</h3>
-              <div className="flex items-start space-x-3 text-gray-300 mb-3">
-                <span className="text-[#fa9de3] mt-0.5">📍</span>
-                <p>Adresse: Waldstraße 222A, 12527 Berlin</p>
+              
+              <div className="flex items-start mb-4">
+                <span className="text-[#fa9de3] mr-3">📍</span>
+                <p className="text-gray-300">Adresse: Waldstraße 222A, 12527 Berlin</p>
               </div>
-              <div className="flex items-start space-x-3 text-gray-300 mb-3">
-                <span className="text-[#fa9de3] mt-0.5">📧</span>
-                <p>E-Mail: <a href="mailto:info@femride.de" className="text-[#fa9de3] hover:underline">info@femride.de</a></p>
+              
+              <div className="flex items-start mb-4">
+                <span className="text-[#fa9de3] mr-3">📧</span>
+                <p className="text-gray-300">E-Mail: <a href="mailto:info@femride.de" className="text-[#fa9de3] hover:underline">info@femride.de</a></p>
               </div>
-              <div className="flex items-start space-x-3 text-gray-300">
-                <span className="text-[#fa9de3] mt-0.5">🌐</span>
-                <p>Webseite: <a href="https://www.femride.de" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">www.femride.de</a></p>
+              
+              <div className="flex items-start">
+                <span className="text-[#fa9de3] mr-3">🌐</span>
+                <p className="text-gray-300">Webseite: <a href="https://www.femride.de" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">www.femride.de</a></p>
               </div>
             </div>
             
             {/* Right column - Legal info */}
-            <div>
+            <div className="text-left">
               <div className="mb-4">
                 <h3 className="font-semibold text-white mb-2">Vertreten durch:</h3>
                 <p className="text-gray-300">Aykut Atli (Geschäftsführer)</p>
