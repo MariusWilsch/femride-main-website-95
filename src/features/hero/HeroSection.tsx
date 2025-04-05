@@ -21,7 +21,7 @@ const HeroSection = () => {
         <Button className="px-8 py-6 text-lg bg-[#fa9de3] hover:bg-[#e989cc] text-black rounded-lg">
           Get the FemRide app
         </Button>
-        <p className="text-lg text-[#fa9de3] font-medium mt-3">Coming soon - Not yet available</p>
+        <p className="text-lg text-[#fa9de3] font-medium mt-3">Coming soon to Google Play & App Store</p>
       </div>
     </main>
   );
