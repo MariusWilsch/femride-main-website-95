@@ -15,7 +15,7 @@ const DownloadSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-5xl md:text-7xl font-bold mb-4">Download our apps</h2>
           <p className="text-lg text-gray-300">
-            Scan the QR code with your phone camera to download the Bolt app.
+            Scan the QR code with your phone camera to download the FemRide app.
           </p>
         </div>
 
@@ -24,7 +24,7 @@ const DownloadSection = () => {
           <div className="md:w-1/2 flex justify-center">
             <img
               src="/lovable-uploads/5f6db923-679e-46c0-ba63-d8212e3d656c.png"
-              alt="Bolt App QR Code"
+              alt="FemRide App QR Code"
               className="w-64 h-64 md:w-80 md:h-80"
             />
           </div>

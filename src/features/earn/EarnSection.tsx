@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 
 /**
- * EarnSection component highlighting different ways to earn money with Bolt
+ * EarnSection component highlighting different ways to earn money with FemRide
  */
 const EarnSection = () => {
   return (
@@ -10,9 +10,9 @@ const EarnSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">Earn money with Bolt</h2>
+          <h2 className="text-5xl md:text-6xl font-bold mb-6">Earn money with FemRide</h2>
           <p className="text-lg text-gray-700 max-w-3xl">
-            Join over 4.5 million partners worldwide that earn with Bolt. For drivers,
+            Join over 4.5 million partners worldwide that earn with FemRide. For drivers,
             couriers, merchants, and fleet owners looking for new ways to boost
             revenue.
           </p>
@@ -28,14 +28,14 @@ const EarnSection = () => {
             />
           </div>
           <div className="w-full md:w-1/2 flex flex-col justify-center">
-            <p className="text-gray-600 mb-2">Earn money as a Bolt driver</p>
+            <p className="text-gray-600 mb-2">Earn money as a FemRide driver</p>
             <h3 className="text-3xl md:text-4xl font-bold mb-4">Drive and earn money</h3>
             <p className="text-lg text-gray-700 mb-6">
               Our 200+ million riders will send you plenty of ride requests.
               When demand is high, you can earn even more.
             </p>
             <div>
-              <Button className="bg-[#2D9D78] hover:bg-[#268f6d] text-white rounded-md px-6 py-5">
+              <Button className="bg-[#e908b0] hover:bg-[#d007a0] text-white rounded-md px-6 py-5">
                 Register to drive
               </Button>
             </div>
@@ -47,12 +47,12 @@ const EarnSection = () => {
           <div className="w-full md:w-1/2">
             <img 
               src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-              alt="Courier with Bolt Food delivery bag" 
+              alt="Courier with FemRide Food delivery bag" 
               className="rounded-xl w-full h-auto object-cover aspect-video"
             />
           </div>
           <div className="w-full md:w-1/2 flex flex-col justify-center">
-            <p className="text-gray-600 mb-2">Become a Bolt courier partner</p>
+            <p className="text-gray-600 mb-2">Become a FemRide courier partner</p>
             <h3 className="text-3xl md:text-4xl font-bold mb-4">Earn with every delivery</h3>
             <p className="text-lg text-gray-700 mb-6">
               You decide when and how often you deliver — weekdays,
@@ -60,7 +60,7 @@ const EarnSection = () => {
               you.
             </p>
             <div>
-              <Button className="bg-[#2D9D78] hover:bg-[#268f6d] text-white rounded-md px-6 py-5">
+              <Button className="bg-[#e908b0] hover:bg-[#d007a0] text-white rounded-md px-6 py-5">
                 Register as a courier
               </Button>
             </div>
@@ -72,7 +72,7 @@ const EarnSection = () => {
           <div className="w-full md:w-1/2">
             <img 
               src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-              alt="Merchant holding a phone with Bolt Food app" 
+              alt="Merchant holding a phone with FemRide Food app" 
               className="rounded-xl w-full h-auto object-cover aspect-video"
             />
           </div>
@@ -84,8 +84,8 @@ const EarnSection = () => {
               restaurants and stores just like yours.
             </p>
             <div>
-              <Button className="bg-[#2D9D78] hover:bg-[#268f6d] text-white rounded-md px-6 py-5">
-                Register with Bolt Food
+              <Button className="bg-[#e908b0] hover:bg-[#d007a0] text-white rounded-md px-6 py-5">
+                Register with FemRide Food
               </Button>
             </div>
           </div>
@@ -96,20 +96,20 @@ const EarnSection = () => {
           <div className="w-full md:w-1/2">
             <img 
               src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-              alt="Woman driver in a Bolt vehicle" 
+              alt="Woman driver in a FemRide vehicle" 
               className="rounded-xl w-full h-auto object-cover aspect-video"
             />
           </div>
           <div className="w-full md:w-1/2 flex flex-col justify-center">
-            <p className="text-gray-600 mb-2">Join Bolt with your fleet and earn more</p>
+            <p className="text-gray-600 mb-2">Join FemRide with your fleet and earn more</p>
             <h3 className="text-3xl md:text-4xl font-bold mb-4">Grow your transport business</h3>
             <p className="text-lg text-gray-700 mb-6">
-              As a fleet owner and Bolt partner, you can manage your
+              As a fleet owner and FemRide partner, you can manage your
               assets from one easy-to-use dashboard and grow your
               transport business.
             </p>
             <div>
-              <Button className="bg-[#2D9D78] hover:bg-[#268f6d] text-white rounded-md px-6 py-5">
+              <Button className="bg-[#e908b0] hover:bg-[#d007a0] text-white rounded-md px-6 py-5">
                 Register your fleet
               </Button>
             </div>

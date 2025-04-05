@@ -14,7 +14,7 @@ const LatestFeaturesSection = () => {
           <h3 className="text-lg mb-4">Latest features</h3>
           <h2 className="text-5xl md:text-7xl font-bold mb-8">Book a ride in advance</h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Planning a trip? Schedule a Bolt ride in advance for even more convenient airport
+            Planning a trip? Schedule a FemRide ride in advance for even more convenient airport
             transfers, important meetings, or any occasion that requires punctuality. Simply
             enter your details and secure your ride up to 90 days ahead.
           </p>

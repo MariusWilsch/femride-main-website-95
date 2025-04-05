@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 /**
- * Section highlighting Bolt's mission to improve cities with data-driven insights
+ * Section highlighting FemRide's mission to improve cities with data-driven insights
  */
 const CitiesSection = () => {
   return (
@@ -38,7 +38,7 @@ const CitiesSection = () => {
                     We're able to provide insights that help local authorities make 
                     their cities more connected and liveable.
                   </p>
-                  <Button className="bg-[#2D9D78] hover:bg-[#248C68] text-white font-medium px-6">
+                  <Button className="bg-[#e908b0] hover:bg-[#d007a0] text-white font-medium px-6">
                     Learn more
                   </Button>
                 </div>
@@ -56,7 +56,7 @@ const CitiesSection = () => {
                     Our data helps city planners identify high-traffic areas and develop 
                     strategies to reduce congestion and pollution.
                   </p>
-                  <Button className="bg-[#2D9D78] hover:bg-[#248C68] text-white font-medium px-6">
+                  <Button className="bg-[#e908b0] hover:bg-[#d007a0] text-white font-medium px-6">
                     Learn more
                   </Button>
                 </div>
@@ -74,7 +74,7 @@ const CitiesSection = () => {
                     We're committed to reducing carbon emissions through electric vehicle 
                     options and optimized routes for all our services.
                   </p>
-                  <Button className="bg-[#2D9D78] hover:bg-[#248C68] text-white font-medium px-6">
+                  <Button className="bg-[#e908b0] hover:bg-[#d007a0] text-white font-medium px-6">
                     Learn more
                   </Button>
                 </div>
@@ -87,7 +87,7 @@ const CitiesSection = () => {
               <ChevronLeft className="h-5 w-5" />
             </CarouselPrevious>
             <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[#2D9D78]"></span>
+              <span className="h-2 w-2 rounded-full bg-[#e908b0]"></span>
               <span className="h-2 w-2 rounded-full bg-white/30"></span>
               <span className="h-2 w-2 rounded-full bg-white/30"></span>
             </div>

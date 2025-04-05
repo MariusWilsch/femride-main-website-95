@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 
 /**
- * Services section component showcasing Bolt's main service offerings
+ * Services section component showcasing FemRide's main service offerings
  */
 const ServicesSection = () => {
   return (
@@ -24,14 +24,14 @@ const ServicesSection = () => {
             <p className="text-lg mb-6">
               Request in seconds, ride in minutes.
             </p>
-            <Button className="bg-[#2D9D78] hover:bg-[#248C68] text-white font-medium px-6">
+            <Button className="bg-[#e908b0] hover:bg-[#d007a0] text-white font-medium px-6">
               Get started
             </Button>
           </div>
           <div className="absolute bottom-0 left-0 right-0">
             <img 
               src="/lovable-uploads/2172695d-46ee-4d18-a288-415a6c9ba8e0.png" 
-              alt="Bolt app on smartphone" 
+              alt="FemRide app on smartphone" 
               className="w-full"
               style={{
                 clipPath: "polygon(0 25%, 100% 0, 100% 100%, 0 100%)"
@@ -47,8 +47,8 @@ const ServicesSection = () => {
             <p className="text-lg mb-6">
               Your favourite food, delivered fast.
             </p>
-            <Button className="bg-[#2D9D78] hover:bg-[#248C68] text-white font-medium px-6">
-              Go to Bolt Food
+            <Button className="bg-[#e908b0] hover:bg-[#d007a0] text-white font-medium px-6">
+              Go to FemRide Food
             </Button>
           </div>
           <div className="mt-12">
@@ -68,7 +68,7 @@ const ServicesSection = () => {
               High-quality car rental made easy.
             </p>
             <Button className="bg-white hover:bg-gray-100 text-[#222] font-medium px-6">
-              Go to Bolt Drive
+              Go to FemRide Drive
             </Button>
           </div>
           <div className="mt-12">
