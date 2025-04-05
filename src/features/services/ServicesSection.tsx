@@ -94,7 +94,7 @@ const ServicesSection = () => {
           </p>
         </div>
         
-        {/* Service cards with enhanced animations */}
+        {/* Service cards with enhanced animations and equal height */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {serviceCards.map((card, index) => (
             <div 
@@ -119,14 +119,14 @@ const ServicesSection = () => {
                 {card.header}
               </div>
 
-              {/* Card content */}
-              <div className="p-8 flex-1">
+              {/* Card content with flex-grow to push button to bottom */}
+              <div className="p-8 flex-grow flex flex-col">
                 <h3 className="text-2xl font-bold mb-4" style={{ color: card.color }}>{card.title}</h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-6 flex-grow">
                   {card.description}
                 </p>
                 <Button 
-                  className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-medium px-6 w-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group" 
+                  className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-medium px-6 w-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group mt-auto" 
                   onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
                 >
                   {card.buttonText}
