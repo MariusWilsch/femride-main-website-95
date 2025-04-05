@@ -19,7 +19,7 @@ const ServicesSection = () => {
             <p className="text-lg mb-6">
               Exklusiv für Frauen, mit verifizierten Fahrerinnen, für maximale Sicherheit und Vertrauen.
             </p>
-            <Button className="bg-[#fa9de3] hover:bg-[#e989cc] text-white font-medium px-6" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+            <Button className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-medium px-6" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
               Jetzt buchen
             </Button>
           </div>
@@ -42,14 +42,14 @@ const ServicesSection = () => {
             <p className="text-lg mb-6">
               Fahre ausschließlich Frauen, verdiene fair und sei Teil von FemRide und unserer Community.
             </p>
-            <Button className="bg-[#fa9de3] hover:bg-[#e989cc] text-white font-medium px-6" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+            <Button className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-medium px-6" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
               Jetzt Fahrerin werden
             </Button>
           </div>
-          <div className="mt-12">
+          <div className="mt-12 h-[360px] overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
-              alt="Person with food delivery" 
+              src="https://images.unsplash.com/photo-1612357735878-79f2b66f5b23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+              alt="Woman driving a car" 
               className="w-full h-full object-cover"
             />
           </div>
@@ -66,10 +66,10 @@ const ServicesSection = () => {
               Jetzt Flottenpartner werden
             </Button>
           </div>
-          <div className="mt-12">
+          <div className="mt-12 h-[360px] overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1621993203242-de582ea76ff9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80" 
-              alt="Person in a car" 
+              src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+              alt="Fleet of cars" 
               className="w-full h-full object-cover"
             />
           </div>
