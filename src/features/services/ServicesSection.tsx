@@ -134,22 +134,22 @@ const ServicesSection = () => {
                   {card.header}
                 </div>
 
-                {/* Text content overlay */}
-                <div className="relative z-10 p-8 flex flex-col h-[400px]">
+                {/* Text content overlay - increased height from 400px to 450px */}
+                <div className="relative z-10 p-8 flex flex-col h-[500px]">
                   <h3 className="text-2xl font-bold mb-4 text-white">{card.title}</h3>
                   <p className="text-white/90 mb-6 flex-grow">
                     {card.description}
                   </p>
                   
-                  {/* Button pushed to the bottom */}
+                  {/* Button pushed to the bottom and made smaller */}
                   <div className="mt-auto">
                     <Button 
-                      className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-semibold text-base px-6 py-6 h-auto w-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group" 
+                      className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-semibold text-sm px-5 py-4 h-auto w-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group" 
                       onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
                     >
                       <span className="flex items-center justify-center w-full">
                         <span className="tracking-wide font-bold">{card.buttonText}</span>
-                        <ChevronRight className="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                        <ChevronRight className="ml-1 w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                       </span>
                     </Button>
                   </div>
