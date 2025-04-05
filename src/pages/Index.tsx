@@ -1,27 +1,29 @@
 
-import Navbar from "@/shared/Navbar";
-import HeroSection from "@/features/hero/HeroSection";
-import ServicesSection from "@/features/services/ServicesSection";
-import CitiesSection from "@/features/cities/CitiesSection";
-import AboutSection from "@/features/about/AboutSection";
-import EarnSection from "@/features/earn/EarnSection";
-import LatestFeaturesSection from "@/features/latestFeatures/LatestFeaturesSection";
-import DownloadSection from "@/features/download/DownloadSection";
+import React from 'react';
+import { Navbar } from '../shared/Navbar';
+import { HeroSection } from '../features/hero/HeroSection';
+import { ServicesSection } from '../features/services/ServicesSection';
+import { AboutSection } from '../features/about/AboutSection';
+import { CitiesSection } from '../features/cities/CitiesSection';
+import { LatestFeaturesSection } from '../features/latestFeatures/LatestFeaturesSection';
+import { EarnSection } from '../features/earn/EarnSection';
+import { DownloadSection } from '../features/download/DownloadSection';
+import { Footer } from '../shared/Footer';
 
-/**
- * Main landing page of the application
- */
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <HeroSection />
-      <ServicesSection />
-      <CitiesSection />
-      <AboutSection />
-      <EarnSection />
-      <LatestFeaturesSection />
-      <DownloadSection />
+      <main className="flex-1">
+        <HeroSection />
+        <ServicesSection />
+        <AboutSection />
+        <CitiesSection />
+        <LatestFeaturesSection />
+        <EarnSection />
+        <DownloadSection />
+      </main>
+      <Footer />
     </div>
   );
 };
