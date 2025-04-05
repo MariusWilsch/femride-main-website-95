@@ -19,6 +19,22 @@ const LatestFeaturesSection = () => {
           </p>
         </div>
         
+        <div className="mb-16 text-center">
+          <div className="bg-black rounded-xl overflow-hidden shadow-xl">
+            <h3 className="text-white text-2xl font-bold pt-8 px-6">Book a ride in advance</h3>
+            <p className="text-white/80 px-6 py-4 max-w-3xl mx-auto">
+              Planning a trip? Schedule a ride in advance for even more convenient airport 
+              transfers, important meetings, or any occasion that requires punctuality. Simply 
+              enter your details and secure your ride up to 90 days ahead.
+            </p>
+            <img 
+              src="/lovable-uploads/eef63163-3e4d-4654-b851-413d3b3afaff.png"
+              alt="People booking a ride in advance on laptop"
+              className="w-full max-h-[500px] object-cover"
+            />
+          </div>
+        </div>
+        
         {/* Two columns section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
           {/* For Drivers */}
@@ -62,14 +78,6 @@ const LatestFeaturesSection = () => {
               Jetzt als Flottenpartner registrieren!
             </Button>
           </div>
-        </div>
-        
-        <div className="mt-10 text-center">
-          <img 
-            src="/lovable-uploads/cc605112-28bd-471e-bb25-3a729268b367.png"
-            alt="FemRide App interface"
-            className="w-full max-w-3xl mx-auto rounded-lg shadow-lg"
-          />
         </div>
       </div>
     </section>
