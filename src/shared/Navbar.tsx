@@ -14,7 +14,11 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <a href="/" className="flex items-center">
-            <span className="text-3xl font-bold text-[#222]">FemRide</span>
+            <img 
+              src="/lovable-uploads/19cc083a-4438-4f13-8e23-d83fb8938903.png" 
+              alt="FemRide Logo" 
+              className="h-8 md:h-10"
+            />
           </a>
         </div>
         
