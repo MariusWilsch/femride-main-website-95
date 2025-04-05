@@ -37,8 +37,8 @@ const ServicesSection = () => {
             </div>
             <div className="h-56 overflow-hidden">
               <img 
-                src="/lovable-uploads/7571e5e9-199b-43dd-a530-0a28ed71d532.png" 
-                alt="Woman using FemRide app on smartphone" 
+                src="/lovable-uploads/b4d4440d-a279-4145-aa31-099d8909f6d8.png" 
+                alt="Woman booking a ride in advance on laptop" 
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
