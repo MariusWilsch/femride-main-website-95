@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <a href="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/70e119a8-9b4c-4ccc-aefd-b67b2e7972de.png" 
+              src="/lovable-uploads/c7f8aded-75a3-4986-a5e0-dcf1a650407b.png" 
               alt="FemRide Logo" 
               className="h-8 md:h-10"
             />
