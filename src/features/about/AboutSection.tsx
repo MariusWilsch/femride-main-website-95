@@ -116,16 +116,16 @@ const AboutSection = () => {
                 </div>
                 
                 {/* Card title */}
-                <h3 className="text-2xl font-bold mb-4 text-black">{card.title}</h3>
+                <h3 className="text-2xl font-bold mb-4 text-black text-center">{card.title}</h3>
                 
-                {/* Statistics highlight */}
-                <div className="flex items-baseline mb-4">
-                  <span className="text-4xl font-bold mr-2 text-black">{card.stats}</span>
-                  <div className="h-0.5 w-12 bg-black/40 rounded-full"></div>
+                {/* Statistics highlight - Improved formatting */}
+                <div className="mb-6 text-center">
+                  <div className="text-5xl font-bold text-black mb-1">{card.stats}</div>
+                  <div className="w-24 h-0.5 bg-black/40 mx-auto rounded-full"></div>
                 </div>
                 
                 {/* Card description */}
-                <p className="text-black/90">{card.description}</p>
+                <p className="text-black/90 text-center">{card.description}</p>
               </div>
             </div>
           ))}
