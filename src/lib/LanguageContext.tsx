@@ -124,8 +124,8 @@ export const translations: Translations = {
     en: 'Become a fleet partner'
   },
   servicesDesc3: {
-    de: 'Maximieren Sie Ihre Flotten Auslastung und profitieren Sie von FemRide's Wachstum und attraktiven Konditionen.',
-    en: 'Maximize your fleet utilization and benefit from FemRide's growth and attractive conditions.'
+    de: "Maximieren Sie Ihre Flotten Auslastung und profitieren Sie von FemRide's Wachstum und attraktiven Konditionen.",
+    en: "Maximize your fleet utilization and benefit from FemRide's growth and attractive conditions."
   },
   servicesButton3: {
     de: 'Jetzt Flottenpartner werden',
