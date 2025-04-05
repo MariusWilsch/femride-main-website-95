@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
  * and improved visual hierarchy based on Refactoring UI principles
  */
 const DownloadSection = () => {
-  const [activeTab, setActiveTab] = useState<'rides' | 'delivery'>('rides');
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -49,7 +48,7 @@ const DownloadSection = () => {
         {/* Section header with animation */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-400">
-            Download our apps
+            Download our app
           </h2>
           <p className="text-lg text-gray-300 inline-block relative">
             Coming soon to Google Play & App Store
@@ -64,7 +63,7 @@ const DownloadSection = () => {
           {/* QR Code - Left side */}
           <div className="md:w-1/2 flex flex-col items-center justify-center">
             <div className="bg-gray-900/80 p-6 md:p-8 rounded-2xl backdrop-blur-sm shadow-xl border border-gray-800 relative mb-6 max-w-md w-full">
-              <h3 className="text-center text-2xl font-bold mb-4">Download our apps</h3>
+              <h3 className="text-center text-2xl font-bold mb-4">Download our app</h3>
               <p className="text-gray-300 text-sm mb-6 text-center">
                 Scan the QR code with your phone camera to download the FemRide app.
               </p>
@@ -78,11 +77,10 @@ const DownloadSection = () => {
                 </div>
               </div>
               
-              {/* Mini-tabs at the bottom of QR card for mockup effect */}
+              {/* Simple Ride label instead of tabs */}
               <div className="flex justify-center mt-6">
-                <div className="flex space-x-4 bg-black/30 rounded-full p-1 text-xs">
-                  <span className="px-3 py-1 rounded-full bg-white/10">Rides</span>
-                  <span className="px-3 py-1">Delivery</span>
+                <div className="bg-black/30 rounded-full p-2 text-xs">
+                  <span className="px-4 py-1 rounded-full bg-white/10">Rides</span>
                 </div>
               </div>
             </div>
@@ -90,40 +88,10 @@ const DownloadSection = () => {
 
           {/* App info - Right side */}
           <div className="md:w-1/2">
-            {/* Tabs with improved styling */}
-            <div className="flex border-b border-gray-700 mb-8 justify-center md:justify-start">
-              <button
-                className={cn(
-                  "py-2 px-8 font-medium relative",
-                  activeTab === 'rides' ? 'text-white' : 'text-gray-400 hover:text-gray-300'
-                )}
-                onClick={() => setActiveTab('rides')}
-              >
-                Rides
-                {activeTab === 'rides' && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#fa9de3] to-[#a3adf4]"></span>
-                )}
-              </button>
-              <button
-                className={cn(
-                  "py-2 px-8 font-medium relative",
-                  activeTab === 'delivery' ? 'text-white' : 'text-gray-400 hover:text-gray-300'
-                )}
-                onClick={() => setActiveTab('delivery')}
-              >
-                Delivery
-                {activeTab === 'delivery' && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#fa9de3] to-[#a3adf4]"></span>
-                )}
-              </button>
-            </div>
-
-            {/* Content with animations */}
+            {/* Content without tabs */}
             <div className="space-y-8">
               <h3 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
-                {activeTab === 'rides' 
-                  ? 'The fast, affordable way to ride.' 
-                  : 'Quick delivery at your doorstep.'}
+                The fast, affordable way to ride.
               </h3>
 
               <p className="text-xl text-gray-300">
