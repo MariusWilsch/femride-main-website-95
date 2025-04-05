@@ -35,10 +35,10 @@ const ServicesSection = () => {
                 Jetzt buchen
               </Button>
             </div>
-            <div className="h-48 overflow-hidden">
+            <div className="h-56 overflow-hidden">
               <img 
-                src="/lovable-uploads/2172695d-46ee-4d18-a288-415a6c9ba8e0.png" 
-                alt="FemRide app on smartphone" 
+                src="/lovable-uploads/7571e5e9-199b-43dd-a530-0a28ed71d532.png" 
+                alt="Woman using FemRide app on smartphone" 
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
@@ -58,9 +58,9 @@ const ServicesSection = () => {
                 Jetzt Fahrerin werden
               </Button>
             </div>
-            <div className="h-48 overflow-hidden">
+            <div className="h-56 overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1612357735878-79f2b66f5b23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                src="/lovable-uploads/1115ff08-742b-47e1-a06b-be2290d5abb9.png" 
                 alt="Woman driving a car" 
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
@@ -81,10 +81,10 @@ const ServicesSection = () => {
                 Jetzt Flottenpartner werden
               </Button>
             </div>
-            <div className="h-48 overflow-hidden">
+            <div className="h-56 overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                alt="Fleet of cars" 
+                src="/lovable-uploads/522eabb7-70e9-4879-a6c3-9d8dcbfb2471.png" 
+                alt="Fleet of cars in parking lot" 
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
