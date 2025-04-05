@@ -58,27 +58,56 @@ const FAQSection = () => {
     >
       <div className="container mx-auto px-4 max-w-5xl">
         {/* Section title with simple animation */}
-        <div className={`mb-16 text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`mb-8 text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#222] mb-4">
             Häufig gestellte Fragen
           </h2>
         </div>
         
-        {/* Category selector with subtle animation delay */}
         <div className={`transition-all duration-700 delay-100 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
+          {/* Category title */}
           {activeCategory === "passengers" && (
-            <h3 className="text-center text-2xl font-bold mb-8">FAQs für Fahrgästinnen</h3>
+            <h3 className="text-center text-2xl font-bold mb-6">FAQs für Fahrgästinnen</h3>
           )}
           
           {activeCategory === "drivers" && (
-            <h3 className="text-center text-2xl font-bold mb-8">FAQs für Fahrerinnen</h3>
+            <h3 className="text-center text-2xl font-bold mb-6">FAQs für Fahrerinnen</h3>
           )}
           
           {activeCategory === "fleet" && (
-            <h3 className="text-center text-2xl font-bold mb-8">FAQs für Subunternehmer</h3>
+            <h3 className="text-center text-2xl font-bold mb-6">FAQs für Subunternehmer</h3>
           )}
+          
+          {/* Category navigation - MOVED HERE FROM BOTTOM */}
+          <div className={`flex justify-center mb-10 transition-all duration-700 delay-150 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
+            <ToggleGroup
+              type="single"
+              value={activeCategory}
+              onValueChange={(value) => {
+                if (value) setActiveCategory(value);
+              }}
+              className="bg-gray-100 p-1 rounded-full"
+            >
+              {categories.map((category) => (
+                <ToggleGroupItem 
+                  key={category.id} 
+                  value={category.id}
+                  aria-label={`Show FAQs for ${category.label}`}
+                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                    activeCategory === category.id 
+                      ? 'bg-[#fa9de3] text-white shadow-md'
+                      : 'text-gray-600 hover:text-gray-800'
+                  }`}
+                >
+                  {category.label}
+                </ToggleGroupItem>
+              ))}
+            </ToggleGroup>
+          </div>
           
           {/* Passengers FAQs */}
           <div className={`mb-16 transition-all duration-300 ease-in-out ${activeCategory === "passengers" ? "block" : "hidden"}`}>
@@ -219,35 +248,6 @@ const FAQSection = () => {
               </AccordionItem>
             </Accordion>
           </div>
-        </div>
-
-        {/* Category navigation */}
-        <div className={`flex justify-center transition-all duration-700 delay-200 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
-          <ToggleGroup
-            type="single"
-            value={activeCategory}
-            onValueChange={(value) => {
-              if (value) setActiveCategory(value);
-            }}
-            className="bg-gray-100 p-1 rounded-full"
-          >
-            {categories.map((category) => (
-              <ToggleGroupItem 
-                key={category.id} 
-                value={category.id}
-                aria-label={`Show FAQs for ${category.label}`}
-                className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                  activeCategory === category.id 
-                    ? 'bg-[#fa9de3] text-white shadow-md'
-                    : 'text-gray-600 hover:text-gray-800'
-                }`}
-              >
-                {category.label}
-              </ToggleGroupItem>
-            ))}
-          </ToggleGroup>
         </div>
       </div>
       
