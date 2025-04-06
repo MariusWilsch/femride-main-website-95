@@ -212,6 +212,35 @@ export const translations: Translations = {
     de: 'Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.',
     en: 'There was a problem sending your message. Please try again later.'
   },
+  // New translations for the contact form
+  contactFormSubject: {
+    de: 'Kontaktanfrage von',
+    en: 'Contact request from'
+  },
+  contactFormName: {
+    de: 'Name',
+    en: 'Name'
+  },
+  contactFormEmail: {
+    de: 'Email',
+    en: 'Email'
+  },
+  contactFormPhone: {
+    de: 'Telefon',
+    en: 'Phone'
+  },
+  contactFormPhoneNotSpecified: {
+    de: 'Nicht angegeben',
+    en: 'Not specified'
+  },
+  contactFormMessageLabel: {
+    de: 'Nachricht',
+    en: 'Message'
+  },
+  contactSubmitting: {
+    de: 'Wird gesendet...',
+    en: 'Sending...'
+  },
   
   // Footer content
   footerCompany: {
@@ -349,6 +378,222 @@ export const translations: Translations = {
   getItOn: {
     de: 'JETZT BEI',
     en: 'GET IT ON'
+  },
+  
+  // About Section
+  aboutMainTitle: {
+    de: 'Was sagen die Frauen zu FemRide?',
+    en: 'What do women say about FemRide?'
+  },
+  aboutMainDesc: {
+    de: 'FemRide macht den Unterschied! – Eine Umfrage mit über 100 Teilnehmer:innen, davon 90 % Frauen, zeigt: Sichere Mobilität ist ein dringendes Bedürfnis.',
+    en: 'FemRide makes the difference! – A survey with over 100 participants, 90% of whom are women, shows: Safe mobility is an urgent need.'
+  },
+  aboutTestimonial1Title: {
+    de: '„Endlich eine sichere Alternative!"',
+    en: '"Finally a safe alternative!"'
+  },
+  aboutTestimonial1Desc: {
+    de: 'der Frauen fühlen sich mit einer Ride-Hailing-Plattform, exklusiv für Frauen sicherer. FemRide schafft Vertrauen durch geprüfte Fahrerinnen und Schutzmaßnahmen für Frauen und Fahrerinnen.',
+    en: 'of women feel safer with a ride-hailing platform exclusively for women. FemRide creates trust through verified female drivers and protective measures for women and drivers.'
+  },
+  aboutTestimonial2Title: {
+    de: '„Keine Angst mehr vor Übergriffen."',
+    en: '"No more fear of harassment."'
+  },
+  aboutTestimonial2Desc: {
+    de: 'der befragten Frauen wollen FemRide nutzen, um sich vor Belästigung und Diskriminierung zu schützen. Unsere Fahrten sind exklusiv von Frauen für Frauen.',
+    en: 'of women surveyed want to use FemRide to protect themselves from harassment and discrimination. Our rides are exclusively by women for women.'
+  },
+  aboutTestimonial3Title: {
+    de: '„Genau das hat gefehlt!"',
+    en: '"This is exactly what was missing!"'
+  },
+  aboutTestimonial3Desc: {
+    de: 'der Frauen sind überzeugt, dass FemRide eine nachhaltige Lösung für mehr Sicherheit im Ride-Hailing bietet. Eine Plattform, die Frauen mehr Freiheit und Unabhängigkeit denn je ermöglicht.',
+    en: 'of women are convinced that FemRide offers a sustainable solution for more safety in ride-hailing. A platform that enables women more freedom and independence than ever before.'
+  },
+  aboutCtaButton: {
+    de: 'Jetzt registrieren und Teil der Bewegung werden',
+    en: 'Register now and become part of the movement'
+  },
+  
+  // Join Us Section
+  joinUsSectionHeader: {
+    de: 'JOIN US',
+    en: 'JOIN US'
+  },
+  joinUsSectionTitle: {
+    de: 'Join FemRide',
+    en: 'Join FemRide'
+  },
+  joinUsSectionSubtitle: {
+    de: 'Werde ein Teil der FemRide Bewegung',
+    en: 'Become part of the FemRide movement'
+  },
+  joinUsSectionDescription: {
+    de: 'Für Sichere Mobilität, mehr Chancen, eine gerechtere Zukunft!',
+    en: 'For safe mobility, more opportunities, a fairer future!'
+  },
+  forFemaleDriversDesc: {
+    de: 'Werde Fahrerin und schließe dich einer FemRide-Flotte in Deutschland an! Auf der Suche nach einer Fahrerin-Position in Deutschland? Werde Teil eines Flottenunternehmens, das mit FemRide kooperiert, und fahre für eine Plattform, die Sicherheit, Chancengleichheit und faire Verdienstmöglichkeiten in den Mittelpunkt stellt. Nutze deine Chance auf einen flexiblen, sicheren Job mit attraktiven Einkommensperspektiven!',
+    en: 'Become a driver and join a FemRide fleet in Germany! Looking for a driver position in Germany? Become part of a fleet company that cooperates with FemRide, and drive for a platform that focuses on safety, equal opportunities, and fair earning potential. Take advantage of your chance for a flexible, secure job with attractive income prospects!'
+  },
+  forFemaleDriversButton: {
+    de: 'Jetzt als Fahrerin anmelden!',
+    en: 'Sign up as a driver now!'
+  },
+  forFleetOperatorsDesc: {
+    de: 'Werde Flottenpartner von FemRide in Deutschland! Besitzt du ein Flottenunternehmen und suchst nach neuen, lukrativen Einsatzmöglichkeiten? Kooperiere mit FemRide und werde Teil einer Plattform, die gesellschaftlichen Impact und nachhaltige Mobilität in den Mittelpunkt stellt. Nutze dein Potenzial und steigere deine Flottenauslastung mit FemRide!',
+    en: 'Become a fleet partner of FemRide in Germany! Do you own a fleet company and are looking for new, lucrative deployment opportunities? Cooperate with FemRide and become part of a platform that focuses on social impact and sustainable mobility. Use your potential and increase your fleet utilization with FemRide!'
+  },
+  forFleetOperatorsButton: {
+    de: 'Jetzt als Flottenpartner registrieren!',
+    en: 'Register as a fleet partner now!'
+  },
+  
+  // FAQ Section
+  faqMainTitle: {
+    de: 'Häufig gestellte Fragen',
+    en: 'Frequently Asked Questions'
+  },
+  faqCategoryPassengers: {
+    de: 'Fahrgästinnen',
+    en: 'Passengers'
+  },
+  faqCategoryDrivers: {
+    de: 'Fahrerinnen',
+    en: 'Drivers'
+  },
+  faqCategoryFleet: {
+    de: 'Subunternehmer',
+    en: 'Fleet Partners'
+  },
+  faqTitlePassengers: {
+    de: 'FAQs für Fahrgästinnen',
+    en: 'FAQs for Passengers'
+  },
+  faqTitleDrivers: {
+    de: 'FAQs für Fahrerinnen',
+    en: 'FAQs for Drivers'
+  },
+  faqTitleFleet: {
+    de: 'FAQs für Subunternehmer',
+    en: 'FAQs for Fleet Partners'
+  },
+  
+  // Passenger FAQs
+  faqPassengerQ1: {
+    de: 'Was ist FemRide?',
+    en: 'What is FemRide?'
+  },
+  faqPassengerA1: {
+    de: 'FemRide ist Europas erste Ride-Hailing-Plattform, die ausschließlich für Frauen – für mehr Sicherheit und Vertrauen unterwegs.',
+    en: 'FemRide is Europe\'s first ride-hailing platform exclusively for women – for more safety and confidence on the go.'
+  },
+  faqPassengerQ2: {
+    de: 'In welchen Städten ist FemRide verfügbar?',
+    en: 'In which cities is FemRide available?'
+  },
+  faqPassengerA2: {
+    de: 'FemRide startet in Berlin und wird bald auch in weiteren deutschen Städten verfügbar sein. Schrittweise erfolgt der Ausbau in weitere Regionen und Länder. 🚀',
+    en: 'FemRide is launching in Berlin and will soon be available in other German cities. We\'ll gradually expand to more regions and countries. 🚀'
+  },
+  faqPassengerQ3: {
+    de: 'Wie kann ich eine Fahrt buchen?',
+    en: 'How can I book a ride?'
+  },
+  faqPassengerA3: {
+    de: 'Lade die FemRide-App herunter, registriere dich und buche deine Fahrt in wenigen Klicks – sicher und einfach.',
+    en: 'Download the FemRide app, register, and book your ride in just a few clicks – safe and simple.'
+  },
+  faqPassengerQ4: {
+    de: 'Welche Sicherheitsmaßnahmen gibt es?',
+    en: 'What safety measures are in place?'
+  },
+  faqPassengerA4: {
+    de: 'Unsere App bietet Live-Tracking, Notfall-Button und eine sichere Kommunikation zwischen Fahrerinnen und Passagierinnen. Zusätzlich identifizieren wir mit einem modernen System ob es sich bei dem Fahrgast und Fahrerin wirklich um Frauen handelt und garantieren damit die Sicherheit für die Benutzerin von FemRide.',
+    en: 'Our app offers live tracking, an emergency button, and secure communication between drivers and passengers. Additionally, we use a modern system to verify that both passengers and drivers are women, guaranteeing the safety of FemRide users.'
+  },
+  
+  // Driver FAQs
+  faqDriverQ1: {
+    de: 'Wie kann ich Fahrerin bei FemRide werden?',
+    en: 'How can I become a driver with FemRide?'
+  },
+  faqDriverA1: {
+    de: 'Registriere dich in der FemRide-App oder auf unserer Webseite und wähle ein Flottenunternehmen, mit dem du zusammenarbeiten möchtest.',
+    en: 'Register in the FemRide app or on our website and choose a fleet company you would like to work with.'
+  },
+  faqDriverQ2: {
+    de: 'Welche Voraussetzungen muss ich erfüllen?',
+    en: 'What requirements do I need to meet?'
+  },
+  faqDriverA2Part1: {
+    de: 'Die Anforderungen hängen von deinem Flottenpartner ab. In der Regel benötigst du:',
+    en: 'The requirements depend on your fleet partner. Generally, you will need:'
+  },
+  faqDriverA2Item1: {
+    de: 'Einen gültigen Führerschein & Personenbeförderungsschein (P-Schein)',
+    en: 'A valid driver\'s license & passenger transportation license (P-license)'
+  },
+  faqDriverA2Item2: {
+    de: 'Ein polizeiliches Führungszeugnis',
+    en: 'A police background check'
+  },
+  faqDriverA2Item3: {
+    de: 'Ein Mindestalter von 21 Jahren',
+    en: 'A minimum age of 21 years'
+  },
+  faqDriverQ3: {
+    de: 'Wie sehen die Verdienstmöglichkeiten aus?',
+    en: 'What are the earning opportunities?'
+  },
+  faqDriverA3: {
+    de: 'Dein Verdienst hängt vom Flottenpartner und deinem Arbeitsmodell ab. In der Regel gibt es transparente Vergütungsmodelle mit fairen Einnahmen pro Fahrt. Zusätzlich gibt es einen Bonus für eine Anzahl von Fahrten, die dir FemRide zusätzlich zu deinem Gehalt auszahlt.',
+    en: 'Your earnings depend on the fleet partner and your work model. There are typically transparent compensation models with fair earnings per ride. Additionally, FemRide pays a bonus for a certain number of rides, which is paid on top of your regular salary.'
+  },
+  faqDriverQ4: {
+    de: 'Brauche ich ein eigenes Auto?',
+    en: 'Do I need my own car?'
+  },
+  faqDriverA4: {
+    de: 'Nein, du fährst mit den Fahrzeugen deines Flottenpartners. Die Bedingungen variieren je nach Partnerunternehmen.',
+    en: 'No, you drive with the vehicles of your fleet partner. The conditions vary depending on the partner company.'
+  },
+  
+  // Fleet FAQs
+  faqFleetQ1: {
+    de: 'Wie kann mein Unternehmen mit FemRide kooperieren?',
+    en: 'How can my company cooperate with FemRide?'
+  },
+  faqFleetA1: {
+    de: 'Registriere dich als Flottenpartner und bringe deine Fahrzeuge auf die Straße – wir bieten attraktive Einsatzmöglichkeiten!',
+    en: 'Register as a fleet partner and get your vehicles on the road – we offer attractive deployment opportunities!'
+  },
+  faqFleetQ2: {
+    de: 'Welche Vorteile hat eine Partnerschaft mit FemRide?',
+    en: 'What are the benefits of partnering with FemRide?'
+  },
+  faqFleetA2: {
+    de: 'Mehr Fahrten & höhere Auslastung, gesellschaftliche Anerkennung und die Vermittlung neuer Fahrerinnen.',
+    en: 'More rides & higher utilization, social recognition, and the placement of new drivers.'
+  },
+  faqFleetQ3: {
+    de: 'Wie erfolgt die Abrechnung?',
+    en: 'How does the billing process work?'
+  },
+  faqFleetA3: {
+    de: 'Wir bieten transparente Abrechnungsmodelle mit regelmäßigen Auszahlungen für eine nachhaltige Zusammenarbeit.',
+    en: 'We offer transparent billing models with regular payouts for sustainable cooperation.'
+  },
+  faqFleetQ4: {
+    de: 'Welche finanziellen Vorteile bietet eine Zusammenarbeit mit FemRide?',
+    en: 'What financial benefits does a partnership with FemRide offer?'
+  },
+  faqFleetA4: {
+    de: 'Dank eines fairen Preismodells zahlen Flottenpartner weniger als üblich, um eine langfristige Partnerschaft zu fördern.',
+    en: 'Thanks to a fair pricing model, fleet partners pay less than usual to encourage a long-term partnership.'
   },
 };
 

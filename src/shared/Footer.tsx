@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
@@ -6,7 +5,7 @@ import { Separator } from '@/components/ui/separator';
 import { useLanguage } from '@/lib/LanguageContext';
 
 export const Footer = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const currentYear = new Date().getFullYear();
   
   return (
@@ -60,46 +59,73 @@ export const Footer = () => {
         {/* Subtle divider */}
         <Separator className="bg-gray-800 my-10" />
         
-        {/* Restructured Impressum section with adjusted alignment */}
+        {/* Impressum section with exact layout as provided */}
         <div className="pb-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-8 max-w-4xl mx-auto">
-            {/* Left column - Company info with shifted heading */}
+            {/* Left column - Company info */}
             <div className="text-left">
-              <h3 className="font-semibold text-lg mb-6 pl-16">FemRide UG</h3>
+              <h3 className="font-semibold text-xl mb-6">FemRide UG</h3>
               
               <div className="flex items-start mb-5">
                 <span className="text-[#fa9de3] mr-3">📍</span>
-                <p className="text-gray-300">Adresse: Waldstraße 222A, 12527 Berlin</p>
+                <p className="text-gray-300">
+                  {language === 'en' ? 'Address: ' : 'Adresse: '}
+                  Waldstraße 222A, 12527 Berlin
+                </p>
               </div>
               
               <div className="flex items-start mb-5">
                 <span className="text-[#fa9de3] mr-3">📧</span>
-                <p className="text-gray-300">E-Mail: <a href="mailto:info@femride.de" className="text-[#fa9de3] hover:underline">info@femride.de</a></p>
+                <p className="text-gray-300">
+                  {language === 'en' ? 'Email: ' : 'E-Mail: '}
+                  <a href="mailto:info@femride.de" className="text-[#fa9de3] hover:underline">
+                    info@femride.de
+                  </a>
+                </p>
               </div>
               
               <div className="flex items-start">
                 <span className="text-[#fa9de3] mr-3">🌐</span>
-                <p className="text-gray-300">Webseite: <a href="https://www.femride.de" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">www.femride.de</a></p>
+                <p className="text-gray-300">
+                  {language === 'en' ? 'Website: ' : 'Webseite: '}
+                  <a href="https://www.femride.de" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">
+                    www.femride.de
+                  </a>
+                </p>
               </div>
             </div>
             
-            {/* Right column - Legal info with shifted Impressum heading */}
+            {/* Right column - Legal info */}
             <div className="text-left">
-              <h2 className="text-xl font-bold mb-10 text-right">Impressum</h2>
+              <h3 className="font-semibold text-xl mb-6 text-right">
+                {language === 'en' ? 'Imprint' : 'Impressum'}
+              </h3>
               
               <div className="mb-5">
-                <h3 className="font-semibold text-white mb-2">Vertreten durch:</h3>
-                <p className="text-gray-300">Aykut Atli (Geschäftsführer)</p>
+                <h4 className="font-semibold text-white mb-2">
+                  {language === 'en' ? 'Represented by:' : 'Vertreten durch:'}
+                </h4>
+                <p className="text-gray-300">
+                  Aykut Atli ({language === 'en' ? 'CEO' : 'Geschäftsführer'})
+                </p>
               </div>
               
               <div className="mb-5">
-                <h3 className="font-semibold text-white mb-2">Handelsregister:</h3>
-                <p className="text-gray-300">Amtsgericht Berlin (Charlottenburg)</p>
+                <h4 className="font-semibold text-white mb-2">
+                  {language === 'en' ? 'Commercial register:' : 'Handelsregister:'}
+                </h4>
+                <p className="text-gray-300">
+                  {language === 'en' ? 'District Court Berlin (Charlottenburg)' : 'Amtsgericht Berlin (Charlottenburg)'}
+                </p>
                 <p className="text-gray-300">HRB 272631</p>
               </div>
               
               <div>
-                <h3 className="font-semibold text-white mb-2">Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV:</h3>
+                <h4 className="font-semibold text-white mb-2">
+                  {language === 'en' 
+                    ? 'Responsible for the content according to § 18 Abs. 2 MStV:' 
+                    : 'Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV:'}
+                </h4>
                 <p className="text-gray-300">Aykut Atli, Waldstraße 222A, 12527 Berlin</p>
               </div>
             </div>

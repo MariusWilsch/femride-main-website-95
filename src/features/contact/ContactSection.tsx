@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -56,13 +55,13 @@ const ContactSection = () => {
       // Prepare email data
       const emailData = {
         to: "info@femride.de",
-        subject: `FemRide Kontaktanfrage von ${formData.name}`,
+        subject: `FemRide ${t('contactFormSubject')} ${formData.name}`,
         message: `
-Name: ${formData.name}
-Email: ${formData.email}
-Telefon: ${formData.phone || 'Nicht angegeben'}
+${t('contactFormName')}: ${formData.name}
+${t('contactFormEmail')}: ${formData.email}
+${t('contactFormPhone')}: ${formData.phone || t('contactFormPhoneNotSpecified')}
 
-Nachricht:
+${t('contactFormMessageLabel')}:
 ${formData.message}
         `,
       };
@@ -78,8 +77,8 @@ ${formData.message}
       
       // Show success message
       toast({
-        title: "Nachricht gesendet",
-        description: "Vielen Dank für Ihre Nachricht. Wir werden uns umgehend bei Ihnen melden.",
+        title: t('contactSuccessTitle'),
+        description: t('contactSuccessDesc'),
       });
       
       // Reset form after submission
@@ -92,8 +91,8 @@ ${formData.message}
     } catch (error) {
       console.error('Error sending email:', error);
       toast({
-        title: "Fehler beim Senden",
-        description: "Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.",
+        title: t('contactErrorTitle'),
+        description: t('contactErrorDesc'),
         variant: "destructive",
       });
     } finally {
@@ -118,20 +117,20 @@ ${formData.message}
         {/* Section header with animations */}
         <div className={`text-center mb-10 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-black font-medium tracking-wide uppercase text-base relative inline-block mb-3">
-            KONTAKT
+            {t('contactHeader')}
             <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-black"></span>
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">
-            Interessiert an einer Zusammenarbeit mit FemRide?
+            {t('contactTitle')}
           </h2>
           <div className="w-24 h-1 bg-[#fa9de3] mx-auto mb-8"></div>
           <div className="max-w-3xl mx-auto text-center mb-8">
             <p className="text-lg text-black">
-              Sie sind Flottenunternehmer und möchten Ihre Fahrzeuge über FemRide einsetzen?<br />
-              Sie sind Fahrerin und möchten Teil unserer Plattform werden?<br />
-              Oder Sie möchten mit uns kooperieren, weil Sie unsere Vision teilen?<br />
-              Dann kontaktieren Sie uns über das Formular – wir melden uns umgehend bei Ihnen!<br />
-              Wir freuen uns darauf, gemeinsam Mobilität sicherer und fairer zu gestalten.
+              {t('contactText1')}<br />
+              {t('contactText2')}<br />
+              {t('contactText3')}<br />
+              {t('contactText4')}<br />
+              {t('contactText5')}
             </p>
           </div>
         </div>
@@ -223,7 +222,7 @@ ${formData.message}
                 >
                   <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20"></span>
                   <span className="relative flex items-center justify-center gap-2">
-                    {isSubmitting ? 'Wird gesendet...' : t('contactSubmitButton')}
+                    {isSubmitting ? t('contactSubmitting') : t('contactSubmitButton')}
                     <Send size={18} className={`transition-transform ${isSubmitting ? 'translate-x-2' : ''}`} />
                   </span>
                 </Button>

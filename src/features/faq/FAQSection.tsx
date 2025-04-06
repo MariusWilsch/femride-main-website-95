@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import {
   Accordion,
@@ -8,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Separator } from "@/components/ui/separator";
+import { useLanguage } from "@/lib/LanguageContext";
 
 /**
  * FAQ section with categories for different user types
@@ -16,12 +16,13 @@ const FAQSection = () => {
   const [activeCategory, setActiveCategory] = useState("passengers");
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const { t } = useLanguage();
 
   // Categories for the toggle group
   const categories = [
-    { id: "passengers", label: "Fahrgästinnen" },
-    { id: "drivers", label: "Fahrerinnen" },
-    { id: "fleet", label: "Subunternehmer" },
+    { id: "passengers", label: t('faqCategoryPassengers') },
+    { id: "drivers", label: t('faqCategoryDrivers') },
+    { id: "fleet", label: t('faqCategoryFleet') },
   ];
 
   useEffect(() => {
@@ -59,7 +60,7 @@ const FAQSection = () => {
         {/* Section title with simple animation */}
         <div className={`mb-8 text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#222] mb-4">
-            Häufig gestellte Fragen
+            {t('faqMainTitle')}
           </h2>
         </div>
         
@@ -68,15 +69,15 @@ const FAQSection = () => {
         }`}>
           {/* Category title */}
           {activeCategory === "passengers" && (
-            <h3 className="text-center text-2xl font-bold mb-6">FAQs für Fahrgästinnen</h3>
+            <h3 className="text-center text-2xl font-bold mb-6">{t('faqTitlePassengers')}</h3>
           )}
           
           {activeCategory === "drivers" && (
-            <h3 className="text-center text-2xl font-bold mb-6">FAQs für Fahrerinnen</h3>
+            <h3 className="text-center text-2xl font-bold mb-6">{t('faqTitleDrivers')}</h3>
           )}
           
           {activeCategory === "fleet" && (
-            <h3 className="text-center text-2xl font-bold mb-6">FAQs für Subunternehmer</h3>
+            <h3 className="text-center text-2xl font-bold mb-6">{t('faqTitleFleet')}</h3>
           )}
           
           {/* Category navigation - MOVED HERE FROM BOTTOM */}
@@ -117,44 +118,44 @@ const FAQSection = () => {
             >
               <AccordionItem value="passengers-1" className={accordionItemClass}>
                 <AccordionTrigger className={accordionTriggerClass}>
-                  Was ist FemRide?
+                  {t('faqPassengerQ1')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
                   <div className="pl-0 pr-0">
-                    FemRide ist Europas erste Ride-Hailing-Plattform, die ausschließlich für Frauen – für mehr Sicherheit und Vertrauen unterwegs.
+                    {t('faqPassengerA1')}
                   </div>
                 </AccordionContent>
               </AccordionItem>
               
               <AccordionItem value="passengers-2" className={accordionItemClass}>
                 <AccordionTrigger className={accordionTriggerClass}>
-                  In welchen Städten ist FemRide verfügbar?
+                  {t('faqPassengerQ2')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
                   <div className="pl-0 pr-0">
-                    FemRide startet in Berlin und wird bald auch in weiteren deutschen Städten verfügbar sein. Schrittweise erfolgt der Ausbau in weitere Regionen und Länder. 🚀
+                    {t('faqPassengerA2')}
                   </div>
                 </AccordionContent>
               </AccordionItem>
               
               <AccordionItem value="passengers-3" className={accordionItemClass}>
                 <AccordionTrigger className={accordionTriggerClass}>
-                  Wie kann ich eine Fahrt buchen?
+                  {t('faqPassengerQ3')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
                   <div className="pl-0 pr-0">
-                    Lade die FemRide-App herunter, registriere dich und buche deine Fahrt in wenigen Klicks – sicher und einfach.
+                    {t('faqPassengerA3')}
                   </div>
                 </AccordionContent>
               </AccordionItem>
               
               <AccordionItem value="passengers-4" className={accordionItemClass}>
                 <AccordionTrigger className={accordionTriggerClass}>
-                  Welche Sicherheitsmaßnahmen gibt es?
+                  {t('faqPassengerQ4')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
                   <div className="pl-0 pr-0">
-                    Unsere App bietet Live-Tracking, Notfall-Button und eine sichere Kommunikation zwischen Fahrerinnen und Passagierinnen. Zusätzlich identifizieren wir mit einem modernen System ob es sich bei dem Fahrgast und Fahrerin wirklich um Frauen handelt und garantieren damit die Sicherheit für die Benutzerin von FemRide.
+                    {t('faqPassengerA4')}
                   </div>
                 </AccordionContent>
               </AccordionItem>
@@ -170,34 +171,34 @@ const FAQSection = () => {
             >
               <AccordionItem value="drivers-1" className={accordionItemClass}>
                 <AccordionTrigger className={accordionTriggerClass}>
-                  Wie kann ich Fahrerin bei FemRide werden?
+                  {t('faqDriverQ1')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
                   <div className="pl-0 pr-0">
-                    Registriere dich in der FemRide-App oder auf unserer Webseite und wähle ein Flottenunternehmen, mit dem du zusammenarbeiten möchtest.
+                    {t('faqDriverA1')}
                   </div>
                 </AccordionContent>
               </AccordionItem>
               
               <AccordionItem value="drivers-2" className={accordionItemClass}>
                 <AccordionTrigger className={accordionTriggerClass}>
-                  Welche Voraussetzungen muss ich erfüllen?
+                  {t('faqDriverQ2')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
                   <div className="pl-0 pr-0">
-                    <p className="mb-2">Die Anforderungen hängen von deinem Flottenpartner ab. In der Regel benötigst du:</p>
+                    <p className="mb-2">{t('faqDriverA2Part1')}</p>
                     <ul className="list-none pl-0 space-y-2">
                       <li className="flex items-start">
                         <span className="text-[#fa9de3] mr-2">•</span>
-                        <span>Einen gültigen Führerschein & Personenbeförderungsschein (P-Schein)</span>
+                        <span>{t('faqDriverA2Item1')}</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[#fa9de3] mr-2">•</span>
-                        <span>Ein polizeiliches Führungszeugnis</span>
+                        <span>{t('faqDriverA2Item2')}</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[#fa9de3] mr-2">•</span>
-                        <span>Ein Mindestalter von 21 Jahren</span>
+                        <span>{t('faqDriverA2Item3')}</span>
                       </li>
                     </ul>
                   </div>
@@ -206,22 +207,22 @@ const FAQSection = () => {
               
               <AccordionItem value="drivers-3" className={accordionItemClass}>
                 <AccordionTrigger className={accordionTriggerClass}>
-                  Wie sehen die Verdienstmöglichkeiten aus?
+                  {t('faqDriverQ3')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
                   <div className="pl-0 pr-0">
-                    Dein Verdienst hängt vom Flottenpartner und deinem Arbeitsmodell ab. In der Regel gibt es transparente Vergütungsmodelle mit fairen Einnahmen pro Fahrt. Zusätzlich gibt es einen Bonus für eine Anzahl von Fahrten, die dir FemRide zusätzlich zu deinem Gehalt auszahlt.
+                    {t('faqDriverA3')}
                   </div>
                 </AccordionContent>
               </AccordionItem>
               
               <AccordionItem value="drivers-4" className={accordionItemClass}>
                 <AccordionTrigger className={accordionTriggerClass}>
-                  Brauche ich ein eigenes Auto?
+                  {t('faqDriverQ4')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
                   <div className="pl-0 pr-0">
-                    Nein, du fährst mit den Fahrzeugen deines Flottenpartners. Die Bedingungen variieren je nach Partnerunternehmen.
+                    {t('faqDriverA4')}
                   </div>
                 </AccordionContent>
               </AccordionItem>
@@ -237,44 +238,44 @@ const FAQSection = () => {
             >
               <AccordionItem value="fleet-1" className={accordionItemClass}>
                 <AccordionTrigger className={accordionTriggerClass}>
-                  Wie kann mein Unternehmen mit FemRide kooperieren?
+                  {t('faqFleetQ1')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
                   <div className="pl-0 pr-0">
-                    Registriere dich als Flottenpartner und bringe deine Fahrzeuge auf die Straße – wir bieten attraktive Einsatzmöglichkeiten!
+                    {t('faqFleetA1')}
                   </div>
                 </AccordionContent>
               </AccordionItem>
               
               <AccordionItem value="fleet-2" className={accordionItemClass}>
                 <AccordionTrigger className={accordionTriggerClass}>
-                  Welche Vorteile hat eine Partnerschaft mit FemRide?
+                  {t('faqFleetQ2')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
                   <div className="pl-0 pr-0">
-                    Mehr Fahrten & höhere Auslastung, gesellschaftliche Anerkennung und die Vermittlung neuer Fahrerinnen.
+                    {t('faqFleetA2')}
                   </div>
                 </AccordionContent>
               </AccordionItem>
               
               <AccordionItem value="fleet-3" className={accordionItemClass}>
                 <AccordionTrigger className={accordionTriggerClass}>
-                  Wie erfolgt die Abrechnung?
+                  {t('faqFleetQ3')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
                   <div className="pl-0 pr-0">
-                    Wir bieten transparente Abrechnungsmodelle mit regelmäßigen Auszahlungen für eine nachhaltige Zusammenarbeit.
+                    {t('faqFleetA3')}
                   </div>
                 </AccordionContent>
               </AccordionItem>
               
               <AccordionItem value="fleet-4" className={accordionItemClass}>
                 <AccordionTrigger className={accordionTriggerClass}>
-                  Welche finanziellen Vorteile bietet eine Zusammenarbeit mit FemRide?
+                  {t('faqFleetQ4')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
                   <div className="pl-0 pr-0">
-                    Dank eines fairen Preismodells zahlen Flottenpartner weniger als üblich, um eine langfristige Partnerschaft zu fördern.
+                    {t('faqFleetA4')}
                   </div>
                 </AccordionContent>
               </AccordionItem>
