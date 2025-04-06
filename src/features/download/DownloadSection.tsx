@@ -77,17 +77,35 @@ const DownloadSection = () => {
               <p className="text-gray-300 text-sm mb-6 text-center">
                 Scan the QR code with your phone camera to download the FemRide app.
               </p>
+              
+              {/* Updated QR code display with phone mockup */}
               <div className="flex justify-center">
-                <div className="p-3 bg-white rounded-3xl shadow-lg transform transition-all duration-500 hover:scale-105">
-                  <img
-                    src="/lovable-uploads/5f6db923-679e-46c0-ba63-d8212e3d656c.png"
-                    alt="FemRide App QR Code"
-                    className="w-56 h-56"
-                  />
+                <div className="bg-white rounded-[2rem] p-3 shadow-lg border-8 border-white w-72">
+                  {/* Phone screen with QR code */}
+                  <div className="bg-black rounded-[1.2rem] overflow-hidden">
+                    <div className="p-4 text-center text-white">
+                      <h4 className="text-sm font-bold mb-1">Download our apps</h4>
+                      <p className="text-xs mb-3 opacity-70">Scan the QR code with your phone camera to download the FemRide app</p>
+                      
+                      {/* QR code */}
+                      <div className="flex justify-center mb-3">
+                        <img
+                          src="/lovable-uploads/5f6db923-679e-46c0-ba63-d8212e3d656c.png"
+                          alt="FemRide App QR Code"
+                          className="w-32 h-32"
+                        />
+                      </div>
+                      
+                      <div className="mt-2 mb-1">
+                        <p className="text-xs font-bold">The fast, affordable way to ride.</p>
+                        <p className="text-[10px] opacity-70">Available for iOS and Android devices</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               
-              {/* Added FemRide logo below QR code */}
+              {/* FemRide logo below phone mockup */}
               <div className="flex justify-center mt-6">
                 <img 
                   src="/lovable-uploads/8171abea-59ac-4806-9009-ab16d31c6467.png" 
