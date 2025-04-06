@@ -10,10 +10,10 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-[#1A1F2C] text-white">
+    <footer className="bg-[#1A1F2C] text-white text-left">
       <div className="container mx-auto px-4 py-16">
         {/* Main navigation links */}
-        <div className="flex flex-col md:flex-row justify-between items-center mb-10">
+        <div className="flex flex-col md:flex-row justify-between items-start mb-10">
           <div className="mb-6 md:mb-0">
             <img 
               src="/lovable-uploads/1c4c3713-8362-4f14-b80e-d0163d28bb8f.png" 
@@ -22,7 +22,7 @@ export const Footer = () => {
             />
           </div>
           
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+          <div className="flex flex-wrap justify-start gap-6 md:gap-10">
             <Link to="/terms" className="text-gray-300 hover:text-[#fa9de3] transition-colors">
               {t('footerTerms')}
             </Link>
@@ -43,21 +43,21 @@ export const Footer = () => {
         {/* Three-column content section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 py-12">
           {/* Company info column */}
-          <div>
+          <div className="text-left">
             <h3 className="text-lg font-semibold mb-6">Company</h3>
             <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <MapPin size={18} className="text-[#fa9de3]" />
+              <div className="flex items-start gap-3">
+                <MapPin size={18} className="text-[#fa9de3] mt-1" />
                 <p className="text-gray-300">Waldstraße 222A, 12527 Berlin</p>
               </div>
-              <div className="flex items-center gap-3">
-                <Mail size={18} className="text-[#fa9de3]" />
+              <div className="flex items-start gap-3">
+                <Mail size={18} className="text-[#fa9de3] mt-1" />
                 <a href="mailto:info@femride.de" className="text-[#fa9de3] hover:underline">
                   info@femride.de
                 </a>
               </div>
-              <div className="flex items-center gap-3">
-                <Globe size={18} className="text-[#fa9de3]" />
+              <div className="flex items-start gap-3">
+                <Globe size={18} className="text-[#fa9de3] mt-1" />
                 <a href="https://www.femride.de" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">
                   www.femride.de
                 </a>
@@ -66,7 +66,7 @@ export const Footer = () => {
           </div>
           
           {/* Connect column with social icons */}
-          <div>
+          <div className="text-left">
             <h3 className="text-lg font-semibold mb-6">Connect</h3>
             <div className="flex flex-wrap gap-4">
               <a 
@@ -109,7 +109,7 @@ export const Footer = () => {
           </div>
           
           {/* Legal info column */}
-          <div>
+          <div className="text-left">
             <h3 className="text-lg font-semibold mb-6">Legal</h3>
             <div className="space-y-4">
               <div>
@@ -131,7 +131,7 @@ export const Footer = () => {
         <Separator className="bg-gray-800" />
         
         {/* Copyright section */}
-        <div className="pt-8 pb-4 text-center">
+        <div className="pt-8 pb-4 text-left">
           <p className="text-gray-400">© {currentYear} FemRide. {t('footerRights')}</p>
         </div>
       </div>
