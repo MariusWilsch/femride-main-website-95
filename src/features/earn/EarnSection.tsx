@@ -1,15 +1,46 @@
 
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/lib/LanguageContext";
 
 /**
  * EarnSection component highlighting different ways to earn money with FemRide
+ * Updated with translations and consistent styling
  */
 const EarnSection = () => {
+  const { t } = useLanguage();
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <section className="py-20 bg-white">
+    <section ref={sectionRef} className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="mb-16">
+        {/* Section Header with animation */}
+        <div className={`mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <p className="text-[#e908b0] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
+            EARN WITH FEMRIDE
+            <span className="absolute -bottom-1 left-0 w-10 h-1 bg-[#e908b0]"></span>
+          </p>
           <h2 className="text-5xl md:text-6xl font-bold mb-6">Earn money with FemRide</h2>
           <p className="text-lg text-gray-700 max-w-3xl">
             Join over 4.5 million partners worldwide that earn with FemRide. For drivers,
@@ -18,8 +49,8 @@ const EarnSection = () => {
           </p>
         </div>
 
-        {/* Driver Opportunity */}
-        <div className="flex flex-col md:flex-row gap-8 mb-20">
+        {/* Driver Opportunity with animation */}
+        <div className={`flex flex-col md:flex-row gap-8 mb-20 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="w-full md:w-1/2">
             <img 
               src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
@@ -36,14 +67,14 @@ const EarnSection = () => {
             </p>
             <div>
               <Button className="bg-[#e908b0] hover:bg-[#d007a0] text-white rounded-md px-6 py-5">
-                Register to drive
+                {t('driverRegisterButton')}
               </Button>
             </div>
           </div>
         </div>
 
-        {/* Courier Opportunity */}
-        <div className="flex flex-col md:flex-row-reverse gap-8 mb-20">
+        {/* Courier Opportunity with animation */}
+        <div className={`flex flex-col md:flex-row-reverse gap-8 mb-20 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="w-full md:w-1/2">
             <img 
               src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
@@ -67,8 +98,8 @@ const EarnSection = () => {
           </div>
         </div>
 
-        {/* Merchant Opportunity */}
-        <div className="flex flex-col md:flex-row gap-8 mb-20">
+        {/* Merchant Opportunity with animation */}
+        <div className={`flex flex-col md:flex-row gap-8 mb-20 transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="w-full md:w-1/2">
             <img 
               src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
@@ -91,8 +122,8 @@ const EarnSection = () => {
           </div>
         </div>
 
-        {/* Fleet Owner Opportunity */}
-        <div className="flex flex-col md:flex-row-reverse gap-8">
+        {/* Fleet Owner Opportunity with animation */}
+        <div className={`flex flex-col md:flex-row-reverse gap-8 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="w-full md:w-1/2">
             <img 
               src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
@@ -110,7 +141,7 @@ const EarnSection = () => {
             </p>
             <div>
               <Button className="bg-[#e908b0] hover:bg-[#d007a0] text-white rounded-md px-6 py-5">
-                Register your fleet
+                {t('fleetPartnerRegisterButton')}
               </Button>
             </div>
           </div>

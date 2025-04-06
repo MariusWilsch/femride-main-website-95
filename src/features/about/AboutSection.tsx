@@ -40,23 +40,23 @@ const AboutSection = () => {
     {
       id: 1,
       icon: <User size={28} color="#a3adf4" />,
-      title: '„Endlich eine sichere Alternative!"',
+      title: t('testimonial1Title'),
       stats: "80%",
-      description: "der Frauen fühlen sich mit einer Ride-Hailing-Plattform, exklusiv für Frauen sicherer. FemRide schafft Vertrauen durch geprüfte Fahrerinnen und Schutzmaßnahmen für Frauen und Fahrerinnen."
+      description: t('testimonial1Text')
     },
     {
       id: 2,
       icon: <Shield size={28} color="#a3adf4" />,
-      title: '„Keine Angst mehr vor Übergriffen."',
+      title: t('testimonial2Title'),
       stats: "75%",
-      description: "der befragten Frauen wollen FemRide nutzen, um sich vor Belästigung und Diskriminierung zu schützen. Unsere Fahrten sind exklusiv von Frauen für Frauen."
+      description: t('testimonial2Text')
     },
     {
       id: 3,
       icon: <Sparkles size={28} color="#a3adf4" />,
-      title: '„Genau das hat gefehlt!"',
+      title: t('testimonial3Title'),
       stats: "83%",
-      description: "der Frauen sind überzeugt, dass FemRide eine nachhaltige Lösung für mehr Sicherheit im Ride-Hailing bietet. Eine Plattform, die Frauen mehr Freiheit und Unabhängigkeit denn je ermöglicht."
+      description: t('testimonial3Text')
     }
   ];
 
@@ -81,12 +81,11 @@ const AboutSection = () => {
             <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#fa9de3]"></span>
           </p>
           <h2 className="text-4xl md:text-6xl font-bold text-black mb-8">
-            Was sagen die Frauen zu FemRide?
+            {t('aboutSectionTitle')}
           </h2>
           <div className="w-24 h-1 bg-black mx-auto mb-8"></div>
           <p className="text-black/80 max-w-2xl mx-auto text-lg">
-            FemRide macht den Unterschied! – Eine Umfrage mit über 100 Teilnehmer:innen, davon 90 % Frauen, zeigt: 
-            Sichere Mobilität ist ein dringendes Bedürfnis.
+            {t('aboutSectionText')}
           </p>
         </div>
 
@@ -130,7 +129,7 @@ const AboutSection = () => {
             onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
           >
             <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20 rounded-3xl"></span>
-            <span className="relative">Jetzt registrieren und Teil der Bewegung werden</span>
+            <span className="relative">{t('aboutCTAButton')}</span>
           </Button>
         </div>
       </div>

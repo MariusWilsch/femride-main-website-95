@@ -51,10 +51,10 @@ const LatestFeaturesSection = () => {
           </h2>
           <div className="w-24 h-1 bg-[#a3adf4] mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
-            Werde ein Teil der FemRide Bewegung
+            {t('joinFemRide')}
           </p>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Für Sichere Mobilität, mehr Chancen, eine gerechtere Zukunft!
+            {t('forSafeMobility')}
           </p>
         </div>
         
@@ -91,11 +91,7 @@ const LatestFeaturesSection = () => {
           >
             <h3 className="text-2xl font-bold mb-4 text-[#222]">{t('forFemaleDrivers')}</h3>
             <p className="text-lg mb-6 text-gray-700">
-              Werde Fahrerin und schließe dich einer FemRide-Flotte in Deutschland an!
-              Auf der Suche nach einer Fahrerin-Position in Deutschland? Werde Teil eines Flottenunternehmens, 
-              das mit FemRide kooperiert, und fahre für eine Plattform, die Sicherheit, Chancengleichheit und 
-              faire Verdienstmöglichkeiten in den Mittelpunkt stellt. Nutze deine Chance auf einen flexiblen, 
-              sicheren Job mit attraktiven Einkommensperspektiven!
+              {t('femaleDriversText')}
             </p>
             <Button 
               className="bg-[#a3adf4] hover:bg-[#8a93d6] text-black font-medium px-6 py-4 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] group rounded-3xl"
@@ -104,7 +100,7 @@ const LatestFeaturesSection = () => {
                 if (contactSection) contactSection.scrollIntoView({behavior: 'smooth'});
               }}
             >
-              <span className="relative z-10">Jetzt als Fahrerin anmelden!</span>
+              <span className="relative z-10">{t('driverRegisterButton')}</span>
               <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20 rounded-3xl"></span>
             </Button>
           </div>
@@ -117,11 +113,7 @@ const LatestFeaturesSection = () => {
           >
             <h3 className="text-2xl font-bold mb-4 text-[#222]">{t('forFleetOperators')}</h3>
             <p className="text-lg mb-6 text-gray-700">
-              Werde Flottenpartner von FemRide in Deutschland!
-              Besitzt du ein Flottenunternehmen und suchst nach neuen, lukrativen Einsatzmöglichkeiten? 
-              Kooperiere mit FemRide und werde Teil einer Plattform, die gesellschaftlichen Impact und 
-              nachhaltige Mobilität in den Mittelpunkt stellt. Nutze dein Potenzial und steigere deine 
-              Flottenauslastung mit FemRide!
+              {t('fleetPartnersText')}
             </p>
             <Button 
               className="bg-[#a3adf4] hover:bg-[#8a93d6] text-black font-medium px-6 py-4 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] group rounded-3xl"
@@ -130,7 +122,7 @@ const LatestFeaturesSection = () => {
                 if (contactSection) contactSection.scrollIntoView({behavior: 'smooth'});
               }}
             >
-              <span className="relative z-10">Jetzt als Flottenpartner registrieren!</span>
+              <span className="relative z-10">{t('fleetPartnerRegisterButton')}</span>
               <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20 rounded-3xl"></span>
             </Button>
           </div>
