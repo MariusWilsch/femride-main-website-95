@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { useEffect, useState, useRef } from "react";
 import { ChevronRight } from "lucide-react";
@@ -128,7 +129,7 @@ const ServicesSection = () => {
 
                 {/* Header banner at top with bold blue text styling - INCREASED SIZE */}
                 <div 
-                  className="p-3 text-center text-xl font-extrabold uppercase tracking-wider text-[#a3adf4] relative rounded-b-3xl"
+                  className="p-3 text-center text-2xl font-extrabold uppercase tracking-wider text-[#a3adf4] relative rounded-b-3xl"
                 >
                   {card.header}
                 </div>
