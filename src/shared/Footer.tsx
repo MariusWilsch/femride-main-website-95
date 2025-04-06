@@ -60,10 +60,8 @@ export const Footer = () => {
         {/* Subtle divider */}
         <Separator className="bg-gray-800 my-10" />
         
-        {/* Impressum section with proper alignment */}
+        {/* Restructured Impressum section with new layout */}
         <div className="pb-6">
-          <h2 className="text-xl font-bold mb-10 text-center">{t('footerImpressum')}</h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6 max-w-4xl mx-auto">
             {/* Left column - Company info */}
             <div className="text-left">
@@ -85,8 +83,10 @@ export const Footer = () => {
               </div>
             </div>
             
-            {/* Right column - Legal info */}
+            {/* Right column - Legal info with Impressum title aligned */}
             <div className="text-left">
+              <h2 className="text-xl font-bold mb-10">{t('footerImpressum')}</h2>
+              
               <div className="mb-4">
                 <h3 className="font-semibold text-white mb-2">Vertreten durch:</h3>
                 <p className="text-gray-300">Aykut Atli (Geschäftsführer)</p>
