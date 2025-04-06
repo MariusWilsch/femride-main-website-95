@@ -6,7 +6,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Separator } from "@/components/ui/separator";
 
 /**
@@ -17,11 +16,11 @@ const FAQSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
-  // Categories for the toggle group
+  // Categories for the simple text navigation
   const categories = [
-    { id: "passengers", label: "Fahrgästinnen" },
-    { id: "drivers", label: "Fahrerinnen" },
-    { id: "fleet", label: "Subunternehmer" },
+    { id: "passengers", label: "FÜR FAHRGÄSTE" },
+    { id: "drivers", label: "FÜR FAHRERINNEN" },
+    { id: "fleet", label: "FÜR UNTERNEHMEN" },
   ];
 
   useEffect(() => {
@@ -79,33 +78,25 @@ const FAQSection = () => {
             <h3 className="text-center text-2xl font-bold mb-6">FAQs für Subunternehmer</h3>
           )}
           
-          {/* Category navigation - MOVED HERE FROM BOTTOM */}
+          {/* Simple text category navigation - replacing buttons */}
           <div className={`flex justify-center mb-10 transition-all duration-700 delay-150 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-            <ToggleGroup
-              type="single"
-              value={activeCategory}
-              onValueChange={(value) => {
-                if (value) setActiveCategory(value);
-              }}
-              className="bg-gray-100 p-1 rounded-full"
-            >
+            <div className="flex space-x-8 md:space-x-12">
               {categories.map((category) => (
-                <ToggleGroupItem 
+                <button 
                   key={category.id} 
-                  value={category.id}
-                  aria-label={`Show FAQs for ${category.label}`}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`font-bold text-lg transition-colors duration-300 ${
                     activeCategory === category.id 
-                      ? 'bg-[#fa9de3] text-white shadow-md'
-                      : 'text-gray-600 hover:text-gray-800'
+                      ? 'text-[#a3adf4]' 
+                      : 'text-gray-400 hover:text-gray-600'
                   }`}
                 >
                   {category.label}
-                </ToggleGroupItem>
+                </button>
               ))}
-            </ToggleGroup>
+            </div>
           </div>
           
           {/* Passengers FAQs */}
@@ -282,8 +273,6 @@ const FAQSection = () => {
           </div>
         </div>
       </div>
-      
-      {/* Removed the scroll to top button indicator */}
     </section>
   );
 };
