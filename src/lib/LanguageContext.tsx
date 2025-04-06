@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'de' | 'en';
@@ -170,15 +169,15 @@ export const translations: Translations = {
     en: 'Your full name'
   },
   contactEmailLabel: {
-    de: 'Email',
+    de: 'E-Mail',
     en: 'Email'
   },
   contactEmailPlaceholder: {
-    de: 'Ihre Email-Adresse',
+    de: 'Ihre E-Mail-Adresse',
     en: 'Your email address'
   },
   contactPhoneLabel: {
-    de: 'Phone',
+    de: 'Telefon',
     en: 'Phone'
   },
   contactPhonePlaceholder: {
@@ -186,7 +185,7 @@ export const translations: Translations = {
     en: 'Your phone number (optional)'
   },
   contactMessageLabel: {
-    de: 'Message',
+    de: 'Nachricht',
     en: 'Message'
   },
   contactMessagePlaceholder: {
@@ -268,7 +267,89 @@ export const translations: Translations = {
   visionTitle: {
     de: 'Meet Our Founder',
     en: 'Meet Our Founder'
-  }
+  },
+  
+  // Section Headers
+  sectionOurServices: {
+    de: 'UNSERE DIENSTE',
+    en: 'OUR SERVICES'
+  },
+  sectionAboutUs: {
+    de: 'ÜBER UNS',
+    en: 'ABOUT US'
+  },
+  sectionOurVision: {
+    de: 'UNSERE VISION',
+    en: 'OUR VISION'
+  },
+  sectionMeetFounder: {
+    de: 'Lernen Sie unseren Gründer kennen',
+    en: 'Meet Our Founder'
+  },
+  
+  // Latest Features Section
+  latestFeaturesSectionTitle: {
+    de: 'Fahrt im Voraus buchen',
+    en: 'Book a ride in advance'
+  },
+  latestFeaturesSectionText: {
+    de: 'Planen Sie eine Reise? Buchen Sie Ihre Fahrt im Voraus für noch bequemere Flughafentransfers, wichtige Meetings oder andere Termine, die Pünktlichkeit erfordern. Geben Sie einfach Ihre Details ein und sichern Sie Ihre Fahrt bis zu 90 Tage im Voraus.',
+    en: 'Planning a trip? Schedule a ride in advance for even more convenient airport transfers, important meetings, or any occasion that requires punctuality. Simply enter your details and secure your ride up to 90 days ahead.'
+  },
+  forFemaleDrivers: {
+    de: 'Für Fahrerinnen',
+    en: 'For female drivers'
+  },
+  forFleetOperators: {
+    de: 'Für Flottenunternehmen',
+    en: 'For fleet operators'
+  },
+  
+  // Download Section
+  downloadSectionTitle: {
+    de: 'Laden Sie unsere App herunter',
+    en: 'Download our app'
+  },
+  downloadSectionSubtitle: {
+    de: 'Bald im Google Play & App Store verfügbar',
+    en: 'Coming soon to Google Play & App Store'
+  },
+  downloadSectionDesc: {
+    de: 'Scannen Sie den QR-Code mit Ihrer Handykamera, um die FemRide App herunterzuladen.',
+    en: 'Scan the QR code with your phone camera to download the FemRide app.'
+  },
+  downloadSectionMainText: {
+    de: 'Die schnelle, kostengünstige Art zu fahren.',
+    en: 'The fast, affordable way to ride.'
+  },
+  downloadSectionDeviceText: {
+    de: 'Verfügbar für iOS und Android Geräte.',
+    en: 'Available for iOS and Android devices.'
+  },
+  downloadSectionAppStore: {
+    de: 'App Store',
+    en: 'App Store'
+  },
+  downloadSectionGooglePlay: {
+    de: 'Google Play',
+    en: 'Google Play'
+  },
+  downloadSectionSoon: {
+    de: 'Bald',
+    en: 'Soon'
+  },
+  downloadSectionNotify: {
+    de: 'Lassen Sie sich benachrichtigen, wenn unsere App zum Download verfügbar ist',
+    en: 'Get notified when our app is available for download'
+  },
+  downloadOn: {
+    de: 'Laden im',
+    en: 'Download on the'
+  },
+  getItOn: {
+    de: 'JETZT BEI',
+    en: 'GET IT ON'
+  },
 };
 
 interface LanguageContextType {

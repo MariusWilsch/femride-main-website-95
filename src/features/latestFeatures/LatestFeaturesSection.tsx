@@ -1,6 +1,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/lib/LanguageContext";
 
 /**
  * LatestFeaturesSection component highlighting driver and fleet partner opportunities
@@ -9,6 +10,7 @@ import { Button } from "@/components/ui/button";
 const LatestFeaturesSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -63,11 +65,9 @@ const LatestFeaturesSection = () => {
         >
           <div className="bg-black rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-[1.01] hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
             <div className="p-8">
-              <h3 className="text-white text-2xl font-bold mb-4">Book a ride in advance</h3>
+              <h3 className="text-white text-2xl font-bold mb-4">{t('latestFeaturesSectionTitle')}</h3>
               <p className="text-white/80 max-w-3xl mx-auto mb-6">
-                Planning a trip? Schedule a ride in advance for even more convenient airport 
-                transfers, important meetings, or any occasion that requires punctuality. Simply 
-                enter your details and secure your ride up to 90 days ahead.
+                {t('latestFeaturesSectionText')}
               </p>
             </div>
             <div className="relative overflow-hidden">
@@ -89,7 +89,7 @@ const LatestFeaturesSection = () => {
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
             } hover:shadow-xl hover:bg-white/60`}
           >
-            <h3 className="text-2xl font-bold mb-4 text-[#222]">For female drivers</h3>
+            <h3 className="text-2xl font-bold mb-4 text-[#222]">{t('forFemaleDrivers')}</h3>
             <p className="text-lg mb-6 text-gray-700">
               Werde Fahrerin und schließe dich einer FemRide-Flotte in Deutschland an!
               Auf der Suche nach einer Fahrerin-Position in Deutschland? Werde Teil eines Flottenunternehmens, 
@@ -115,7 +115,7 @@ const LatestFeaturesSection = () => {
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
             } hover:shadow-xl hover:bg-white/60`}
           >
-            <h3 className="text-2xl font-bold mb-4 text-[#222]">For fleet operators</h3>
+            <h3 className="text-2xl font-bold mb-4 text-[#222]">{t('forFleetOperators')}</h3>
             <p className="text-lg mb-6 text-gray-700">
               Werde Flottenpartner von FemRide in Deutschland!
               Besitzt du ein Flottenunternehmen und suchst nach neuen, lukrativen Einsatzmöglichkeiten? 

@@ -49,11 +49,11 @@ const FounderSection = () => {
         {/* Section header */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-[#a3adf4] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
-            OUR VISION
+            {t('sectionOurVision')}
             <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#a3adf4]"></span>
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-[#222] mb-8">
-            Meet Our Founder
+            {t('sectionMeetFounder')}
           </h2>
           <div className="w-24 h-1 bg-[#a3adf4] mx-auto mb-8"></div>
         </div>

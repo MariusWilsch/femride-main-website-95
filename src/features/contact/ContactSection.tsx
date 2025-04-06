@@ -6,11 +6,13 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Send, UserCircle, Mail, Phone, MessageSquare } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import { useLanguage } from "@/lib/LanguageContext";
 
 /**
  * Enhanced contact section with improved design principles and email functionality
  */
 const ContactSection = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -151,7 +153,7 @@ ${formData.message}
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <UserCircle className="text-black/70" size={18} />
-                    <Label htmlFor="name" className="text-black font-medium">Name</Label>
+                    <Label htmlFor="name" className="text-black font-medium">{t('contactNameLabel')}</Label>
                   </div>
                   <Input 
                     id="name"
@@ -160,14 +162,14 @@ ${formData.message}
                     onChange={handleChange}
                     required
                     className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12 rounded-2xl"
-                    placeholder="Ihr vollständiger Name"
+                    placeholder={t('contactNamePlaceholder')}
                   />
                 </div>
 
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <Mail className="text-black/70" size={18} />
-                    <Label htmlFor="email" className="text-black font-medium">Email</Label>
+                    <Label htmlFor="email" className="text-black font-medium">{t('contactEmailLabel')}</Label>
                   </div>
                   <Input 
                     id="email"
@@ -177,14 +179,14 @@ ${formData.message}
                     onChange={handleChange}
                     required
                     className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12 rounded-2xl"
-                    placeholder="Ihre Email-Adresse"
+                    placeholder={t('contactEmailPlaceholder')}
                   />
                 </div>
 
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <Phone className="text-black/70" size={18} />
-                    <Label htmlFor="phone" className="text-black font-medium">Phone</Label>
+                    <Label htmlFor="phone" className="text-black font-medium">{t('contactPhoneLabel')}</Label>
                   </div>
                   <Input 
                     id="phone"
@@ -193,14 +195,14 @@ ${formData.message}
                     value={formData.phone}
                     onChange={handleChange}
                     className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12 rounded-2xl"
-                    placeholder="Ihre Telefonnummer (optional)"
+                    placeholder={t('contactPhonePlaceholder')}
                   />
                 </div>
 
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <MessageSquare className="text-black/70" size={18} />
-                    <Label htmlFor="message" className="text-black font-medium">Message</Label>
+                    <Label htmlFor="message" className="text-black font-medium">{t('contactMessageLabel')}</Label>
                   </div>
                   <Textarea 
                     id="message"
@@ -210,7 +212,7 @@ ${formData.message}
                     required
                     rows={5}
                     className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 resize-none rounded-2xl"
-                    placeholder="Ihre Nachricht an uns..."
+                    placeholder={t('contactMessagePlaceholder')}
                   />
                 </div>
 
@@ -221,7 +223,7 @@ ${formData.message}
                 >
                   <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20"></span>
                   <span className="relative flex items-center justify-center gap-2">
-                    {isSubmitting ? 'Wird gesendet...' : 'Absenden'}
+                    {isSubmitting ? 'Wird gesendet...' : t('contactSubmitButton')}
                     <Send size={18} className={`transition-transform ${isSubmitting ? 'translate-x-2' : ''}`} />
                   </span>
                 </Button>

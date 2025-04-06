@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { User, Shield, Sparkles } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 /**
  * Enhanced About section highlighting FemRide as a European mobility platform for women
@@ -12,6 +13,7 @@ import { User, Shield, Sparkles } from "lucide-react";
 const AboutSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -75,7 +77,7 @@ const AboutSection = () => {
         {/* Section header with animations - "ABOUT US" in pink */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-[#fa9de3] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
-            ABOUT US
+            {t('sectionAboutUs')}
             <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#fa9de3]"></span>
           </p>
           <h2 className="text-4xl md:text-6xl font-bold text-black mb-8">
