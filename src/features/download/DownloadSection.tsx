@@ -60,11 +60,11 @@ const DownloadSection = () => {
           </p>
         </div>
 
-        {/* Main content container with app logo */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 max-w-6xl mx-auto">
-          {/* App logo on the left */}
-          <div className={`w-full md:w-1/2 flex justify-center md:justify-end transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-            <div className="relative w-full max-w-[400px]">
+        {/* Main content container with app logo - adjusted spacing */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-12 max-w-6xl mx-auto">
+          {/* App logo on the left - adjusted spacing and positioning */}
+          <div className={`w-full md:w-5/12 flex justify-center md:justify-end pr-0 md:pr-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+            <div className="relative w-full max-w-[400px] mx-auto md:ml-auto md:mr-0">
               <img 
                 src="/lovable-uploads/654ddc06-1ffe-4b11-9adf-c28fb37b5b96.png" 
                 alt="FemRide App Logo" 
@@ -73,8 +73,8 @@ const DownloadSection = () => {
             </div>
           </div>
           
-          {/* App info and buttons on the right */}
-          <div className={`w-full md:w-1/2 text-left transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+          {/* App info and buttons on the right - adjusted width for better spacing */}
+          <div className={`w-full md:w-7/12 text-left transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
             <div className="space-y-8">
               <h3 className="text-3xl md:text-5xl font-bold">
                 {t('downloadSectionMainText')}
