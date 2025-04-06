@@ -46,20 +46,19 @@ const DownloadSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section header with animation */}
-        <div className={`text-center mb-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-400">
-            Download our app
-          </h2>
-          
-          {/* Logo image added here */}
-          <div className="flex justify-center mb-8">
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          {/* FemRide Logo */}
+          <div className="flex justify-center mb-6">
             <img 
-              src="/lovable-uploads/51623d51-1411-41ab-b413-558c8987b550.png" 
+              src="/lovable-uploads/d60b24d2-aee2-4a97-8572-b4d501eef651.png" 
               alt="FemRide Logo" 
-              className="h-32 w-auto" 
+              className="w-28 h-28 object-contain"
             />
           </div>
           
+          <h2 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-400">
+            Download our app
+          </h2>
           <p className="text-lg text-gray-300 inline-block relative">
             Coming soon to Google Play & App Store
             <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#fa9de3] to-[#a3adf4] rounded-full transform scale-x-0 transition-transform duration-700 ease-out" style={{
