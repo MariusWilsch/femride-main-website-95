@@ -8,7 +8,6 @@ import { useLanguage } from "@/lib/LanguageContext";
 /**
  * Enhanced DownloadSection component with modern design elements
  * and improved visual hierarchy based on Refactoring UI principles
- * Updated to German language with removed images
  */
 const DownloadSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -49,7 +48,7 @@ const DownloadSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section header with animation */}
-        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-400">
             {t('downloadSectionTitle')}
           </h2>
@@ -61,13 +60,23 @@ const DownloadSection = () => {
           </p>
         </div>
 
-        {/* Main content container */}
-        <div className={`flex flex-col md:flex-row justify-between items-center gap-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          {/* App info - Center */}
-          <div className="w-full text-center">
-            {/* Content without tabs */}
+        {/* Main content container with app logo */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 max-w-6xl mx-auto">
+          {/* App logo on the left */}
+          <div className={`w-full md:w-1/2 flex justify-center md:justify-end transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+            <div className="relative w-full max-w-[400px]">
+              <img 
+                src="/lovable-uploads/654ddc06-1ffe-4b11-9adf-c28fb37b5b96.png" 
+                alt="FemRide App Logo" 
+                className="w-full h-auto drop-shadow-[0_0_30px_rgba(250,157,227,0.3)]"
+              />
+            </div>
+          </div>
+          
+          {/* App info and buttons on the right */}
+          <div className={`w-full md:w-1/2 text-left transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
             <div className="space-y-8">
-              <h3 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
+              <h3 className="text-3xl md:text-5xl font-bold">
                 {t('downloadSectionMainText')}
               </h3>
 
@@ -76,10 +85,10 @@ const DownloadSection = () => {
               </p>
 
               {/* App Store buttons with enhanced styling */}
-              <div className="flex flex-wrap justify-center gap-6 mt-10">
+              <div className="flex flex-col sm:flex-row gap-4 mt-6">
                 <div className="relative group">
                   <Button 
-                    className="bg-gray-800 hover:bg-gray-700 text-white rounded-3xl font-medium px-8 py-7 text-base group-hover:shadow-[0_0_25px_rgba(250,157,227,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none"
+                    className="bg-gray-800 hover:bg-gray-700 text-white rounded-3xl font-medium px-8 py-7 text-base group-hover:shadow-[0_0_25px_rgba(250,157,227,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none w-full sm:w-auto"
                   >
                     <AppWindow size={24} />
                     <span className="flex flex-col items-start">
@@ -94,7 +103,7 @@ const DownloadSection = () => {
                 
                 <div className="relative group">
                   <Button 
-                    className="bg-gray-800 hover:bg-gray-700 text-white rounded-3xl font-medium px-8 py-7 text-base group-hover:shadow-[0_0_25px_rgba(163,173,244,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none"
+                    className="bg-gray-800 hover:bg-gray-700 text-white rounded-3xl font-medium px-8 py-7 text-base group-hover:shadow-[0_0_25px_rgba(163,173,244,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none w-full sm:w-auto"
                   >
                     <Smartphone size={24} />
                     <span className="flex flex-col items-start">
@@ -109,7 +118,7 @@ const DownloadSection = () => {
               </div>
               
               {/* Optional feature callout */}
-              <div className="mt-12 bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-gray-800 flex items-center gap-3 max-w-md mx-auto">
+              <div className="mt-6 bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-gray-800 flex items-center gap-3">
                 <Download size={20} className="text-[#fa9de3]" />
                 <p className="text-sm text-gray-300">
                   {t('downloadSectionNotify')}
