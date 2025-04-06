@@ -47,6 +47,15 @@ const DownloadSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section header with animation */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          {/* FemRide Logo */}
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/lovable-uploads/d60b24d2-aee2-4a97-8572-b4d501eef651.png" 
+              alt="FemRide Logo" 
+              className="w-28 h-28 object-contain"
+            />
+          </div>
+          
           <h2 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-400">
             Download our app
           </h2>
