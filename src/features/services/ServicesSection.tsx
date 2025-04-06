@@ -1,4 +1,5 @@
 
+import { Button } from "@/components/ui/button";
 import { useEffect, useState, useRef } from "react";
 import { ChevronRight } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
@@ -125,7 +126,7 @@ const ServicesSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
                 </div>
 
-                {/* Header banner at top with text instead of button styling */}
+                {/* Header banner at top with bold blue text styling instead of button */}
                 <div 
                   className="p-3 text-center text-base font-extrabold uppercase tracking-wider text-[#a3adf4] relative rounded-b-3xl"
                 >
@@ -141,10 +142,15 @@ const ServicesSection = () => {
                   
                   {/* Replacing button with bold blue text */}
                   <div className="mt-auto">
-                    <div className="text-[#a3adf4] font-bold text-lg tracking-wide flex items-center justify-center">
-                      {card.buttonText}
-                      <ChevronRight className="ml-1 w-5 h-5" />
-                    </div>
+                    <Button 
+                      className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-semibold text-sm px-5 py-4 h-auto w-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group" 
+                      onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+                    >
+                      <span className="flex items-center justify-center w-full">
+                        <span className="tracking-wide font-bold">{card.buttonText}</span>
+                        <ChevronRight className="ml-1 w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                      </span>
+                    </Button>
                   </div>
                 </div>
               </div>
