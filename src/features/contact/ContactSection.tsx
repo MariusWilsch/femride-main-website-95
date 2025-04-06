@@ -107,8 +107,8 @@ ${formData.message}
       className="py-20 relative overflow-hidden" 
       id="contact-section"
     >
-      {/* Background with gradients and decorations - Changed to pink */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#fa9de3]/90 via-[#fa9de3] to-[#fa9de3]/80 -z-10"></div>
+      {/* Background with gradients and decorations */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#a3adf4]/90 via-[#a3adf4] to-[#a3adf4]/80 -z-10"></div>
       
       {/* Decorative blobs */}
       <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-white/10 filter blur-[50px] animate-blob"></div>
@@ -124,7 +124,7 @@ ${formData.message}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">
             Interessiert an einer Zusammenarbeit mit FemRide?
           </h2>
-          <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-[#fa9de3] mx-auto mb-8"></div>
           <div className="max-w-3xl mx-auto text-center mb-8">
             <p className="text-lg text-black">
               Sie sind Flottenunternehmer und möchten Ihre Fahrzeuge über FemRide einsetzen?<br />
@@ -161,7 +161,7 @@ ${formData.message}
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#a3adf4] focus:ring-[#a3adf4]/20 h-12 rounded-2xl"
+                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12 rounded-2xl"
                     placeholder={t('contactNamePlaceholder')}
                   />
                 </div>
@@ -178,7 +178,7 @@ ${formData.message}
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#a3adf4] focus:ring-[#a3adf4]/20 h-12 rounded-2xl"
+                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12 rounded-2xl"
                     placeholder={t('contactEmailPlaceholder')}
                   />
                 </div>
@@ -194,7 +194,7 @@ ${formData.message}
                     type="tel"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#a3adf4] focus:ring-[#a3adf4]/20 h-12 rounded-2xl"
+                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12 rounded-2xl"
                     placeholder={t('contactPhonePlaceholder')}
                   />
                 </div>
@@ -211,7 +211,7 @@ ${formData.message}
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#a3adf4] focus:ring-[#a3adf4]/20 resize-none rounded-2xl"
+                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 resize-none rounded-2xl"
                     placeholder={t('contactMessagePlaceholder')}
                   />
                 </div>
@@ -219,7 +219,7 @@ ${formData.message}
                 <Button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-black hover:bg-black/80 text-white py-6 rounded-3xl font-medium text-base shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.02] relative overflow-hidden group"
+                  className="w-full bg-[#fa9de3] hover:bg-[#e989cc] text-black py-6 rounded-3xl font-medium text-base shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.02] relative overflow-hidden group"
                 >
                   <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20"></span>
                   <span className="relative flex items-center justify-center gap-2">
