@@ -7,7 +7,7 @@ import { User, Shield, Sparkles } from "lucide-react";
 /**
  * Enhanced About section highlighting FemRide as a European mobility platform for women
  * With improved aesthetics, animations, and design elements
- * Updated to use blue as primary color with "ABOUT US" in blue
+ * Updated to use blue as primary color with "ABOUT US" in pink
  */
 const AboutSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -72,11 +72,11 @@ const AboutSection = () => {
       <div className="absolute bottom-20 left-20 w-80 h-80 rounded-full bg-white/5 filter blur-[70px] animate-blob animation-delay-2000"></div>
       
       <div className="container mx-auto px-4 relative">
-        {/* Section header with animations - "ABOUT US" in blue */}
+        {/* Section header with animations - "ABOUT US" in pink */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-[#a3adf4] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
+          <p className="text-[#fa9de3] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
             ABOUT US
-            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#a3adf4]"></span>
+            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#fa9de3]"></span>
           </p>
           <h2 className="text-4xl md:text-6xl font-bold text-black mb-8">
             Was sagen die Frauen zu FemRide?
@@ -121,10 +121,10 @@ const AboutSection = () => {
           ))}
         </div>
 
-        {/* CTA button with blue background color */}
+        {/* CTA button with pink background color */}
         <div className={`flex justify-center transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <Button 
-            className="px-8 py-6 text-lg bg-[#a3adf4] hover:bg-[#8c98e8] text-black rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden group"
+            className="px-8 py-6 text-lg bg-[#fa9de3] hover:bg-[#e989cc] text-black rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden group"
             onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
           >
             <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20"></span>
