@@ -11,6 +11,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 
 /**
  * FAQ section with categories for different user types
+ * Modified to ensure consistent text alignment for answers (left-aligned)
  */
 const FAQSection = () => {
   const [activeCategory, setActiveCategory] = useState("passengers");
@@ -49,6 +50,9 @@ const FAQSection = () => {
   const accordionItemClass = "border-0 border-b border-gray-200";
   const accordionTriggerClass = "py-6 text-lg font-medium flex items-center justify-between hover:no-underline";
   const accordionContentClass = "pb-6 text-gray-600";
+  
+  // Updated style for all FAQ answers content - left aligned
+  const answerContentClass = "px-4 text-left mx-auto max-w-3xl";
 
   return (
     <section 
@@ -121,7 +125,7 @@ const FAQSection = () => {
                   {t('faqPassengerQ1')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <div className="pl-0 pr-0">
+                  <div className={answerContentClass}>
                     {t('faqPassengerA1')}
                   </div>
                 </AccordionContent>
@@ -132,7 +136,7 @@ const FAQSection = () => {
                   {t('faqPassengerQ2')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <div className="pl-0 pr-0">
+                  <div className={answerContentClass}>
                     {t('faqPassengerA2')}
                   </div>
                 </AccordionContent>
@@ -143,7 +147,7 @@ const FAQSection = () => {
                   {t('faqPassengerQ3')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <div className="pl-0 pr-0">
+                  <div className={answerContentClass}>
                     {t('faqPassengerA3')}
                   </div>
                 </AccordionContent>
@@ -154,7 +158,7 @@ const FAQSection = () => {
                   {t('faqPassengerQ4')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <div className="pl-0 pr-0">
+                  <div className={answerContentClass}>
                     {t('faqPassengerA4')}
                   </div>
                 </AccordionContent>
@@ -174,7 +178,7 @@ const FAQSection = () => {
                   {t('faqDriverQ1')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <div className="pl-0 pr-0">
+                  <div className={answerContentClass}>
                     {t('faqDriverA1')}
                   </div>
                 </AccordionContent>
@@ -185,9 +189,9 @@ const FAQSection = () => {
                   {t('faqDriverQ2')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <div className="pl-0 pr-0">
-                    <p className="mb-2">{t('faqDriverA2Part1')}</p>
-                    <ul className="list-none pl-0 space-y-2">
+                  <div className={answerContentClass}>
+                    <p className="mb-4 text-left">{t('faqDriverA2Part1')}</p>
+                    <ul className="list-none inline-block mr-auto text-left space-y-2">
                       <li className="flex items-start">
                         <span className="text-[#fa9de3] mr-2">•</span>
                         <span>{t('faqDriverA2Item1')}</span>
@@ -210,7 +214,7 @@ const FAQSection = () => {
                   {t('faqDriverQ3')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <div className="pl-0 pr-0">
+                  <div className={answerContentClass}>
                     {t('faqDriverA3')}
                   </div>
                 </AccordionContent>
@@ -221,7 +225,7 @@ const FAQSection = () => {
                   {t('faqDriverQ4')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <div className="pl-0 pr-0">
+                  <div className={answerContentClass}>
                     {t('faqDriverA4')}
                   </div>
                 </AccordionContent>
@@ -241,7 +245,7 @@ const FAQSection = () => {
                   {t('faqFleetQ1')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <div className="pl-0 pr-0">
+                  <div className={answerContentClass}>
                     {t('faqFleetA1')}
                   </div>
                 </AccordionContent>
@@ -252,7 +256,7 @@ const FAQSection = () => {
                   {t('faqFleetQ2')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <div className="pl-0 pr-0">
+                  <div className={answerContentClass}>
                     {t('faqFleetA2')}
                   </div>
                 </AccordionContent>
@@ -263,7 +267,7 @@ const FAQSection = () => {
                   {t('faqFleetQ3')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <div className="pl-0 pr-0">
+                  <div className={answerContentClass}>
                     {t('faqFleetA3')}
                   </div>
                 </AccordionContent>
@@ -274,7 +278,7 @@ const FAQSection = () => {
                   {t('faqFleetQ4')}
                 </AccordionTrigger>
                 <AccordionContent className={accordionContentClass}>
-                  <div className="pl-0 pr-0">
+                  <div className={answerContentClass}>
                     {t('faqFleetA4')}
                   </div>
                 </AccordionContent>

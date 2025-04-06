@@ -118,7 +118,7 @@ ${formData.message}
         <div className={`text-center mb-10 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-black font-medium tracking-wide uppercase text-base relative inline-block mb-3">
             {t('contactHeader')}
-            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-black"></span>
+            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#fa9de3]"></span>
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">
             {t('contactTitle')}

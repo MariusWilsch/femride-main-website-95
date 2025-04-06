@@ -75,7 +75,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 relative">
         {/* Section header with animations - "ABOUT US" in pink */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-[#fa9de3] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
+          <p className="text-black font-medium tracking-wide uppercase text-base relative inline-block mb-3">
             {t('sectionAboutUs')}
             <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#fa9de3]"></span>
           </p>

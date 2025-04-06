@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Globe, Menu } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -13,6 +12,8 @@ import {
 /**
  * Navigation component for the application header
  * Enhanced with sticky behavior and animations
+ * Updated to link Register button to Services section
+ * Updated button styling to match site styling from index.css
  */
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,6 +34,14 @@ const Navbar = () => {
 
   const toggleLanguage = () => {
     setLanguage(language === 'de' ? 'en' : 'de');
+  };
+
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false); // Close mobile menu if open
   };
 
   return (
@@ -83,7 +92,8 @@ const Navbar = () => {
           </a>
           
           <Button 
-            className="bg-[#222] hover:bg-[#333] text-white rounded-full px-6 py-2 transition-transform hover:scale-105 duration-200 shadow-md"
+            onClick={scrollToServices}
+            className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-medium rounded-full px-6 py-2 transition-transform hover:scale-105 duration-200 shadow-md"
           >
             {t('navRegister')}
           </Button>
@@ -124,7 +134,10 @@ const Navbar = () => {
               {t('navSupport')}
             </a>
             
-            <Button className="bg-[#222] hover:bg-[#333] text-white rounded-full px-6 py-2 transition-transform hover:scale-105 duration-200">
+            <Button 
+              onClick={scrollToServices}
+              className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-medium rounded-full px-6 py-2 transition-transform hover:scale-105 duration-200"
+            >
               {t('navRegister')}
             </Button>
           </div>

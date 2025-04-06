@@ -372,12 +372,12 @@ export const translations: Translations = {
     en: 'Get notified when our app is available for download'
   },
   downloadOn: {
-    de: 'Laden im',
-    en: 'Download on the'
+    de: 'JETZT BEI',
+    en: 'GET ON'
   },
   getItOn: {
     de: 'JETZT BEI',
-    en: 'GET IT ON'
+    en: 'GET ON'
   },
   
   // About Section

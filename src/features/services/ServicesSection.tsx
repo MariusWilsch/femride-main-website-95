@@ -34,7 +34,7 @@ const ServicesSection = () => {
       observer.disconnect();
     };
   }, []);
-
+  
   const serviceCards = [
     {
       id: 1,
@@ -43,7 +43,7 @@ const ServicesSection = () => {
       description: t('servicesDesc1'),
       buttonText: t('servicesButton1'),
       color: "#a3adf4", // Using the correct blue color
-      imageSrc: "/lovable-uploads/97a44fdb-e7a6-4917-9b66-1a40f373e0a7.png",
+      imageSrc: "/lovable-uploads/6cb77555-69e9-4c53-8c49-17d4a2798133.png",
       imageAlt: "Women in car with pink hair",
     },
     {
@@ -53,7 +53,7 @@ const ServicesSection = () => {
       description: t('servicesDesc2'),
       buttonText: t('servicesButton2'),
       color: "#a3adf4", // Using the correct blue color
-      imageSrc: "/lovable-uploads/6cb77555-69e9-4c53-8c49-17d4a2798133.png",
+      imageSrc: "/lovable-uploads/97a44fdb-e7a6-4917-9b66-1a40f373e0a7.png",
       imageAlt: "Women in car enjoying a ride",
     },
     {

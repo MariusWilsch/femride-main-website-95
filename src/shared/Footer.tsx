@@ -7,6 +7,7 @@ import { useLanguage } from '@/lib/LanguageContext';
 export const Footer = () => {
   const { t, language } = useLanguage();
   const currentYear = new Date().getFullYear();
+  const isGerman = language === 'de';
   
   return (
     <footer className="bg-[#1A1F2C] text-white text-left">
@@ -28,12 +29,6 @@ export const Footer = () => {
             <Link to="/privacy" className="text-gray-300 hover:text-[#fa9de3] transition-colors">
               {t('footerPrivacy')}
             </Link>
-            <Link to="/about" className="text-gray-300 hover:text-[#fa9de3] transition-colors">
-              About
-            </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-[#fa9de3] transition-colors">
-              Contact
-            </Link>
           </div>
         </div>
         
@@ -43,7 +38,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 py-12">
           {/* Company info column */}
           <div className="text-left">
-            <h3 className="text-lg font-semibold mb-6">Company</h3>
+            <h3 className="text-lg font-semibold mb-6">{isGerman ? 'Unternehmen' : 'Company'}</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-[#fa9de3] mt-1" />
@@ -66,7 +61,7 @@ export const Footer = () => {
           
           {/* Connect column with social icons */}
           <div className="text-left">
-            <h3 className="text-lg font-semibold mb-6">Connect</h3>
+            <h3 className="text-lg font-semibold mb-6">{isGerman ? 'Verbinden' : 'Connect'}</h3>
             <div className="flex flex-wrap gap-4">
               <a 
                 href="https://facebook.com" 
@@ -109,19 +104,21 @@ export const Footer = () => {
           
           {/* Legal info column */}
           <div className="text-left">
-            <h3 className="text-lg font-semibold mb-6">Legal</h3>
+            <h3 className="text-lg font-semibold mb-6">{isGerman ? 'Rechtliches' : 'Legal'}</h3>
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium text-white mb-1">Impressum</h4>
-                <p className="text-gray-300">Aykut Atli (Geschäftsführer)</p>
+                <p className="text-gray-300">{isGerman ? 'Aykut Atli (Geschäftsführer)' : 'Aykut Atli (CEO)'}</p>
               </div>
               <div>
                 <h4 className="font-medium text-white mb-1">Handelsregister:</h4>
-                <p className="text-gray-300">Amtsgericht Berlin (Charlottenburg)</p>
+                <p className="text-gray-300">{isGerman ? 'Amtsgericht Berlin (Charlottenburg)' : 'District Court Berlin (Charlottenburg)'}</p>
                 <p className="text-gray-300">HRB 272631</p>
               </div>
               <div>
-                <p className="text-gray-300 text-sm">Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV: Aykut Atli</p>
+                <p className="text-gray-300 text-sm">{isGerman 
+                  ? 'Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV: Aykut Atli'
+                  : 'Responsible for the content according to § 18 Abs. 2 MStV: Aykut Atli'}</p>
               </div>
             </div>
           </div>
