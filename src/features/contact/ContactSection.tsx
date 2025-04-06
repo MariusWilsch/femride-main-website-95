@@ -134,13 +134,13 @@ ${formData.message}
           </div>
         </div>
 
-        {/* Contact form with animation */}
+        {/* Contact form with animation - Updated with more rounded corners */}
         <div 
           className={`max-w-2xl mx-auto transition-all duration-700 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
           }`}
         >
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/30 relative overflow-hidden">
+          <div className="bg-white/20 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/30 relative overflow-hidden">
             {/* Subtle pattern overlay */}
             <div className="absolute inset-0 opacity-5 pointer-events-none">
               <div className="absolute inset-y-0 left-0 w-1/2 bg-black/5"></div>
@@ -159,7 +159,7 @@ ${formData.message}
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12"
+                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12 rounded-2xl"
                     placeholder="Ihr vollständiger Name"
                   />
                 </div>
@@ -176,7 +176,7 @@ ${formData.message}
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12"
+                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12 rounded-2xl"
                     placeholder="Ihre Email-Adresse"
                   />
                 </div>
@@ -192,7 +192,7 @@ ${formData.message}
                     type="tel"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12"
+                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12 rounded-2xl"
                     placeholder="Ihre Telefonnummer (optional)"
                   />
                 </div>
@@ -209,7 +209,7 @@ ${formData.message}
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 resize-none"
+                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 resize-none rounded-2xl"
                     placeholder="Ihre Nachricht an uns..."
                   />
                 </div>
@@ -217,7 +217,7 @@ ${formData.message}
                 <Button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-[#fa9de3] hover:bg-[#e989cc] text-black py-6 rounded-xl font-medium text-base shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.02] relative overflow-hidden group"
+                  className="w-full bg-[#fa9de3] hover:bg-[#e989cc] text-black py-6 rounded-3xl font-medium text-base shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.02] relative overflow-hidden group"
                 >
                   <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20"></span>
                   <span className="relative flex items-center justify-center gap-2">
