@@ -61,7 +61,7 @@ const LatestFeaturesSection = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
           }`}
         >
-          <div className="bg-black rounded-xl overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-[1.01] hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+          <div className="bg-black rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-[1.01] hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
             <div className="p-8">
               <h3 className="text-white text-2xl font-bold mb-4">Book a ride in advance</h3>
               <p className="text-white/80 max-w-3xl mx-auto mb-6">
@@ -85,7 +85,7 @@ const LatestFeaturesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
           {/* For Drivers */}
           <div 
-            className={`bg-white/50 backdrop-blur-sm p-8 rounded-2xl text-left shadow-lg border border-[#a3adf4]/20 transition-all duration-700 delay-400 transform ${
+            className={`bg-white/50 backdrop-blur-sm p-8 rounded-3xl text-left shadow-lg border border-[#a3adf4]/20 transition-all duration-700 delay-400 transform ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
             } hover:shadow-xl hover:bg-white/60`}
           >
@@ -98,20 +98,20 @@ const LatestFeaturesSection = () => {
               sicheren Job mit attraktiven Einkommensperspektiven!
             </p>
             <Button 
-              className="bg-[#a3adf4] hover:bg-[#8a93d6] text-black font-medium px-6 py-4 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] group rounded-xl"
+              className="bg-[#a3adf4] hover:bg-[#8a93d6] text-black font-medium px-6 py-4 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] group rounded-3xl"
               onClick={() => {
                 const contactSection = document.getElementById('contact-section');
                 if (contactSection) contactSection.scrollIntoView({behavior: 'smooth'});
               }}
             >
               <span className="relative z-10">Jetzt als Fahrerin anmelden!</span>
-              <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20 rounded-md"></span>
+              <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20 rounded-3xl"></span>
             </Button>
           </div>
           
           {/* For Fleet Partners */}
           <div 
-            className={`bg-white/50 backdrop-blur-sm p-8 rounded-2xl text-left shadow-lg border border-[#a3adf4]/20 transition-all duration-700 delay-600 transform ${
+            className={`bg-white/50 backdrop-blur-sm p-8 rounded-3xl text-left shadow-lg border border-[#a3adf4]/20 transition-all duration-700 delay-600 transform ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
             } hover:shadow-xl hover:bg-white/60`}
           >
@@ -124,14 +124,14 @@ const LatestFeaturesSection = () => {
               Flottenauslastung mit FemRide!
             </p>
             <Button 
-              className="bg-[#a3adf4] hover:bg-[#8a93d6] text-black font-medium px-6 py-4 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] group rounded-xl"
+              className="bg-[#a3adf4] hover:bg-[#8a93d6] text-black font-medium px-6 py-4 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] group rounded-3xl"
               onClick={() => {
                 const contactSection = document.getElementById('contact-section');
                 if (contactSection) contactSection.scrollIntoView({behavior: 'smooth'});
               }}
             >
               <span className="relative z-10">Jetzt als Flottenpartner registrieren!</span>
-              <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20 rounded-md"></span>
+              <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20 rounded-3xl"></span>
             </Button>
           </div>
         </div>

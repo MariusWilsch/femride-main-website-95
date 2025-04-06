@@ -93,7 +93,7 @@ const AboutSection = () => {
           {testimonialCards.map((card, index) => (
             <div 
               key={card.id}
-              className={`bg-white/10 backdrop-blur-sm rounded-2xl border border-white/30 overflow-hidden shadow-xl transition-all duration-700 transform ${
+              className={`bg-white/10 backdrop-blur-sm rounded-3xl border border-white/30 overflow-hidden shadow-xl transition-all duration-700 transform ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-20'
@@ -121,13 +121,13 @@ const AboutSection = () => {
           ))}
         </div>
 
-        {/* CTA button with pink background color */}
+        {/* CTA button with pink background color and more rounded corners */}
         <div className={`flex justify-center transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <Button 
-            className="px-8 py-6 text-lg bg-[#fa9de3] hover:bg-[#e989cc] text-black rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden group"
+            className="px-8 py-6 text-lg bg-[#fa9de3] hover:bg-[#e989cc] text-black rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden group"
             onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
           >
-            <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20"></span>
+            <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20 rounded-3xl"></span>
             <span className="relative">Jetzt registrieren und Teil der Bewegung werden</span>
           </Button>
         </div>

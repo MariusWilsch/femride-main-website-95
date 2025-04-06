@@ -23,7 +23,7 @@ const HeroSection = () => {
       {/* Hero content */}
       <div className="container mx-auto px-4 relative z-10 text-center">
         <div className="max-w-lg mx-auto">
-          <div className="inline-block bg-white/90 backdrop-blur-sm border border-pink-200 rounded-full px-6 py-2 shadow-md mb-6">
+          <div className="inline-block bg-white/90 backdrop-blur-sm border border-pink-200 rounded-3xl px-6 py-2 shadow-md mb-6">
             <p className="text-[#fa9de3] font-bold text-lg">{t('heroTagline')}</p>
           </div>
           
@@ -38,12 +38,12 @@ const HeroSection = () => {
           
           <div className="flex flex-col items-center space-y-4">
             <Button 
-              className="px-8 py-6 text-lg bg-[#fa9de3] hover:bg-[#e989cc] text-black rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="px-8 py-6 text-lg bg-[#fa9de3] hover:bg-[#e989cc] text-black rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               {t('heroButton')}
             </Button>
             
-            <p className="text-lg text-[#fa9de3] font-medium bg-black/50 px-4 py-2 rounded-lg">
+            <p className="text-lg text-[#fa9de3] font-medium bg-black/50 px-4 py-2 rounded-2xl">
               {t('heroComingSoon')}
             </p>
           </div>
