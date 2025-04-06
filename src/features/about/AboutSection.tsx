@@ -61,15 +61,15 @@ const AboutSection = () => {
   return (
     <section 
       ref={sectionRef} 
-      className="py-20 relative overflow-hidden bg-[#a3adf4]/20"
+      className="py-20 relative overflow-hidden"
       id="about"
     >
-      {/* Background changed to lighter blue like JOIN US section */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white to-[#a3adf4]/20 -z-10"></div>
+      {/* Background changed to blue */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#a3adf4]/80 via-[#a3adf4] to-[#a3adf4]/90 -z-10"></div>
       
       {/* Decorative blobs with updated colors */}
-      <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-[#a3adf4]/10 filter blur-[60px] animate-blob"></div>
-      <div className="absolute bottom-20 left-20 w-80 h-80 rounded-full bg-[#fa9de3]/10 filter blur-[70px] animate-blob animation-delay-2000"></div>
+      <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-white/10 filter blur-[50px] animate-blob"></div>
+      <div className="absolute bottom-20 left-20 w-80 h-80 rounded-full bg-white/5 filter blur-[70px] animate-blob animation-delay-2000"></div>
       
       <div className="container mx-auto px-4 relative">
         {/* Section header with animations - "ABOUT US" in pink */}
@@ -78,44 +78,44 @@ const AboutSection = () => {
             ABOUT US
             <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#fa9de3]"></span>
           </p>
-          <h2 className="text-4xl md:text-6xl font-bold text-[#222] mb-8">
+          <h2 className="text-4xl md:text-6xl font-bold text-black mb-8">
             Was sagen die Frauen zu FemRide?
           </h2>
-          <div className="w-24 h-1 bg-[#222] mx-auto mb-8"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <div className="w-24 h-1 bg-black mx-auto mb-8"></div>
+          <p className="text-black/80 max-w-2xl mx-auto text-lg">
             FemRide macht den Unterschied! – Eine Umfrage mit über 100 Teilnehmer:innen, davon 90 % Frauen, zeigt: 
             Sichere Mobilität ist ein dringendes Bedürfnis.
           </p>
         </div>
 
-        {/* Testimonial cards with staggered animations - updated to use soft gray background */}
+        {/* Testimonial cards with staggered animations */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16">
           {testimonialCards.map((card, index) => (
             <div 
               key={card.id}
-              className={`bg-gray-300/70 backdrop-blur-sm rounded-3xl border border-gray-200/40 overflow-hidden shadow-xl transition-all duration-700 transform ${
+              className={`bg-white/10 backdrop-blur-sm rounded-3xl border border-white/30 overflow-hidden shadow-xl transition-all duration-700 transform ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-20'
-              } hover:bg-gray-300/80 hover:shadow-2xl hover:-translate-y-1`}
+              } hover:bg-white/20 hover:shadow-2xl hover:-translate-y-1`}
               style={{ transitionDelay: `${200 * (index + 1)}ms` }}
             >
               <div className="p-6 flex flex-col h-full">
-                {/* Icon circle with matching color */}
-                <div className="w-12 h-12 rounded-full bg-[#a3adf4]/30 flex items-center justify-center mb-4">
+                {/* Icon background changed to white */}
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-4">
                   {card.icon}
                 </div>
                 
-                {/* Card title */}
-                <h3 className="text-2xl font-bold mb-4 text-[#222] text-center">{card.title}</h3>
+                {/* Card title - changed to black */}
+                <h3 className="text-2xl font-bold mb-4 text-black text-center">{card.title}</h3>
                 
-                {/* Statistics highlight */}
+                {/* Statistics highlight - changed to black */}
                 <div className="mb-6 text-center">
-                  <div className="text-5xl font-bold text-[#222]">{card.stats}</div>
+                  <div className="text-5xl font-bold text-black">{card.stats}</div>
                 </div>
                 
-                {/* Card description */}
-                <p className="text-gray-700 text-center">{card.description}</p>
+                {/* Card description - changed to darker color */}
+                <p className="text-black/80 text-center">{card.description}</p>
               </div>
             </div>
           ))}
