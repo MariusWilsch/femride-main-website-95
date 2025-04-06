@@ -90,7 +90,7 @@ const CitiesSection = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
         }`}>
           {/* Left column */}
-          <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
+          <div className="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-all duration-300">
             <p className="text-[#e989cc] mb-3">{slides[activeSlide].subtitle}</p>
             <h3 className="text-3xl md:text-4xl font-bold mb-6">
               {slides[activeSlide].title}
@@ -103,7 +103,7 @@ const CitiesSection = () => {
             <p className="text-xl mb-8 leading-relaxed text-white/90">
               {slides[activeSlide].description}
             </p>
-            <Button className="bg-[#e989cc] hover:bg-[#d678bb] text-black rounded-xl font-medium px-8 py-6 text-base self-start hover:shadow-lg transition-all duration-300 hover:scale-105 relative overflow-hidden group">
+            <Button className="bg-[#e989cc] hover:bg-[#d678bb] text-black font-medium px-8 py-6 text-base self-start hover:shadow-lg transition-all duration-300 hover:scale-105 relative overflow-hidden group">
               <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20"></span>
               <span className="relative">Learn more</span>
             </Button>

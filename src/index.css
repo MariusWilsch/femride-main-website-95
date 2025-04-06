@@ -1,3 +1,4 @@
+
 @import url('https://cdn.jsdelivr.net/npm/gilroy-font@1.0.0/stylesheet.css');
 
 @tailwind base;
@@ -34,7 +35,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 1rem;
+    --radius: 1.5rem;
 
     --sidebar-background: 0 0% 98%;
 

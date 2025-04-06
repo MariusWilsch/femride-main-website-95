@@ -101,7 +101,7 @@ const ServicesSection = () => {
           {serviceCards.map((card, index) => (
             <div 
               key={card.id}
-              className={`rounded-xl overflow-hidden bg-white shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 h-full transform ${
+              className={`rounded-3xl overflow-hidden bg-white shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 h-full transform ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-20'
@@ -128,7 +128,7 @@ const ServicesSection = () => {
 
                 {/* Header banner at top */}
                 <div 
-                  className="p-3 text-center text-sm font-bold uppercase tracking-wider text-white relative"
+                  className="p-3 text-center text-sm font-bold uppercase tracking-wider text-white relative rounded-b-3xl"
                   style={{ backgroundColor: card.color }}
                 >
                   {card.header}

@@ -62,13 +62,13 @@ const DownloadSection = () => {
         <div className={`flex flex-col md:flex-row justify-between items-center gap-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
           {/* QR Code - Left side */}
           <div className="md:w-1/2 flex flex-col items-center justify-center">
-            <div className="bg-gray-900/80 p-6 md:p-8 rounded-2xl backdrop-blur-sm shadow-xl border border-gray-800 relative mb-6 max-w-md w-full">
+            <div className="bg-gray-900/80 p-6 md:p-8 rounded-3xl backdrop-blur-sm shadow-xl border border-gray-800 relative mb-6 max-w-md w-full">
               <h3 className="text-center text-2xl font-bold mb-4">Download our app</h3>
               <p className="text-gray-300 text-sm mb-6 text-center">
                 Scan the QR code with your phone camera to download the FemRide app.
               </p>
               <div className="flex justify-center">
-                <div className="p-3 bg-white rounded-xl shadow-lg transform transition-all duration-500 hover:scale-105">
+                <div className="p-3 bg-white rounded-3xl shadow-lg transform transition-all duration-500 hover:scale-105">
                   <img
                     src="/lovable-uploads/5f6db923-679e-46c0-ba63-d8212e3d656c.png"
                     alt="FemRide App QR Code"
@@ -102,7 +102,7 @@ const DownloadSection = () => {
               <div className="flex flex-wrap gap-6 mt-10">
                 <div className="relative group">
                   <Button 
-                    className="bg-gray-800 hover:bg-gray-700 text-white rounded-xl font-medium px-8 py-7 text-base group-hover:shadow-[0_0_25px_rgba(250,157,227,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none"
+                    className="bg-gray-800 hover:bg-gray-700 text-white rounded-3xl font-medium px-8 py-7 text-base group-hover:shadow-[0_0_25px_rgba(250,157,227,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none"
                   >
                     <AppWindow size={24} />
                     <span className="flex flex-col items-start">
@@ -117,7 +117,7 @@ const DownloadSection = () => {
                 
                 <div className="relative group">
                   <Button 
-                    className="bg-gray-800 hover:bg-gray-700 text-white rounded-xl font-medium px-8 py-7 text-base group-hover:shadow-[0_0_25px_rgba(163,173,244,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none"
+                    className="bg-gray-800 hover:bg-gray-700 text-white rounded-3xl font-medium px-8 py-7 text-base group-hover:shadow-[0_0_25px_rgba(163,173,244,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none"
                   >
                     <Smartphone size={24} />
                     <span className="flex flex-col items-start">
@@ -132,7 +132,7 @@ const DownloadSection = () => {
               </div>
               
               {/* Optional feature callout */}
-              <div className="mt-12 bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-gray-800 flex items-center gap-3 max-w-md">
+              <div className="mt-12 bg-white/5 backdrop-blur-sm rounded-3xl p-4 border border-gray-800 flex items-center gap-3 max-w-md">
                 <Download size={20} className="text-[#fa9de3]" />
                 <p className="text-sm text-gray-300">
                   Get notified when our app is available for download

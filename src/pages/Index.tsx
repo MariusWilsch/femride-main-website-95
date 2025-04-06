@@ -52,7 +52,7 @@ const Index = () => {
       </main>
       <Footer />
       
-      {/* Scroll to top button */}
+      {/* Scroll to top button - updated to rounded-full */}
       <button 
         onClick={scrollToTop} 
         className={`fixed bottom-8 right-8 bg-[#fa9de3] hover:bg-[#e989cc] text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 z-50 ${
