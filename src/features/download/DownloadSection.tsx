@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { AppWindow, Smartphone, Download } from "lucide-react";
@@ -64,11 +63,11 @@ const DownloadSection = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-12 max-w-6xl mx-auto">
           {/* App logo on the left - adjusted spacing and positioning */}
           <div className={`w-full md:w-5/12 flex justify-center md:justify-end pr-0 md:pr-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-            <div className="relative w-full max-w-[400px] mx-auto md:ml-auto md:mr-0">
+            <div className="relative w-full max-w-[280px] mx-auto md:ml-auto md:mr-0">
               <img 
-                src="/lovable-uploads/654ddc06-1ffe-4b11-9adf-c28fb37b5b96.png" 
+                src="/lovable-uploads/femrideIconInvisable.png" 
                 alt="FemRide App Logo" 
-                className="w-full h-auto drop-shadow-[0_0_30px_rgba(250,157,227,0.3)]"
+                className="w-full h-auto drop-shadow-[0_0_30px_rgba(250,157,227,0.3)] transform scale-70"
               />
             </div>
           </div>
