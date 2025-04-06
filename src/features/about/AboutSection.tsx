@@ -88,21 +88,21 @@ const AboutSection = () => {
           </p>
         </div>
 
-        {/* Testimonial cards with staggered animations - using darker background */}
+        {/* Testimonial cards with staggered animations - updated to use soft gray background */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16">
           {testimonialCards.map((card, index) => (
             <div 
               key={card.id}
-              className={`bg-black/20 backdrop-blur-sm rounded-3xl border border-black/10 overflow-hidden shadow-xl transition-all duration-700 transform ${
+              className={`bg-gray-300/70 backdrop-blur-sm rounded-3xl border border-gray-200/40 overflow-hidden shadow-xl transition-all duration-700 transform ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-20'
-              } hover:bg-black/25 hover:shadow-2xl hover:-translate-y-1`}
+              } hover:bg-gray-300/80 hover:shadow-2xl hover:-translate-y-1`}
               style={{ transitionDelay: `${200 * (index + 1)}ms` }}
             >
               <div className="p-6 flex flex-col h-full">
-                {/* Icon background changed to darker shade */}
-                <div className="w-12 h-12 rounded-full bg-black/20 flex items-center justify-center mb-4">
+                {/* Icon circle with matching color */}
+                <div className="w-12 h-12 rounded-full bg-[#a3adf4]/30 flex items-center justify-center mb-4">
                   {card.icon}
                 </div>
                 
