@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { useEffect, useState, useRef } from "react";
 import { ChevronRight } from "lucide-react";
@@ -9,6 +8,7 @@ import { useLanguage } from "@/lib/LanguageContext";
  * Enhanced with animations and improved visual design based on Refactoring UI principles
  */
 const ServicesSection = () => {
+  
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -126,9 +126,9 @@ const ServicesSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
                 </div>
 
-                {/* Header banner at top with bold blue text styling instead of button */}
+                {/* Header banner at top with bold blue text styling - INCREASED SIZE */}
                 <div 
-                  className="p-3 text-center text-base font-extrabold uppercase tracking-wider text-[#a3adf4] relative rounded-b-3xl"
+                  className="p-3 text-center text-xl font-extrabold uppercase tracking-wider text-[#a3adf4] relative rounded-b-3xl"
                 >
                   {card.header}
                 </div>
