@@ -87,6 +87,15 @@ const DownloadSection = () => {
                 </div>
               </div>
               
+              {/* Added FemRide logo below QR code */}
+              <div className="flex justify-center mt-6">
+                <img 
+                  src="/lovable-uploads/8171abea-59ac-4806-9009-ab16d31c6467.png" 
+                  alt="FemRide Logo" 
+                  className="h-16 w-auto" 
+                />
+              </div>
+              
               {/* Simple Ride label instead of tabs */}
               <div className="flex justify-center mt-6">
                 <div className="bg-black/30 rounded-full p-2 text-xs">
