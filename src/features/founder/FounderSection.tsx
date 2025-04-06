@@ -59,10 +59,10 @@ const FounderSection = () => {
         </div>
 
         <div className={`flex flex-col md:flex-row items-center gap-12 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {/* Founder Image with enhanced styling */}
+          {/* Founder Image with enhanced styling - changed from pink to blue */}
           <div className="md:w-1/3 flex flex-col items-center">
             <div className="relative">
-              <div className="absolute inset-0 rounded-full bg-[#fa9de3] transform -rotate-6 scale-105 z-0"></div>
+              <div className="absolute inset-0 rounded-full bg-[#a3adf4] transform -rotate-6 scale-105 z-0"></div>
               <div className="rounded-full overflow-hidden h-60 w-60 border-4 border-white shadow-xl relative z-10">
                 <img 
                   src="/lovable-uploads/3d3a2394-f0be-402f-9dc5-36702fa45848.png" 
