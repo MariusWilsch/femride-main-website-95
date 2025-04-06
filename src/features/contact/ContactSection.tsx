@@ -102,10 +102,10 @@ ${formData.message}
   return (
     <section 
       ref={sectionRef}
-      className="py-20 relative overflow-hidden" 
+      className="py-20 relative overflow-hidden bg-[#a3adf4]/20" 
       id="contact-section"
     >
-      {/* Background with gradients and decorations - changed to lighter blue like JOIN US section */}
+      {/* Background with gradients and decorations - changed to blue like JOIN US section */}
       <div className="absolute inset-0 bg-gradient-to-b from-white to-[#a3adf4]/20 -z-10"></div>
       
       {/* Decorative blobs */}
@@ -115,9 +115,9 @@ ${formData.message}
       <div className="container mx-auto px-4 relative">
         {/* Section header with animations */}
         <div className={`text-center mb-10 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-[#a3adf4] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
+          <p className="text-[#fa9de3] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
             KONTAKT
-            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#a3adf4]"></span>
+            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#fa9de3]"></span>
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#222] mb-6">
             Interessiert an einer Zusammenarbeit mit FemRide?
@@ -140,7 +140,7 @@ ${formData.message}
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
           }`}
         >
-          <div className="bg-black/10 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-black/10 relative overflow-hidden">
+          <div className="bg-black/20 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-black/10 relative overflow-hidden">
             {/* Subtle pattern overlay */}
             <div className="absolute inset-0 opacity-5 pointer-events-none">
               <div className="absolute inset-y-0 left-0 w-1/2 bg-black/5"></div>

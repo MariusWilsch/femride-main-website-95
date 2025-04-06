@@ -61,7 +61,7 @@ const AboutSection = () => {
   return (
     <section 
       ref={sectionRef} 
-      className="py-20 relative overflow-hidden"
+      className="py-20 relative overflow-hidden bg-[#a3adf4]/20"
       id="about"
     >
       {/* Background changed to lighter blue like JOIN US section */}
@@ -74,9 +74,9 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 relative">
         {/* Section header with animations - "ABOUT US" in pink */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-[#a3adf4] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
+          <p className="text-[#fa9de3] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
             ABOUT US
-            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#a3adf4]"></span>
+            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#fa9de3]"></span>
           </p>
           <h2 className="text-4xl md:text-6xl font-bold text-[#222] mb-8">
             Was sagen die Frauen zu FemRide?
@@ -93,16 +93,16 @@ const AboutSection = () => {
           {testimonialCards.map((card, index) => (
             <div 
               key={card.id}
-              className={`bg-black/10 backdrop-blur-sm rounded-3xl border border-black/10 overflow-hidden shadow-xl transition-all duration-700 transform ${
+              className={`bg-black/20 backdrop-blur-sm rounded-3xl border border-black/10 overflow-hidden shadow-xl transition-all duration-700 transform ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-20'
-              } hover:bg-black/15 hover:shadow-2xl hover:-translate-y-1`}
+              } hover:bg-black/25 hover:shadow-2xl hover:-translate-y-1`}
               style={{ transitionDelay: `${200 * (index + 1)}ms` }}
             >
               <div className="p-6 flex flex-col h-full">
                 {/* Icon background changed to darker shade */}
-                <div className="w-12 h-12 rounded-full bg-black/10 flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-full bg-black/20 flex items-center justify-center mb-4">
                   {card.icon}
                 </div>
                 
