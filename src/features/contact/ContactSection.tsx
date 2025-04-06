@@ -102,29 +102,29 @@ ${formData.message}
   return (
     <section 
       ref={sectionRef}
-      className="py-20 relative overflow-hidden" 
+      className="py-20 relative overflow-hidden bg-[#a3adf4]/20" 
       id="contact-section"
     >
-      {/* Background with gradients and decorations */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#a3adf4]/90 via-[#a3adf4] to-[#a3adf4]/80 -z-10"></div>
+      {/* Background with gradients and decorations - changed to blue like JOIN US section */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white to-[#a3adf4]/20 -z-10"></div>
       
       {/* Decorative blobs */}
-      <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-white/10 filter blur-[50px] animate-blob"></div>
-      <div className="absolute bottom-20 left-20 w-80 h-80 rounded-full bg-white/5 filter blur-[70px] animate-blob animation-delay-2000"></div>
+      <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-[#a3adf4]/10 filter blur-[60px] animate-blob"></div>
+      <div className="absolute bottom-20 left-20 w-80 h-80 rounded-full bg-[#fa9de3]/10 filter blur-[70px] animate-blob animation-delay-2000"></div>
       
       <div className="container mx-auto px-4 relative">
         {/* Section header with animations */}
         <div className={`text-center mb-10 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-black font-medium tracking-wide uppercase text-base relative inline-block mb-3">
+          <p className="text-[#fa9de3] font-medium tracking-wide uppercase text-base relative inline-block mb-3">
             KONTAKT
-            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-black"></span>
+            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-10 h-1 bg-[#fa9de3]"></span>
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#222] mb-6">
             Interessiert an einer Zusammenarbeit mit FemRide?
           </h2>
           <div className="w-24 h-1 bg-[#fa9de3] mx-auto mb-8"></div>
           <div className="max-w-3xl mx-auto text-center mb-8">
-            <p className="text-lg text-black">
+            <p className="text-lg text-gray-700">
               Sie sind Flottenunternehmer und möchten Ihre Fahrzeuge über FemRide einsetzen?<br />
               Sie sind Fahrerin und möchten Teil unserer Plattform werden?<br />
               Oder Sie möchten mit uns kooperieren, weil Sie unsere Vision teilen?<br />
@@ -134,13 +134,13 @@ ${formData.message}
           </div>
         </div>
 
-        {/* Contact form with animation - Updated with more rounded corners */}
+        {/* Contact form with animation - Updated with darker form background */}
         <div 
           className={`max-w-2xl mx-auto transition-all duration-700 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
           }`}
         >
-          <div className="bg-white/20 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/30 relative overflow-hidden">
+          <div className="bg-black/20 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-black/10 relative overflow-hidden">
             {/* Subtle pattern overlay */}
             <div className="absolute inset-0 opacity-5 pointer-events-none">
               <div className="absolute inset-y-0 left-0 w-1/2 bg-black/5"></div>
@@ -150,8 +150,8 @@ ${formData.message}
               <div className="grid grid-cols-1 gap-6">
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <UserCircle className="text-black/70" size={18} />
-                    <Label htmlFor="name" className="text-black font-medium">Name</Label>
+                    <UserCircle className="text-gray-700" size={18} />
+                    <Label htmlFor="name" className="text-gray-700 font-medium">Name</Label>
                   </div>
                   <Input 
                     id="name"
@@ -159,15 +159,15 @@ ${formData.message}
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12 rounded-2xl"
+                    className="bg-white/70 border-black/10 text-gray-800 placeholder:text-gray-500 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12 rounded-2xl"
                     placeholder="Ihr vollständiger Name"
                   />
                 </div>
 
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <Mail className="text-black/70" size={18} />
-                    <Label htmlFor="email" className="text-black font-medium">Email</Label>
+                    <Mail className="text-gray-700" size={18} />
+                    <Label htmlFor="email" className="text-gray-700 font-medium">Email</Label>
                   </div>
                   <Input 
                     id="email"
@@ -176,15 +176,15 @@ ${formData.message}
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12 rounded-2xl"
+                    className="bg-white/70 border-black/10 text-gray-800 placeholder:text-gray-500 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12 rounded-2xl"
                     placeholder="Ihre Email-Adresse"
                   />
                 </div>
 
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <Phone className="text-black/70" size={18} />
-                    <Label htmlFor="phone" className="text-black font-medium">Phone</Label>
+                    <Phone className="text-gray-700" size={18} />
+                    <Label htmlFor="phone" className="text-gray-700 font-medium">Phone</Label>
                   </div>
                   <Input 
                     id="phone"
@@ -192,15 +192,15 @@ ${formData.message}
                     type="tel"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12 rounded-2xl"
+                    className="bg-white/70 border-black/10 text-gray-800 placeholder:text-gray-500 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 h-12 rounded-2xl"
                     placeholder="Ihre Telefonnummer (optional)"
                   />
                 </div>
 
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <MessageSquare className="text-black/70" size={18} />
-                    <Label htmlFor="message" className="text-black font-medium">Message</Label>
+                    <MessageSquare className="text-gray-700" size={18} />
+                    <Label htmlFor="message" className="text-gray-700 font-medium">Message</Label>
                   </div>
                   <Textarea 
                     id="message"
@@ -209,7 +209,7 @@ ${formData.message}
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="bg-white/30 border-white/30 text-black placeholder:text-black/50 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 resize-none rounded-2xl"
+                    className="bg-white/70 border-black/10 text-gray-800 placeholder:text-gray-500 focus:border-[#fa9de3] focus:ring-[#fa9de3]/20 resize-none rounded-2xl"
                     placeholder="Ihre Nachricht an uns..."
                   />
                 </div>
