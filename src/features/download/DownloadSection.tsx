@@ -125,15 +125,6 @@ const DownloadSection = () => {
             </div>
           </div>
         </div>
-        
-        {/* Additional app features image */}
-        <div className={`mt-20 max-w-4xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          <img 
-            src="/lovable-uploads/36fc2308-2590-4dea-b07b-277b00032f4c.png" 
-            alt="FemRide App Interface" 
-            className="w-full rounded-3xl shadow-2xl border border-white/10 transition-all duration-500 hover:shadow-[0_0_30px_rgba(163,173,244,0.2)]"
-          />
-        </div>
       </div>
     </section>
   );
