@@ -6,7 +6,6 @@ import ServicesSection from '../features/services/ServicesSection';
 import AboutSection from '../features/about/AboutSection';
 import FounderSection from '../features/founder/FounderSection';
 import LatestFeaturesSection from '../features/latestFeatures/LatestFeaturesSection';
-import EarnSection from '../features/earn/EarnSection'; // Added import
 import FAQSection from '../features/faq/FAQSection';
 import ContactSection from '../features/contact/ContactSection';
 import DownloadSection from '../features/download/DownloadSection';
@@ -45,7 +44,6 @@ const Index = () => {
         <AboutSection />
         <FounderSection />
         <LatestFeaturesSection />
-        <EarnSection /> {/* Added EarnSection component */}
         <FAQSection />
         <ContactSection />
         <DownloadSection />
