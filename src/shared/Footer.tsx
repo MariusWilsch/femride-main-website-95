@@ -60,46 +60,46 @@ export const Footer = () => {
         {/* Subtle divider */}
         <Separator className="bg-gray-800 my-10" />
         
-        {/* Restructured Impressum section with new layout */}
+        {/* Restructured Impressum section with new layout and increased spacing */}
         <div className="pb-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6 max-w-4xl mx-auto">
-            {/* Left column - Company info */}
-            <div className="text-left">
-              <h3 className="font-semibold text-lg mb-4">FemRide UG</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-10 max-w-4xl mx-auto">
+            {/* Left column - Company info with increased spacing */}
+            <div className="text-left space-y-8">
+              <h3 className="font-semibold text-lg mb-6">FemRide UG</h3>
               
-              <div className="flex items-start mb-4">
-                <span className="text-[#fa9de3] mr-3">📍</span>
+              <div className="flex items-start mb-8">
+                <span className="text-[#fa9de3] mr-4">📍</span>
                 <p className="text-gray-300">Adresse: Waldstraße 222A, 12527 Berlin</p>
               </div>
               
-              <div className="flex items-start mb-4">
-                <span className="text-[#fa9de3] mr-3">📧</span>
+              <div className="flex items-start mb-8">
+                <span className="text-[#fa9de3] mr-4">📧</span>
                 <p className="text-gray-300">E-Mail: <a href="mailto:info@femride.de" className="text-[#fa9de3] hover:underline">info@femride.de</a></p>
               </div>
               
               <div className="flex items-start">
-                <span className="text-[#fa9de3] mr-3">🌐</span>
+                <span className="text-[#fa9de3] mr-4">🌐</span>
                 <p className="text-gray-300">Webseite: <a href="https://www.femride.de" target="_blank" rel="noopener noreferrer" className="text-[#fa9de3] hover:underline">www.femride.de</a></p>
               </div>
             </div>
             
-            {/* Right column - Legal info with Impressum title aligned */}
-            <div className="text-left">
+            {/* Right column - Legal info with Impressum title aligned and increased spacing */}
+            <div className="text-left space-y-8">
               <h2 className="text-xl font-bold mb-10">{t('footerImpressum')}</h2>
               
-              <div className="mb-4">
-                <h3 className="font-semibold text-white mb-2">Vertreten durch:</h3>
+              <div className="mb-8">
+                <h3 className="font-semibold text-white mb-3">Vertreten durch:</h3>
                 <p className="text-gray-300">Aykut Atli (Geschäftsführer)</p>
               </div>
               
-              <div className="mb-4">
-                <h3 className="font-semibold text-white mb-2">Handelsregister:</h3>
+              <div className="mb-8">
+                <h3 className="font-semibold text-white mb-3">Handelsregister:</h3>
                 <p className="text-gray-300">Amtsgericht Berlin (Charlottenburg)</p>
                 <p className="text-gray-300">HRB 272631</p>
               </div>
               
               <div>
-                <h3 className="font-semibold text-white mb-2">Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV:</h3>
+                <h3 className="font-semibold text-white mb-3">Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV:</h3>
                 <p className="text-gray-300">Aykut Atli, Waldstraße 222A, 12527 Berlin</p>
               </div>
             </div>
