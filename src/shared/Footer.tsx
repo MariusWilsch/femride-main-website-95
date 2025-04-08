@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, Twitter, MapPin, Mail, Globe } from 'lucide-react';
+import { Instagram, Linkedin, MapPin, Mail, Globe } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { useLanguage } from '@/lib/LanguageContext';
 
@@ -59,19 +60,10 @@ export const Footer = () => {
             </div>
           </div>
           
-          {/* Connect column with social icons */}
+          {/* Connect column with social icons - Removed Facebook and Twitter */}
           <div className="text-left">
             <h3 className="text-lg font-semibold mb-6">{isGerman ? 'Verbinden' : 'Connect'}</h3>
             <div className="flex flex-wrap gap-4">
-              <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="bg-gray-800 hover:bg-[#fa9de3] transition-colors rounded-full p-3"
-              >
-                <Facebook size={20} className="text-white" />
-              </a>
               <a 
                 href="https://www.instagram.com/femride_de" 
                 target="_blank" 
@@ -80,15 +72,6 @@ export const Footer = () => {
                 className="bg-gray-800 hover:bg-[#fa9de3] transition-colors rounded-full p-3"
               >
                 <Instagram size={20} className="text-white" />
-              </a>
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label="Twitter" 
-                className="bg-gray-800 hover:bg-[#fa9de3] transition-colors rounded-full p-3"
-              >
-                <Twitter size={20} className="text-white" />
               </a>
               <a 
                 href="https://www.linkedin.com/company/femridedeutschland/" 
