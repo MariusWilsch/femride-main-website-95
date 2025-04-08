@@ -23,9 +23,9 @@ const HeroSection = () => {
       
       {/* Hero content */}
       <div className="container mx-auto px-4 relative z-10 text-center">
-        <div className="max-w-2xl mx-auto"> {/* Increased from max-w-lg to max-w-2xl for a wider content area */}
+        <div className="max-w-2xl mx-auto">
           
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-wide"> {/* Increased font size and added tracking-wide */}
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-wide">
             <span className="block">{t('heroTitle1')}</span>
             <span className="block">{t('heroTitle2')}</span>
           </h1>
@@ -34,15 +34,15 @@ const HeroSection = () => {
             {t('heroSubtitle')}
           </p>
           
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+          <div className="flex flex-col items-center justify-center space-y-6">
             <Button 
               className="px-8 py-6 text-lg bg-[#fa9de3] hover:bg-[#e989cc] text-black rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               {t('heroButton')}
             </Button>
             
-            {/* App Store and Google Play buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mt-6 sm:mt-0">
+            {/* App Store and Google Play buttons stacked below the main button */}
+            <div className="flex flex-col sm:flex-row gap-4 mt-2">
               {/* App Store Button */}
               <div className="relative group">
                 <Button 
