@@ -368,8 +368,8 @@ export const translations: Translations = {
     en: 'Coming soon'
   },
   downloadSectionNotify: {
-    de: 'Lassen Sie sich benachrichtigen, wenn unsere App zum Download verfügbar ist',
-    en: 'Get notified when our app is available for download'
+    de: 'Bleiben Sie auf dem Laufenden und erfahren Sie als Erste/r, wenn unsere App verfügbar ist',
+    en: 'Stay updated and be the first to know when our app is available'
   },
   downloadOn: {
     de: 'JETZT BEI',
