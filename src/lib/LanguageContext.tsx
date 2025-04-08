@@ -364,8 +364,8 @@ export const translations: Translations = {
     en: 'Google Play'
   },
   downloadSectionSoon: {
-    de: 'Bald',
-    en: 'Soon'
+    de: 'Bald verfügbar',
+    en: 'Coming soon'
   },
   downloadSectionNotify: {
     de: 'Lassen Sie sich benachrichtigen, wenn unsere App zum Download verfügbar ist',
