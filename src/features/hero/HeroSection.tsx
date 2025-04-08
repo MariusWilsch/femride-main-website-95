@@ -22,12 +22,9 @@ const HeroSection = () => {
       
       {/* Hero content */}
       <div className="container mx-auto px-4 relative z-10 text-center">
-        <div className="max-w-lg mx-auto">
-          <div className="inline-block bg-white/90 backdrop-blur-sm border border-pink-200 rounded-3xl px-6 py-2 shadow-md mb-6">
-            <p className="text-[#fa9de3] font-bold text-lg"></p>
-          </div>
+        <div className="max-w-2xl mx-auto"> {/* Increased from max-w-lg to max-w-2xl for a wider content area */}
           
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-wide"> {/* Increased font size and added tracking-wide */}
             <span className="block">{t('heroTitle1')}</span>
             <span className="block">{t('heroTitle2')}</span>
           </h1>
