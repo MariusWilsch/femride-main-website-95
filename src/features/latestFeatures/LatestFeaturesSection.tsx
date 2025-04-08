@@ -1,3 +1,4 @@
+
 import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/LanguageContext";
@@ -30,6 +31,13 @@ const LatestFeaturesSection = () => {
       observer.disconnect();
     };
   }, []);
+
+  const scrollToContactForm = () => {
+    const contactSection = document.getElementById('contact-section');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section ref={sectionRef} className="py-20 relative overflow-hidden bg-[#a3adf4]/20">
@@ -94,10 +102,7 @@ const LatestFeaturesSection = () => {
             </p>
             <Button 
               className="bg-[#a3adf4] hover:bg-[#8a93d6] text-black font-medium px-6 py-4 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] group rounded-3xl"
-              onClick={() => {
-                const contactSection = document.getElementById('contact-section');
-                if (contactSection) contactSection.scrollIntoView({behavior: 'smooth'});
-              }}
+              onClick={scrollToContactForm}
             >
               <span className="relative z-10">{t('forFemaleDriversButton')}</span>
               <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20 rounded-3xl"></span>
@@ -116,10 +121,7 @@ const LatestFeaturesSection = () => {
             </p>
             <Button 
               className="bg-[#a3adf4] hover:bg-[#8a93d6] text-black font-medium px-6 py-4 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-2px] group rounded-3xl"
-              onClick={() => {
-                const contactSection = document.getElementById('contact-section');
-                if (contactSection) contactSection.scrollIntoView({behavior: 'smooth'});
-              }}
+              onClick={scrollToContactForm}
             >
               <span className="relative z-10">{t('forFleetOperatorsButton')}</span>
               <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20 rounded-3xl"></span>
