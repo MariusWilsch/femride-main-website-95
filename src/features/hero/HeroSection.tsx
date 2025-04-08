@@ -42,7 +42,7 @@ const HeroSection = () => {
             </Button>
             
             {/* App Store and Google Play buttons stacked below the main button */}
-            <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full">
+            <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full max-w-md mx-auto">
               {/* App Store Button */}
               <div className="relative group flex-1">
                 <Button 
