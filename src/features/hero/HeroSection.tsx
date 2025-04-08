@@ -2,6 +2,7 @@
 import React from 'react';
 import { useLanguage } from '@/lib/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { AppWindow, Smartphone } from 'lucide-react';
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -33,16 +34,47 @@ const HeroSection = () => {
             {t('heroSubtitle')}
           </p>
           
-          <div className="flex flex-col items-center space-y-4">
+          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
             <Button 
               className="px-8 py-6 text-lg bg-[#fa9de3] hover:bg-[#e989cc] text-black rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               {t('heroButton')}
             </Button>
             
-            <p className="text-lg text-[#fa9de3] font-medium bg-black/50 px-4 py-2 rounded-3xl">
-              {t('heroComingSoon')}
-            </p>
+            {/* App Store and Google Play buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mt-6 sm:mt-0">
+              {/* App Store Button */}
+              <div className="relative group">
+                <Button 
+                  className="bg-gray-800 hover:bg-gray-700 text-white rounded-3xl font-medium px-8 py-6 text-base group-hover:shadow-[0_0_25px_rgba(250,157,227,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none"
+                >
+                  <AppWindow size={24} />
+                  <span className="flex flex-col items-start">
+                    <span className="text-xs opacity-80">JETZT BEI</span>
+                    <span className="font-bold">App Store</span>
+                  </span>
+                </Button>
+                <div className="absolute -top-2 -right-2 bg-[#fa9de3] text-black text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
+                  Bald
+                </div>
+              </div>
+              
+              {/* Google Play Button */}
+              <div className="relative group">
+                <Button 
+                  className="bg-gray-800 hover:bg-gray-700 text-white rounded-3xl font-medium px-8 py-6 text-base group-hover:shadow-[0_0_25px_rgba(163,173,244,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none"
+                >
+                  <Smartphone size={24} />
+                  <span className="flex flex-col items-start">
+                    <span className="text-xs opacity-80">JETZT BEI</span>
+                    <span className="font-bold">Google Play</span>
+                  </span>
+                </Button>
+                <div className="absolute -top-2 -right-2 bg-[#a3adf4] text-black text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
+                  Bald
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
