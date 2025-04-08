@@ -1,7 +1,7 @@
+
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { AppWindow, Smartphone, Download } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { AppWindow, Smartphone } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
 /**
@@ -114,14 +114,6 @@ const DownloadSection = () => {
                     {t('downloadSectionSoon')}
                   </div>
                 </div>
-              </div>
-              
-              {/* Optional feature callout */}
-              <div className="mt-6 bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-gray-800 flex items-center gap-3">
-                <Download size={20} className="text-[#fa9de3]" />
-                <p className="text-sm text-gray-300">
-                  {t('downloadSectionNotify')}
-                </p>
               </div>
             </div>
           </div>
