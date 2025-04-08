@@ -24,7 +24,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10 text-center">
         <div className="max-w-lg mx-auto">
           <div className="inline-block bg-white/90 backdrop-blur-sm border border-pink-200 rounded-3xl px-6 py-2 shadow-md mb-6">
-            <p className="text-[#fa9de3] font-bold text-lg">{t('heroTagline')}</p>
+            <p className="text-[#fa9de3] font-bold text-lg"></p>
           </div>
           
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
