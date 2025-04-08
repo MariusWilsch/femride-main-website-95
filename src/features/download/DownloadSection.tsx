@@ -4,10 +4,6 @@ import { Button } from "@/components/ui/button";
 import { AppWindow, Smartphone } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
-/**
- * Enhanced DownloadSection component with modern design elements
- * Following Refactoring UI principles for a more professional look
- */
 const DownloadSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -36,86 +32,86 @@ const DownloadSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="py-24 bg-black text-white relative overflow-hidden" 
+      className="py-16 bg-gradient-to-b from-white to-gray-50 relative" 
       id="download"
     >
-      {/* Background elements - subtle gradients */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#fa9de3]/20 rounded-full filter blur-[80px] animate-blob"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#a3adf4]/20 rounded-full filter blur-[100px] animate-blob animation-delay-2000"></div>
+      {/* Subtle background accent */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#fa9de3]/5 rounded-full filter blur-[100px]"></div>
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#a3adf4]/5 rounded-full filter blur-[100px]"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section header with attractive typography */}
-        <div className={`text-center transition-all duration-700 mb-4 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+        {/* Section header with more subtle styling */}
+        <div className={`text-center transition-all duration-700 mb-8 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-gray-900">
             {t('downloadSectionTitle')}
           </h2>
           
-          {/* Colorful underline with gradient */}
-          <div className="w-64 h-1 bg-gradient-to-r from-[#fa9de3] to-[#a3adf4] mx-auto mb-4"></div>
+          {/* Subtle accent line */}
+          <div className="w-24 h-0.5 bg-gray-200 mx-auto mb-6"></div>
           
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-base text-gray-600 max-w-2xl mx-auto">
             {t('downloadSectionSubtitle')}
           </p>
         </div>
 
-        {/* Main content container with flex layout */}
-        <div className="grid md:grid-cols-2 items-center gap-12 mt-16 max-w-6xl mx-auto">
-          {/* Left side - App logo with glow effect */}
-          <div className={`transition-all duration-1000 transform ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-            <div className="relative w-full max-w-md mx-auto">
-              <img 
-                src="/lovable-uploads/femrideIconInvisable.png" 
-                alt="FemRide App Logo" 
-                className="w-full h-auto drop-shadow-[0_0_30px_rgba(250,157,227,0.4)] animate-pulse"
-              />
-            </div>
-          </div>
-          
-          {/* Right side - Text and buttons */}
-          <div className={`space-y-8 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        {/* Content with reversed layout */}
+        <div className="grid md:grid-cols-2 items-center gap-8 max-w-4xl mx-auto">
+          {/* Left side - Text and buttons */}
+          <div className={`space-y-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div>
-              <h3 className="text-3xl md:text-5xl font-bold mb-4">
+              <h3 className="text-2xl md:text-3xl font-medium mb-4 text-gray-800">
                 {t('downloadSectionMainText')}
               </h3>
               
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-base text-gray-600 mb-6">
                 {t('downloadSectionDeviceText')}
               </p>
 
-              {/* App Store buttons with modern styling */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <div className="relative group">
+              {/* App Store buttons with more subdued styling */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <div className="relative">
                   <Button 
-                    className="bg-[#1a1a1a] hover:bg-[#2a2a2a] text-white rounded-full font-medium px-8 py-6 h-auto text-base group-hover:shadow-[0_0_25px_rgba(250,157,227,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-800 w-full sm:w-auto"
+                    className="bg-white hover:bg-gray-50 text-gray-800 rounded-xl px-6 py-5 h-auto text-sm border border-gray-200 w-full sm:w-auto flex items-center gap-3 shadow-sm transition-all"
                   >
-                    <AppWindow size={24} />
+                    <AppWindow size={20} />
                     <span className="flex flex-col items-start">
-                      <span className="text-xs opacity-80">{t('downloadOn')}</span>
-                      <span className="font-bold">{t('downloadSectionAppStore')}</span>
+                      <span className="text-xs opacity-70">{t('downloadOn')}</span>
+                      <span className="font-medium">{t('downloadSectionAppStore')}</span>
                     </span>
                   </Button>
-                  <div className="absolute -top-2 -right-2 bg-[#fa9de3] text-black text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
+                  <div className="absolute -top-2 -right-2 bg-gray-200 text-gray-800 text-xs font-medium px-2 py-0.5 rounded-full">
                     {t('downloadSectionSoon')}
                   </div>
                 </div>
                 
-                <div className="relative group">
+                <div className="relative">
                   <Button 
-                    className="bg-[#1a1a1a] hover:bg-[#2a2a2a] text-white rounded-full font-medium px-8 py-6 h-auto text-base group-hover:shadow-[0_0_25px_rgba(163,173,244,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-800 w-full sm:w-auto"
+                    className="bg-white hover:bg-gray-50 text-gray-800 rounded-xl px-6 py-5 h-auto text-sm border border-gray-200 w-full sm:w-auto flex items-center gap-3 shadow-sm transition-all"
                   >
-                    <Smartphone size={24} />
+                    <Smartphone size={20} />
                     <span className="flex flex-col items-start">
-                      <span className="text-xs opacity-80">{t('getItOn')}</span>
-                      <span className="font-bold">{t('downloadSectionGooglePlay')}</span>
+                      <span className="text-xs opacity-70">{t('getItOn')}</span>
+                      <span className="font-medium">{t('downloadSectionGooglePlay')}</span>
                     </span>
                   </Button>
-                  <div className="absolute -top-2 -right-2 bg-[#a3adf4] text-black text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
+                  <div className="absolute -top-2 -right-2 bg-gray-200 text-gray-800 text-xs font-medium px-2 py-0.5 rounded-full">
                     {t('downloadSectionSoon')}
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          
+          {/* Right side - App logo smaller and more subtle */}
+          <div className={`transition-all duration-1000 transform ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+            <div className="relative w-full max-w-xs mx-auto">
+              <img 
+                src="/lovable-uploads/femrideIconInvisable.png" 
+                alt="FemRide App Logo" 
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
