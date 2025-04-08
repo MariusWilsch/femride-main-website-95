@@ -34,6 +34,14 @@ const ServicesSection = () => {
       observer.disconnect();
     };
   }, []);
+
+  // Function to scroll to contact form
+  const scrollToContactForm = () => {
+    const contactSection = document.getElementById('contact-section');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   
   const serviceCards = [
     {
@@ -141,11 +149,11 @@ const ServicesSection = () => {
                     {card.description}
                   </p>
                   
-                  {/* Replacing button with bold blue text */}
+                  {/* Updated button to scroll to contact form */}
                   <div className="mt-auto">
                     <Button 
                       className="bg-[#fa9de3] hover:bg-[#e989cc] text-black font-semibold text-sm px-5 py-4 h-auto w-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group" 
-                      onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+                      onClick={scrollToContactForm}
                     >
                       <span className="flex items-center justify-center w-full">
                         <span className="tracking-wide font-bold">{card.buttonText}</span>
