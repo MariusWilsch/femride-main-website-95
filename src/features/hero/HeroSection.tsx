@@ -58,7 +58,7 @@ const HeroSection = () => {
                     <span className={`font-bold ${isMobile ? 'text-sm' : ''}`}>App Store</span>
                   </span>
                 </Button>
-                <div className={`absolute ${isMobile ? '-top-3 right-14' : '-top-2 -right-2'} bg-[#fa9de3] text-black ${isMobile ? 'text-[10px] px-3 py-1' : 'text-xs px-4 py-1.5'} rounded-full shadow-lg`}>
+                <div className={`absolute ${isMobile ? '-top-3 right-20' : '-top-2 -right-2'} bg-[#fa9de3] text-black ${isMobile ? 'text-[10px] px-3 py-1' : 'text-xs px-4 py-1.5'} rounded-full shadow-lg`}>
                   Bald
                 </div>
               </div>
@@ -74,7 +74,7 @@ const HeroSection = () => {
                     <span className={`font-bold ${isMobile ? 'text-sm' : ''}`}>Google Play</span>
                   </span>
                 </Button>
-                <div className={`absolute ${isMobile ? '-top-3 right-14' : '-top-2 -right-2'} bg-[#a3adf4] text-black ${isMobile ? 'text-[10px] px-3 py-1' : 'text-xs px-4 py-1.5'} rounded-full shadow-lg`}>
+                <div className={`absolute ${isMobile ? '-top-3 right-20' : '-top-2 -right-2'} bg-[#a3adf4] text-black ${isMobile ? 'text-[10px] px-3 py-1' : 'text-xs px-4 py-1.5'} rounded-full shadow-lg`}>
                   Bald
                 </div>
               </div>
