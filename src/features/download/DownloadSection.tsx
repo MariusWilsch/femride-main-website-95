@@ -3,11 +3,13 @@ import { useState, useEffect, useRef } from "react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { Badge } from "@/components/ui/badge";
 import { Bell } from "lucide-react";
-//hi
+import { useIsMobile } from "@/hooks/use-mobile";
+
 const DownloadSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const { t } = useLanguage();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -57,40 +59,40 @@ const DownloadSection = () => {
 
         {/* Enlarged app store buttons with clearer "coming soon" badges */}
         <div className={`flex justify-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="flex flex-row gap-6 max-w-lg mx-auto">
+          <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} gap-6 max-w-lg mx-auto`}>
             <div className="relative">
-              <div className="border border-gray-700 rounded-2xl px-6 py-6 flex items-center gap-3 bg-gray-900 shadow-lg hover:shadow-xl hover:border-gray-600 transition-all">
-                <div className="w-12 h-12 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#fa9de3]">
+              <div className={`border border-gray-700 rounded-2xl px-6 ${isMobile ? 'py-4' : 'py-6'} flex items-center gap-3 bg-gray-900 shadow-lg hover:shadow-xl hover:border-gray-600 transition-all`}>
+                <div className={`${isMobile ? 'w-10 h-10' : 'w-12 h-12'} flex items-center justify-center`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width={isMobile ? "24" : "30"} height={isMobile ? "24" : "30"} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#fa9de3]">
                     <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                     <line x1="8" y1="21" x2="16" y2="21"></line>
                     <line x1="12" y1="17" x2="12" y2="21"></line>
                   </svg>
                 </div>
                 <div className="flex flex-col items-start">
-                  <span className="text-sm text-[#fa9de3] font-medium">{t('downloadOn')}</span>
-                  <span className="font-semibold text-lg text-white">App Store</span>
+                  <span className={`${isMobile ? 'text-xs' : 'text-sm'} text-[#fa9de3] font-medium`}>{t('downloadOn')}</span>
+                  <span className={`font-semibold ${isMobile ? 'text-base' : 'text-lg'} text-white`}>App Store</span>
                 </div>
               </div>
-              <Badge className="absolute -top-3 -right-3 bg-[#fa9de3] hover:bg-[#fa9de3] font-bold text-black text-sm px-4 py-1.5 shadow-xl">
+              <Badge className={`absolute -top-3 -right-3 bg-[#fa9de3] hover:bg-[#fa9de3] font-bold text-black ${isMobile ? 'text-xs px-3 py-1' : 'text-sm px-4 py-1.5'} shadow-xl`}>
                 {t('downloadSectionSoon')}
               </Badge>
             </div>
             
             <div className="relative">
-              <div className="border border-gray-700 rounded-2xl px-6 py-6 flex items-center gap-3 bg-gray-900 shadow-lg hover:shadow-xl hover:border-gray-600 transition-all">
-                <div className="w-12 h-12 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#a3adf4]">
+              <div className={`border border-gray-700 rounded-2xl px-6 ${isMobile ? 'py-4' : 'py-6'} flex items-center gap-3 bg-gray-900 shadow-lg hover:shadow-xl hover:border-gray-600 transition-all`}>
+                <div className={`${isMobile ? 'w-10 h-10' : 'w-12 h-12'} flex items-center justify-center`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width={isMobile ? "24" : "30"} height={isMobile ? "24" : "30"} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#a3adf4]">
                     <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
                     <line x1="12" y1="18" x2="12.01" y2="18"></line>
                   </svg>
                 </div>
                 <div className="flex flex-col items-start">
-                  <span className="text-sm text-[#a3adf4] font-medium">{t('getItOn')}</span>
-                  <span className="font-semibold text-lg text-white">Google Play</span>
+                  <span className={`${isMobile ? 'text-xs' : 'text-sm'} text-[#a3adf4] font-medium`}>{t('getItOn')}</span>
+                  <span className={`font-semibold ${isMobile ? 'text-base' : 'text-lg'} text-white`}>Google Play</span>
                 </div>
               </div>
-              <Badge className="absolute -top-3 -right-3 bg-[#a3adf4] hover:bg-[#a3adf4] font-bold text-black text-sm px-4 py-1.5 shadow-xl">
+              <Badge className={`absolute -top-3 -right-3 bg-[#a3adf4] hover:bg-[#a3adf4] font-bold text-black ${isMobile ? 'text-xs px-3 py-1' : 'text-sm px-4 py-1.5'} shadow-xl`}>
                 {t('downloadSectionSoon')}
               </Badge>
             </div>

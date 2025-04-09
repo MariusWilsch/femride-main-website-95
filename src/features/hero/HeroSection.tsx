@@ -3,9 +3,11 @@ import React from 'react';
 import { useLanguage } from '@/lib/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { AppWindow, Smartphone } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const HeroSection = () => {
   const { t } = useLanguage();
+  const isMobile = useIsMobile();
   
   return (
     <div className="relative min-h-[90vh] flex items-center justify-center">
@@ -38,7 +40,9 @@ const HeroSection = () => {
             <Button 
               className="px-8 py-6 text-lg bg-[#fa9de3] hover:bg-[#e989cc] text-black rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
-              {t('heroButton')}
+              <span className={isMobile ? "text-sm" : "text-lg"}>
+                {t('heroButton')}
+              </span>
             </Button>
             
             {/* App Store and Google Play buttons stacked below the main button */}
@@ -46,15 +50,15 @@ const HeroSection = () => {
               {/* App Store Button */}
               <div className="relative group flex-1">
                 <Button 
-                  className="bg-gray-800 hover:bg-gray-700 text-white rounded-3xl font-medium px-8 py-6 text-base group-hover:shadow-[0_0_25px_rgba(250,157,227,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none w-full"
+                  className={`bg-gray-800 hover:bg-gray-700 text-white rounded-3xl font-medium px-8 ${isMobile ? 'py-4 text-xs' : 'py-6 text-base'} group-hover:shadow-[0_0_25px_rgba(250,157,227,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none w-full`}
                 >
-                  <AppWindow size={24} />
+                  <AppWindow size={isMobile ? 18 : 24} />
                   <span className="flex flex-col items-start">
-                    <span className="text-xs opacity-80">JETZT BEI</span>
-                    <span className="font-bold">App Store</span>
+                    <span className={`${isMobile ? 'text-[10px]' : 'text-xs'} opacity-80`}>JETZT BEI</span>
+                    <span className={`font-bold ${isMobile ? 'text-sm' : ''}`}>App Store</span>
                   </span>
                 </Button>
-                <div className="absolute -top-2 -right-2 bg-[#fa9de3] text-black text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
+                <div className={`absolute -top-2 -right-2 bg-[#fa9de3] text-black ${isMobile ? 'text-[10px] px-3 py-1' : 'text-xs px-4 py-1.5'} rounded-full shadow-lg`}>
                   Bald
                 </div>
               </div>
@@ -62,15 +66,15 @@ const HeroSection = () => {
               {/* Google Play Button */}
               <div className="relative group flex-1">
                 <Button 
-                  className="bg-gray-800 hover:bg-gray-700 text-white rounded-3xl font-medium px-8 py-6 text-base group-hover:shadow-[0_0_25px_rgba(163,173,244,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none w-full"
+                  className={`bg-gray-800 hover:bg-gray-700 text-white rounded-3xl font-medium px-8 ${isMobile ? 'py-4 text-xs' : 'py-6 text-base'} group-hover:shadow-[0_0_25px_rgba(163,173,244,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none w-full`}
                 >
-                  <Smartphone size={24} />
+                  <Smartphone size={isMobile ? 18 : 24} />
                   <span className="flex flex-col items-start">
-                    <span className="text-xs opacity-80">JETZT BEI</span>
-                    <span className="font-bold">Google Play</span>
+                    <span className={`${isMobile ? 'text-[10px]' : 'text-xs'} opacity-80`}>JETZT BEI</span>
+                    <span className={`font-bold ${isMobile ? 'text-sm' : ''}`}>Google Play</span>
                   </span>
                 </Button>
-                <div className="absolute -top-2 -right-2 bg-[#a3adf4] text-black text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
+                <div className={`absolute -top-2 -right-2 bg-[#a3adf4] text-black ${isMobile ? 'text-[10px] px-3 py-1' : 'text-xs px-4 py-1.5'} rounded-full shadow-lg`}>
                   Bald
                 </div>
               </div>

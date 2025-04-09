@@ -8,6 +8,7 @@ import {
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Separator } from "@/components/ui/separator";
 import { useLanguage } from "@/lib/LanguageContext";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 /**
  * FAQ section with categories for different user types
@@ -18,6 +19,7 @@ const FAQSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const { t } = useLanguage();
+  const isMobile = useIsMobile();
 
   // Categories for the toggle group
   const categories = [
@@ -48,7 +50,7 @@ const FAQSection = () => {
 
   // Custom accordion styles that match the image
   const accordionItemClass = "border-0 border-b border-gray-200";
-  const accordionTriggerClass = "py-6 text-lg font-medium flex items-center justify-between hover:no-underline";
+  const accordionTriggerClass = `py-6 ${isMobile ? 'text-base' : 'text-lg'} font-medium flex items-center justify-between hover:no-underline`;
   const accordionContentClass = "pb-6 text-gray-600";
   
   // Updated style for all FAQ answers content - left aligned
@@ -63,7 +65,7 @@ const FAQSection = () => {
       <div className="container mx-auto px-4 max-w-5xl">
         {/* Section title with simple animation */}
         <div className={`mb-8 text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#222] mb-4">
+          <h2 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'} font-bold text-[#222] mb-4`}>
             {t('faqMainTitle')}
           </h2>
         </div>
@@ -73,18 +75,18 @@ const FAQSection = () => {
         }`}>
           {/* Category title */}
           {activeCategory === "passengers" && (
-            <h3 className="text-center text-2xl font-bold mb-6">{t('faqTitlePassengers')}</h3>
+            <h3 className={`text-center ${isMobile ? 'text-xl' : 'text-2xl'} font-bold mb-6`}>{t('faqTitlePassengers')}</h3>
           )}
           
           {activeCategory === "drivers" && (
-            <h3 className="text-center text-2xl font-bold mb-6">{t('faqTitleDrivers')}</h3>
+            <h3 className={`text-center ${isMobile ? 'text-xl' : 'text-2xl'} font-bold mb-6`}>{t('faqTitleDrivers')}</h3>
           )}
           
           {activeCategory === "fleet" && (
-            <h3 className="text-center text-2xl font-bold mb-6">{t('faqTitleFleet')}</h3>
+            <h3 className={`text-center ${isMobile ? 'text-xl' : 'text-2xl'} font-bold mb-6`}>{t('faqTitleFleet')}</h3>
           )}
           
-          {/* Category navigation - MOVED HERE FROM BOTTOM */}
+          {/* Category navigation - styled for mobile */}
           <div className={`flex justify-center mb-10 transition-all duration-700 delay-150 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
@@ -94,14 +96,14 @@ const FAQSection = () => {
               onValueChange={(value) => {
                 if (value) setActiveCategory(value);
               }}
-              className="bg-gray-100 p-1 rounded-full"
+              className={`bg-gray-100 p-1 rounded-full ${isMobile ? 'w-full flex' : ''}`}
             >
               {categories.map((category) => (
                 <ToggleGroupItem 
                   key={category.id} 
                   value={category.id}
                   aria-label={`Show FAQs for ${category.label}`}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                  className={`${isMobile ? 'flex-1 text-xs px-2' : 'px-6'} py-2 rounded-full transition-all duration-300 ${
                     activeCategory === category.id 
                       ? 'bg-[#fa9de3] text-white shadow-md'
                       : 'text-gray-600 hover:text-gray-800'
@@ -287,8 +289,6 @@ const FAQSection = () => {
           </div>
         </div>
       </div>
-      
-      {/* Removed the scroll to top button indicator */}
     </section>
   );
 };
