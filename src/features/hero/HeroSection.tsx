@@ -4,7 +4,7 @@ import { useLanguage } from '@/lib/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { AppWindow, Smartphone } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
-
+//n
 const HeroSection = () => {
   const { t } = useLanguage();
   const isMobile = useIsMobile();
