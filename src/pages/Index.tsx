@@ -8,6 +8,7 @@ import LatestFeaturesSection from '../features/latestFeatures/LatestFeaturesSect
 import FAQSection from '../features/faq/FAQSection';
 import ContactSection from '../features/contact/ContactSection';
 import DownloadSection from '../features/download/DownloadSection';
+import NewsletterSection from '../features/newsletter/NewsletterSection';
 import { Footer } from '../shared/Footer';
 import { ChevronUp } from 'lucide-react';
 
@@ -42,6 +43,7 @@ const Index = () => {
         <ServicesSection />
         <AboutSection />
         <LatestFeaturesSection />
+        <NewsletterSection />
         <FAQSection />
         <ContactSection />
         <DownloadSection />
