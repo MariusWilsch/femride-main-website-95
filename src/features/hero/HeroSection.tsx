@@ -50,7 +50,7 @@ const HeroSection = () => {
               {/* App Store Button */}
               <div className="relative group flex-1">
                 <Button 
-                  className={`bg-gray-800 hover:bg-gray-700 text-white rounded-3xl font-medium px-8 ${isMobile ? 'py-4 text-xs' : 'py-6 text-base'} group-hover:shadow-[0_0_25px_rgba(250,157,227,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none w-full`}
+                  className={`bg-gray-800 hover:bg-gray-700 text-white rounded-3xl font-medium ${isMobile ? 'px-4 py-3 text-xs max-w-[180px] mx-auto' : 'px-8 py-6 text-base'} group-hover:shadow-[0_0_25px_rgba(250,157,227,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none ${isMobile ? 'w-auto' : 'w-full'}`}
                 >
                   <AppWindow size={isMobile ? 18 : 24} />
                   <span className="flex flex-col items-start">
@@ -66,7 +66,7 @@ const HeroSection = () => {
               {/* Google Play Button */}
               <div className="relative group flex-1">
                 <Button 
-                  className={`bg-gray-800 hover:bg-gray-700 text-white rounded-3xl font-medium px-8 ${isMobile ? 'py-4 text-xs' : 'py-6 text-base'} group-hover:shadow-[0_0_25px_rgba(163,173,244,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none w-full`}
+                  className={`bg-gray-800 hover:bg-gray-700 text-white rounded-3xl font-medium ${isMobile ? 'px-4 py-3 text-xs max-w-[180px] mx-auto' : 'px-8 py-6 text-base'} group-hover:shadow-[0_0_25px_rgba(163,173,244,0.3)] transition-all duration-300 flex items-center gap-4 border border-gray-700 opacity-90 pointer-events-none ${isMobile ? 'w-auto' : 'w-full'}`}
                 >
                   <Smartphone size={isMobile ? 18 : 24} />
                   <span className="flex flex-col items-start">

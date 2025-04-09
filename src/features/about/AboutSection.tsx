@@ -1,8 +1,10 @@
+
 import React, { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { User, Shield, Sparkles } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 /**
  * Enhanced About section highlighting FemRide as a European mobility platform for women
@@ -13,6 +15,7 @@ const AboutSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const { t } = useLanguage();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -124,7 +127,7 @@ const AboutSection = () => {
         {/* CTA button with pink background color and more rounded corners */}
         <div className={`flex justify-center transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <Button 
-            className="px-8 py-6 text-lg bg-[#fa9de3] hover:bg-[#e989cc] text-black rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden group"
+            className={`px-8 py-6 ${isMobile ? 'text-sm' : 'text-lg'} bg-[#fa9de3] hover:bg-[#e989cc] text-black rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden group`}
             onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
           >
             <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full opacity-20 rounded-3xl"></span>
